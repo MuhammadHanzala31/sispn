@@ -6,7 +6,7 @@ import Link from 'next/link'
 export default function Navbar() {
   return (
     <div className='flex items-center justify-between lg:px-[80px] md:px-[40px] px-6 bg-black py-4 fixed w-full opacity-90 backdrop-blur-2xl z-10' >
-      
+
       <Image src={logo} alt="logo" width={150} height={100} />
 
       <div className='flex items-center gap-12'>
@@ -27,12 +27,12 @@ export default function Navbar() {
                           opacity-0 invisible group-hover:opacity-100 group-hover:visible 
                           transition-all duration-300 shadow-lg">
 
-            <Link href="/services/website-design-and-development" 
+            <Link href="/services/website-design-and-development"
               className="block px-0 py-3 text-sm border-b border-b-white text-white hover:bg-white/10 transition">
               Web Development
             </Link>
 
-            <Link href="/services/seo" 
+            <Link href="/services/seo"
               className="block px-0 py-3 text-sm text-white hover:bg-white/10 transition">
               SEO Optimization
             </Link>
@@ -42,7 +42,7 @@ export default function Navbar() {
         <div className="relative group">
           <div
             className='hover:text-[#B83DC8] text-white  text-lg font-medium font-sans'
-            
+
           >
             Insights <i className="ri-arrow-drop-down-line"></i>
           </div>
@@ -53,12 +53,12 @@ export default function Navbar() {
                           opacity-0 invisible group-hover:opacity-100 group-hover:visible 
                           transition-all duration-300 shadow-lg">
 
-            <Link href="/about-us" 
+            <Link href="/about-us"
               className="block px-0 py-3 text-sm border-b border-b-white text-white hover:bg-white/10 transition">
               About
             </Link>
 
-            <Link href="/blogs" 
+            <Link href="/blogs"
               className="block px-0 py-3 text-sm text-white hover:bg-white/10 transition">
               Blogs
             </Link>
