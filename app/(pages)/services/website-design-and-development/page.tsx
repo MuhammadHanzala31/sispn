@@ -1,42 +1,56 @@
 import ProjectCard from '@/app/(components)/ProjectCard'
 import React from 'react'
 import imageCard from '@/public/seo-card.png'
+import p1 from '@/public/d-p-1/daniel-korpai-pKRNxEguRgM-unsplash.png'
+import p2 from '@/public/d-p-2/aashish-yadav-YIHEZ8neNBE-unsplash (1).png'
+import p3 from '@/public/d-p-3/viseo-conseil-8XaM86qk9Ac-unsplash.png'
+import p4 from '@/public/d-p-4/nubelson-fernandes-jKL2PvKN8Q0-unsplash.png'
+import p5 from '@/public/d-p-5/team-nocoloco-Yt9wUh3ZB3Q-unsplash.png'
+import p6 from '@/public/d-p-6/azwedo-l-lc-nT4WsKUoLo4-unsplash.png'
+import p7 from '@/public/d-p-7/dmitriy-demidov-iuuJC_pjLU0-unsplash.png'
 import StrategyCard from '@/app/(components)/StrategyCard';
 
 
 
 const services = [
     {
+        image: p1,
         title: "Custom Web Development",
         description:
             "We build powerful, scalable web apps tailored to your business logic — from CRM and ERP to booking platforms and social networks. Using frameworks like React, Angular, Django, and Node.js, we deliver applications that are secure, efficient, and user-friendly.",
     },
     {
+        image: p2,
         title: "CMS Development",
         description:
             "Easily manage your site content with customized CMS platforms. Whether it's WordPress, Drupal, Joomla, or a headless CMS solution, we tailor the setup to give you full control without requiring technical expertise.",
     },
     {
+        image : p3,
         title: "E-Commerce Development",
         description:
             "Turn visitors into customers with secure, fast, and conversion-focused online product catalogs. From setup, payment gateway integration, inventory sync, and smooth checkout flows designed to reduce cart abandonment.",
     },
     {
+        image : p4,
         title: "Front-End & Back-End Development",
         description:
             "From sleek user interfaces to solid, secure backend systems, we handle both ends of development. Our front-end stack includes HTML5, CSS3, JavaScript, React, Angular, and Vue.js. On the backend, we use Python, Java, PHP, .NET, and more to ensure your site runs smoothly at scale.",
     },
     {
+        image : p5,
         title: "Web Portals & Intranets",
         description:
             "We design secure, role-based portals for employees, customers, or partners. From document sharing to real-time dashboards, we help streamline internal processes and external collaboration.",
     },
     {
+        image : p6,
         title: "Mobile-Responsive Web Design",
         description:
             "We create websites that adapt perfectly to any device — desktop, tablet, or mobile. With a mobile-first approach and SEO optimization built in, your site won’t just look good; it will perform and rank better, too.",
     },
     {
+        image : p7,
         title: "Maintenance & Support",
         description:
             "Your digital platform is never 'done' — it evolves. That’s why we offer proactive post-launch services: performance monitoring, bug fixes, feature enhancements, and security patches to keep your site running flawlessly.",
@@ -74,36 +88,36 @@ const seoProcess = [
 
 
 const seoBenefits = [
-   {
-    title: "Requirement Gathering",
-    description:
-      "We analyze your business needs to define the project scope and objectives for SISPn Tech. Our team collaborates closely with you to ensure every detail aligns with your vision and expectations. We gather comprehensive insights to lay a solid foundation for your project.",
-  },
-  {
-    title: "Planning & Strategy",
-    description:
-      "We create a detailed roadmap with timelines, technologies, and milestones tailored for SISPn Tech. We strategize to optimize resources and set clear goals for successful project outcomes. Our planning phase includes risk assessment to ensure smooth execution.",
-  },
-  {
-    title: "UI/UX Design",
-    description:
-      "Our team designs intuitive and engaging interfaces with interactive prototypes for SISPn Tech. We prioritize user-friendly designs that enhance engagement and reflect your brand identity. Feedback from you is incorporated to refine the design iteratively.",
-  },
-  {
-    title: "Development",
-    description:
-      "We build robust solutions using agile methodologies and cutting-edge technologies for SISPn Tech. Our developers ensure scalability and performance to support your growing business needs. Regular progress updates keep you informed throughout the development phase.",
-  },
-  {
-    title: "Testing & QA",
-    description:
-      "Rigorous testing ensures functionality, performance, security, and compatibility for SISPn Tech. We address potential issues proactively to deliver a flawless end product. Multiple testing cycles guarantee a reliable and secure website.",
-  },
-  {
-    title: "Support & Maintenance",
-    description:
-      "Post-launch, we provide continuous updates, optimization, and support for SISPn Tech. Our team is committed to keeping your website secure and up-to-date over time. We offer ongoing assistance to address any future enhancements or issues.",
-  },
+    {
+        title: "Requirement Gathering",
+        description:
+            "We analyze your business needs to define the project scope and objectives for SISPn Tech. Our team collaborates closely with you to ensure every detail aligns with your vision and expectations. We gather comprehensive insights to lay a solid foundation for your project.",
+    },
+    {
+        title: "Planning & Strategy",
+        description:
+            "We create a detailed roadmap with timelines, technologies, and milestones tailored for SISPn Tech. We strategize to optimize resources and set clear goals for successful project outcomes. Our planning phase includes risk assessment to ensure smooth execution.",
+    },
+    {
+        title: "UI/UX Design",
+        description:
+            "Our team designs intuitive and engaging interfaces with interactive prototypes for SISPn Tech. We prioritize user-friendly designs that enhance engagement and reflect your brand identity. Feedback from you is incorporated to refine the design iteratively.",
+    },
+    {
+        title: "Development",
+        description:
+            "We build robust solutions using agile methodologies and cutting-edge technologies for SISPn Tech. Our developers ensure scalability and performance to support your growing business needs. Regular progress updates keep you informed throughout the development phase.",
+    },
+    {
+        title: "Testing & QA",
+        description:
+            "Rigorous testing ensures functionality, performance, security, and compatibility for SISPn Tech. We address potential issues proactively to deliver a flawless end product. Multiple testing cycles guarantee a reliable and secure website.",
+    },
+    {
+        title: "Support & Maintenance",
+        description:
+            "Post-launch, we provide continuous updates, optimization, and support for SISPn Tech. Our team is committed to keeping your website secure and up-to-date over time. We offer ongoing assistance to address any future enhancements or issues.",
+    },
 ];
 
 
@@ -136,8 +150,8 @@ export default function page() {
                     </div>
                     <p className='text-[#414141] text-xl max-w-[1566px] mx-auto text-center'>At SISPN Tech, we offer a full spectrum of website development services to meet the needs of modern businesses — whether you're launching a startup, scaling an enterprise, or optimizing your digital infrastructure.</p>
                     <div className='grid grid-cols-3 gap-4'>
-                        {services.map(services => (
-                            <ProjectCard key={services.title} title={services.title} description={services.description}/>
+                        {services.map((services, id) => (
+                            <ProjectCard image={services.image} key={services.title} title={services.title} description={services.description} />
                         ))}
                     </div>
                 </div>

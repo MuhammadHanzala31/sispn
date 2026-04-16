@@ -1,46 +1,95 @@
 import Image from 'next/image'
 import React from 'react'
 import brand from '@/public/brand-1/Component 87 – 9.png'
+import sp1 from '@/public/s-p-1.png'
+import sp2 from '@/public/s-p-2.png'
+import sp3 from '@/public/s-p-3.png'
+import sp4 from '@/public/s-p-4.png'
+import sp5 from '@/public/s-p-5.png'
+import sp6 from '@/public/s-p-6.png'
+import sp7 from '@/public/s-p-7.png'
+import sp8 from '@/public/s-p-8.png'
+import sp9 from '@/public/s-p-9.png'
+import sp10 from '@/public/s-p-10.png'
 import ProjectCard from '@/app/(components)/ProjectCard'
 import Newsletter from '@/app/(components)/Newsletter'
 import RequestForm from '@/app/(components)/RequestForm'
 
 
+
+
 const services = [
   {
-    title: "Custom Web Development",
+    id: 1,
+    title: "Content Marketing",
     description:
-      "We build powerful, scalable web apps tailored to your business logic — from CRM and ERP to booking platforms and social networks. Using frameworks like React, Angular, Django, and Node.js, we deliver applications that are secure, efficient, and user-friendly.",
+      "In today’s fast-paced digital world, content marketing services are the backbone of successful online strategies.",
+    image: sp1,
+    link: "#",
   },
   {
-    title: "CMS Development",
+    id: 2,
+    title: "Affordable Digital Marketing",
     description:
-      "Easily manage your site content with customized CMS platforms. Whether it's WordPress, Drupal, Joomla, or a headless CMS solution, we tailor the setup to give you full control without requiring technical expertise.",
+      "SISPN Tech’s comprehensive digital marketing services deliver more sales, leads, conversions, and revenue.",
+    image: sp2,
+    link: "/services",
   },
   {
-    title: "E-Commerce Development",
+    id: 3,
+    title: "E-Commerce Marketing",
     description:
-      "Turn visitors into customers with secure, fast, and conversion-focused online product catalogs. From setup, payment gateway integration, inventory sync, and smooth checkout flows designed to reduce cart abandonment.",
+      "Our team of passionate marketing specialists drives growth and maximizes ROI for your eCommerce business.",
+    image: sp3,
+    link: "#",
   },
   {
-    title: "Front-End & Back-End Development",
+    id: 4,
+    title: "Website Development",
     description:
-      "From sleek user interfaces to solid, secure backend systems, we handle both ends of development. Our front-end stack includes HTML5, CSS3, JavaScript, React, Angular, and Vue.js. On the backend, we use Python, Java, PHP, .NET, and more to ensure your site runs smoothly at scale.",
+      "Transform your digital identity with our advanced CMS and custom website development services.",
+    image: sp4,
+    link: "#",
   },
   {
-    title: "Web Portals & Intranets",
+    id: 5,
+    title: "Online Reputation Services",
     description:
-      "We design secure, role-based portals for employees, customers, or partners. From document sharing to real-time dashboards, we help streamline internal processes and external collaboration.",
+      "Build trust and strengthen your brand’s online presence with expert reputation management.",
+    image: sp5,
+    link: "#",
   },
   {
-    title: "Mobile-Responsive Web Design",
+    id: 6,
+    title: "Search Engine Optimization",
     description:
-      "We create websites that adapt perfectly to any device — desktop, tablet, or mobile. With a mobile-first approach and SEO optimization built in, your site won’t just look good; it will perform and rank better, too.",
+      "Get found online with proven SEO strategies tailored to improve visibility and rankings.",
+    image: sp6,
+    link: "#",
   },
   {
-    title: "Maintenance & Support",
+    id: 7,
+    title: "Email Marketing",
     description:
-      "Your digital platform is never 'done' — it evolves. That’s why we offer proactive post-launch services: performance monitoring, bug fixes, feature enhancements, and security patches to keep your site running flawlessly.",
+      "Transform your email campaigns into revenue-generating assets with targeted strategies.",
+    image: sp7,
+    link: "#",
+  },
+  {
+    id: 8,
+    title: "Google Ads",
+    description:
+      "Run high-performing ad campaigns using Google Ads to boost traffic, leads, and sales.",
+    image: sp8,
+    link: "#",
+  },
+  {
+    id: 9,
+    title: "Premier Graphics Designing",
+    description:
+      "Create visually stunning designs from logos to branding materials with our expert designers.",
+    image: sp9,
+    link: "#",
   },
 ];
 
@@ -87,13 +136,9 @@ export default function page() {
                 <button className='px-6 py-3.5 rounded-lg text-white text-xl font-medium cursor-pointer  bg-linear-to-t hover:scale-[0.9] transition-all to-[#8E2391] from-[#421C47] w-fit'>Let’s take your business to the next level!</button>
             </section>
             <section className='my-20 grid lg:grid-cols-3 gap-8 grid-cols-1 lg:px-20 px-7'>
-                <ProjectCard/>
-                <ProjectCard/>
-                <ProjectCard/>
-                <ProjectCard/>
-                <ProjectCard/>
-                <ProjectCard/>
-                <ProjectCard/>
+                {services?.map((item) => (
+                    <ProjectCard key={item.id} image={item.image} title={item.title} description={item.description}/>
+                ))}
             </section>
             <Newsletter/>
             <RequestForm/>

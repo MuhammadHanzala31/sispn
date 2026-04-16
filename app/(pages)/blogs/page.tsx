@@ -2,6 +2,10 @@
 
 import BlogCard from '@/app/(components)/BlogCard'
 import React, { useState } from 'react'
+import blogImage from '@/public/blog-card.png'
+import Image from 'next/image'
+import Link from 'next/link'
+
 
 export default function page() {
 
@@ -24,7 +28,19 @@ export default function page() {
                 <div className='flex flex-col lg:flex-row items-center gap-8'>
                     <div className='lg:w-1/2'>
                         {/* blog card */}
-                        <BlogCard />
+                        <div className={`flex flex-col items-center gap-8`}>
+                            <Image src={blogImage} alt="blog-image" />
+                            <div className='flex flex-col gap-8 pr-36 w-[737px]'>
+                                <div className='flex flex-row justify-start gap-3.5 '>
+                                    <p className={`text-xl text-white`}>25 MARCH 2026</p>
+                                    <span className={`text-xl text-white`}>|</span>
+                                    <p className={`text-xl text-white`}>DIGITAL MARKETING</p>
+                                </div>
+                                <h5 className={`text-3xl font-bold  text-white`}>The Power of Social Media Marketing: Boost Your Brand with SISPN Tech Digital</h5>
+                                <p className={`text-xl text-white`}>Increase your brand's visibility faster by using SISPN Tech, a results-focused and performance-oriented Social Media Marketing Agency.</p>
+                                <Link href={'/blogs'} className={`text-xl text-white`}>{'Read More >'}</Link>
+                            </div>
+                        </div>
                     </div>
                     <div className='lg:w-[35%] w-full flex flex-col gap-8 '>
                         <h6 className='text-white text-3xl font-bold'>Search</h6>

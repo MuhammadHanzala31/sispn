@@ -3,6 +3,9 @@ import React from 'react'
 import about1 from '@/public/about-1.png'
 import about2 from '@/public/about-2.png'
 import about3 from '@/public/about-3.png'
+import aboutb3 from '@/public/about-b-3.png'
+import aboutb4 from '@/public/about-b-4.png'
+import RequestForm from '@/app/(components)/RequestForm'
 
 export default function page() {
     return (
@@ -23,10 +26,10 @@ export default function page() {
                         </div>
                         <div className='flex lg:flex-row flex-col gap-8 items-center w-full'>
                             <div className='flex flex-col gap-8 lg:w-1/2 w-full'>
-                                <Image src={about1} alt='about1' />
+                                <Image src={aboutb3} alt='about1' />
                             </div>
                             <div className='flex flex-col gap-8 lg:w-1/2 w-full'>
-                                <Image src={about1} alt='about1' />
+                                <Image src={aboutb4} alt='about1' />
                             </div>
                         </div>
                     </div>
@@ -73,6 +76,7 @@ export default function page() {
                     <button className='px-6 py-3.5 rounded-lg text-white text-xl font-medium cursor-pointer  bg-linear-to-t hover:scale-[0.9] transition-all to-[#8E2391] from-[#421C47] w-fit'>Let's Discuss The Project</button>
                 </div>
             </section>
+            <RequestForm/>
         </main>
     )
 }
