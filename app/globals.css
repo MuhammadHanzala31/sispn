@@ -45,3 +45,12 @@ body {
   background-size:cover;
 
 }
+
+.slick-slide {
+  padding: 0 10px; /* gap between slides */
+  box-sizing: border-box;
+}
+
+.slick-list {
+  margin: 0 -10px; /* balance outer spacing */
+}

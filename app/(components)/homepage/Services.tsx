@@ -1,6 +1,14 @@
 import Image from 'next/image'
 import React from 'react'
-import barnd from '@/public/brand-1/Component 87 – 9.png'
+
+import brand1 from '@/public/b-1.png'
+import brand2 from '@/public/b-2.png'
+import brand3 from '@/public/b-3.png'
+import brand4 from '@/public/b-4.png'
+import brand5 from '@/public/b-5.png'
+import brand6 from '@/public/b-6.png'
+import brand7 from '@/public/b-7.png'
+import brand8 from '@/public/b-8.png'
 
 export default function Services() {
   return (
@@ -15,18 +23,18 @@ export default function Services() {
         </div>
         <div className='flex flex-col gap-4 lg:w-1/2 w-full'>
           <div className='flex gap-7 justify-center'>
-            <Image src={barnd} alt='brand' width={200}/>
-            <Image src={barnd} alt='brand' width={200}/>
-            <Image src={barnd} alt='brand' width={200}/>
+            <Image src={brand1} alt='brand' width={200}/>
+            <Image src={brand2} alt='brand' width={200}/>
+            <Image src={brand3} alt='brand' width={200}/>
           </div>
           <div className='flex gap-8 justify-center' >
-            <Image src={barnd} alt='brand' width={200}/>
-            <Image src={barnd} alt='brand' width={200}/>
+            <Image src={brand4} alt='brand' width={200}/>
+            <Image src={brand5} alt='brand' width={200}/>
           </div>
           <div className='flex gap-7 justify-center'>
-            <Image src={barnd} alt='brand' width={200}/>
-            <Image src={barnd} alt='brand' width={200}/>
-            <Image src={barnd} alt='brand' width={200}/>
+            <Image src={brand6} alt='brand' width={200}/>
+            <Image src={brand7} alt='brand' width={200}/>
+            <Image src={brand8} alt='brand' width={200}/>
           </div>
         </div>
     </section>

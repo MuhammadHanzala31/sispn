@@ -16,8 +16,8 @@ export default function Home() {
       <Services/>
       <Projects/>
       <Portfolio/>
+      <AwardsSlider/>
       <Newsletter/>
-      {/* <AwardsSlider/> */}
       <RequestForm/>
     </main>
   );

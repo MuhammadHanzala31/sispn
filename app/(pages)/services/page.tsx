@@ -15,6 +15,15 @@ import ProjectCard from '@/app/(components)/ProjectCard'
 import Newsletter from '@/app/(components)/Newsletter'
 import RequestForm from '@/app/(components)/RequestForm'
 
+import brand1 from '@/public/b-1.png'
+import brand2 from '@/public/b-2.png'
+import brand3 from '@/public/b-3.png'
+import brand4 from '@/public/b-4.png'
+import brand5 from '@/public/b-5.png'
+import brand6 from '@/public/b-6.png'
+import brand7 from '@/public/b-7.png'
+import brand8 from '@/public/b-8.png'
+
 
 
 
@@ -107,21 +116,21 @@ export default function page() {
                                 <span className='text-3xl font-sans font-bold text-white'>SERVICES WE CAN HELP YOU WITH</span>
                             </div>
                             <div className='grid grid-cols-3 gap-8 lg:w-1/2 w-full relative'>
-                                <Image src={brand} alt='brand1' />
-                                <Image src={brand} alt='brand1' className='relative -top-28' />
-                                <Image src={brand} alt='brand1' />
+                                <Image src={brand1} alt='brand1' />
+                                <Image src={brand2} alt='brand1' className='relative -top-28' />
+                                <Image src={brand3} alt='brand1' />
                             </div>
                         </div>
                         <div className='flex flex-row items-center gap-4'>
                             <div className='grid grid-cols-3 gap-8 lg:w-1/2 w-full relative'>
-                                <Image src={brand} alt='brand1' />
-                                <Image src={brand} alt='brand1' className='relative top-28' />
-                                <Image src={brand} alt='brand1' />
+                                <Image src={brand4} alt='brand1' />
+                                <Image src={brand5} alt='brand1' className='relative top-28' />
+                                <Image src={brand6} alt='brand1' />
                             </div>
                             <div className='grid grid-cols-3 gap-8 lg:w-1/2 w-full relative'>
-                                <Image src={brand} alt='brand1 ' className='relative top-18' />
-                                <Image src={brand} alt='brand1' className='relative -top-22' />
-                                <Image src={brand} alt='brand1' />
+                                <Image src={brand7} alt='brand1 ' className='relative top-18' />
+                                <Image src={brand8} alt='brand1' className='relative -top-22' />
+                                <Image src={brand2} alt='brand1' />
                             </div>
                         </div>
                     </div>

@@ -9,7 +9,7 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [openDropdown, setOpenDropdown] = useState(null)
 
-  const toggleDropdown = (dropdown) => {
+  const toggleDropdown = (dropdown : any) => {
     setOpenDropdown(openDropdown === dropdown ? null : dropdown)
   }
 
