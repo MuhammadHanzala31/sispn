@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Hero() {
   return (
-    <section className='py-16  sm:py-40 md:py-28 lg:py-40 flex items-center justify-center hero-banner'>
+    <section className='py-16  sm:py-40 pt-50 md:py-28 lg:py-40 flex items-center justify-center hero-banner'>
       
       <div className=' mx-auto max-w-[1344px] px-4 sm:px-6 lg:px-8'>
         

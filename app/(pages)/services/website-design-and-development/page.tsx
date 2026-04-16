@@ -9,6 +9,7 @@ import p5 from '@/public/d-p-5/team-nocoloco-Yt9wUh3ZB3Q-unsplash.png'
 import p6 from '@/public/d-p-6/azwedo-l-lc-nT4WsKUoLo4-unsplash.png'
 import p7 from '@/public/d-p-7/dmitriy-demidov-iuuJC_pjLU0-unsplash.png'
 import StrategyCard from '@/app/(components)/StrategyCard';
+import RequestForm from '@/app/(components)/RequestForm'
 
 
 
@@ -149,7 +150,7 @@ export default function page() {
                         <h4 className='text-4xl font-bold text-center text-[#81358A]'>COMPLETE WEB DEVELOPMENT SOLUTIONS BY SISPN TECH</h4>
                     </div>
                     <p className='text-[#414141] text-xl max-w-[1566px] mx-auto text-center'>At SISPN Tech, we offer a full spectrum of website development services to meet the needs of modern businesses — whether you're launching a startup, scaling an enterprise, or optimizing your digital infrastructure.</p>
-                    <div className='grid grid-cols-3 gap-4'>
+                    <div className='grid lg:grid-cols-3 grid-cols-1 gap-4'>
                         {services.map((services, id) => (
                             <ProjectCard image={services.image} key={services.title} title={services.title} description={services.description} />
                         ))}
@@ -160,7 +161,7 @@ export default function page() {
                 <div className='flex flex-col gap-4 items-center'>
                     <h4 className='text-4xl font-bold text-[#81358A]'>TAILORED SEO STRATEGY FOR SUSTAINABLE GROWTH</h4>
                     <p className='text-[#414141] text-xl text-center max-w-[1450px] mx-auto'>SISPN Tech understands that a universal approach doesn't perform in SEO campaigns. Our customized strategies are developed to meet your specific business goals. This ensures the long-term expansion of a digital business in a constantly evolving digital world. By focusing on long-term success and adjusting to the most recent SEO trends, we can help your business to stay ahead of your competitors.</p>
-                    <div className='grid grid-cols-3 gap-5'>
+                    <div className='grid lg:grid-cols-3 grid-cols-1 gap-5'>
                         {seoProcess?.map((item, idx) => (<StrategyCard key={idx} title={item.title} description={item.description} />))}
                     </div>``
                 </div>
@@ -170,7 +171,7 @@ export default function page() {
                     <div className='flex flex-col gap-4'>
                         <h4 className='text-4xl font-bold text-white text-center '>OUR WEB DEVELOPMENT PROCESS</h4>
                         <p className='text-white text-xl text-center max-w-[1450px] mx-auto'>At SISPN Tech, we deliver tailored web solutions with a structured and client-focused approach, ensuring your digital vision comes to life seamlessly. Our six-step process combines expertise, innovation, and dedication to build robust, high-performing websites that meet your unique business goals.</p>
-                        <div className='grid grid-cols-2 gap-5'>
+                        <div className='grid lg:grid-cols-2 grid-cols-1 gap-5'>
                             {seoBenefits?.map((item, idx) => (<div key={idx} className='flex flex-col gap-2 border-2 bg-white border-white rounded-2xl p-4'>
                                 <h4 className='text-2xl font-bold text-[#81358A] text-center'>{item.title}</h4>
                                 <p className='text-[#414141] text-xl text-center'>{item.description}</p>
@@ -179,6 +180,7 @@ export default function page() {
                     </div>
                 </div>
             </section>
+            <RequestForm/>
         </main>
     )
 }

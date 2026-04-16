@@ -8,6 +8,7 @@ import seop4 from '@/public/seo-p-4.png'
 import seop5 from '@/public/seo-p-5.png'
 import seop6 from '@/public/seo-p-6.png'
 import StrategyCard from '@/app/(components)/StrategyCard';
+import RequestForm from '@/app/(components)/RequestForm';
 
 const seoProcess = [
     {
@@ -102,7 +103,7 @@ export default function page() {
                         <h4 className='text-4xl font-bold text-center text-[#81358A]'>COMPREHENSIVE SEO SERVICES DESIGNED FOR YOUR WEBSITE</h4>
                     </div>
                     <p className='text-[#414141] text-xl max-w-[1566px] mx-auto text-center'>SISPN Tech offers an extensive range of SEO solutions designed to boost your website performance, enhance the site’s online presence and generate visible growth. Our custom SEO strategies include the following areas of expertise:</p>
-                     <div className='grid grid-cols-3 gap-4'>
+                     <div className='grid lg:grid-cols-3 grid-cols-1 gap-4'>
                         <ProjectCard image={seop1}  title={"On-Page SEO"} description={'We at SISPN Tech precisely improve the content on your site and HTML structure to improve the visibility of your website to search engines. The on-page SEO services include strategically integrated keywords, meta tags refinement and content optimization, making sure your website ranks higher in relevant searches. Aligning with the elements of your website to search engine algorithms, we aim to get more targeted traffic to your website and boost engagement with users.'}/>
                         <ProjectCard image={seop2} title={"Off-Page SEO"} description={'Building the authority of your website over its different pages is vital. Off-page SEO strategies aim to acquire high-quality backlinks, promote social media interaction, and enhance your website’s online image. All of these efforts increase the credibility of your website and improve its ranking in search engine results, leading to an increase in organic traffic.'}/>
                         <ProjectCard image={seop3} title={"Technical SEO"} description={"We ensure that your site's technical aspects are designed to meet the needs of users as well as the required conditions of search engines. Our technical SEO solutions address your website speed, mobile responsiveness, crawlability, structure, and data implementation for swift performance. By resolving the technical issues, we improve user experience to facilitate better ranking in the search engines which leads to higher results."}/>
@@ -116,7 +117,7 @@ export default function page() {
                 <div className='flex flex-col gap-4 items-center'>
                     <h4 className='text-4xl font-bold text-[#81358A]'>TAILORED SEO STRATEGY FOR SUSTAINABLE GROWTH</h4>
                     <p className='text-[#414141] text-xl text-center max-w-[1450px] mx-auto'>SISPN Tech understands that a universal approach doesn't perform in SEO campaigns. Our customized strategies are developed to meet your specific business goals. This ensures the long-term expansion of a digital business in a constantly evolving digital world. By focusing on long-term success and adjusting to the most recent SEO trends, we can help your business to stay ahead of your competitors.</p>
-                    <div className='grid grid-cols-3 gap-5'>
+                    <div className='grid lg:grid-cols-3 grid-cols-1 gap-5'>
                         {seoProcess?.map((item, idx) => (<StrategyCard key={idx} title={item.title} description={item.description}/>))}
                     </div>``
                 </div>
@@ -126,7 +127,7 @@ export default function page() {
                     <div className='flex flex-col gap-4'>
                     <h4 className='text-4xl font-bold text-white text-center '>OUR SEO PROCESS</h4>
                     <p className='text-white text-xl text-center max-w-[1450px] mx-auto'>In today’s digital world, having a website is just the beginning of your online journey. In order to be truly successful online, your business needs to be credible, visible and easily discoverable by your target audience. This is the reason that Search Engine Optimization (SEO) is in the picture. In SISPN Tech, we specialize in offering comprehensive SEO services specifically tailored to your business goals to improve your web presence, bring relevant traffic, and convert visitors to loyal customers.</p>
-                    <div className='grid grid-cols-2 gap-5'>
+                    <div className='grid lg:grid-cols-2 grid-cols-1 gap-5'>
                         {seoBenefits?.map((item, idx) => (<div key={idx} className='flex flex-col gap-2 border-2 bg-white border-white rounded-2xl p-4'>
                             <h4 className='text-2xl font-bold text-[#81358A] text-center'>{item.title}</h4>
                             <p className='text-[#414141] text-xl text-center'>{item.description}</p>
@@ -135,6 +136,7 @@ export default function page() {
                     </div>
                 </div>
             </section>
+            <RequestForm/>
         </main>
     )
 }
