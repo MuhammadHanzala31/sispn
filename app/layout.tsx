@@ -18,7 +18,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Sispn Tech",
-  description: "sispn tech website",
+  description: "sispn tech",
 };
 
 export default function RootLayout({
@@ -31,12 +31,12 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      
+
       <body className="h-screen flex flex-col relative">
-      <Navbar />
+        <Navbar />
         {children}
-        <Footer/>
-        </body>
+        <Footer />
+      </body>
     </html>
   );
 }
