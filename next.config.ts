@@ -9,7 +9,10 @@ const nextConfig: NextConfig = {
       port: '',
       pathname: '/photo-**',
     },]
-  }
+  },
+  generateBuildId: async () => {
+    return Date.now().toString()
+  },
 };
 
 export default nextConfig;
