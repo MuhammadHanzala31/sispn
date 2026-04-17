@@ -37,18 +37,11 @@ const socialLinks = [
 export default function Footer() {
     return (
         <footer className="bg-white border-t-2 border-black">
-
             <div className="mx-auto px-6 lg:px-20 pt-20 pb-12">
-
-                {/* ✅ 5 COLUMN GRID */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
-
-                    {/* 1️⃣ Logo */}
                     <div>
                         <Image src={logo1} alt="logo" width={200} />
                     </div>
-
-                    {/* 2️⃣ Resources */}
                     <div>
                         <h3 className="font-bold text-[#662C6D] mb-4">Resources</h3>
                         <ul className="space-y-3">
@@ -61,8 +54,6 @@ export default function Footer() {
                             ))}
                         </ul>
                     </div>
-
-                    {/* 3️⃣ Services */}
                     <div>
                         <h3 className="font-bold text-[#662C6D] mb-4">Services</h3>
                         <ul className="space-y-3">
@@ -75,8 +66,6 @@ export default function Footer() {
                             ))}
                         </ul>
                     </div>
-
-                    {/* 4️⃣ Location */}
                     <div>
                         <h3 className="font-bold text-[#662C6D] mb-4">Locations</h3>
 
@@ -92,13 +81,10 @@ export default function Footer() {
                             Phone: +1 (315)-999-4142
                         </p>
                     </div>
-
-                    {/* 5️⃣ Newsletter (UNCHANGED STYLE) */}
                     <div>
                         <h3 className="font-bold text-[#662C6D] mb-4 text-sm">
                             You Will Get Weekly Update On Email
                         </h3>
-
                         <form className="space-y-3">
                             <input
                                 type="email"
@@ -112,8 +98,6 @@ export default function Footer() {
                                 Subscribe
                             </button>
                         </form>
-
-                        {/* Social Icons */}
                         <div className="flex gap-4 mt-4">
                             {socialLinks.map((social) => (
                                 <a key={social.label} href={social.href}>
@@ -121,7 +105,6 @@ export default function Footer() {
                                 </a>
                             ))}
                         </div>
-
                         <p className="text-xs text-gray-600 mt-4">
                             By clicking the button you agree to the{' '}
                             <a href="#" className="text-purple-600 hover:underline">Privacy Policy</a>{' '}
@@ -129,11 +112,8 @@ export default function Footer() {
                             <a href="#" className="text-purple-600 hover:underline">Terms and Conditions</a>.
                         </p>
                     </div>
-
                 </div>
             </div>
-
-            {/* Bottom */}
             <div className="bg-black text-white py-4">
                 <div className="max-w-7xl mx-auto px-6">
                     <p className="text-sm text-right">
@@ -141,7 +121,6 @@ export default function Footer() {
                     </p>
                 </div>
             </div>
-
         </footer>
     );
 }
