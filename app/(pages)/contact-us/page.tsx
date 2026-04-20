@@ -46,13 +46,13 @@ export default function page() {
                                             <div className='bg-[#B83DC8] w-12 h-12 rounded-full flex justify-center items-center'>
                                             <i className="ri-phone-line text-white text-2xl"></i>
                                             </div>
-                                            <span className='text-xl font-sans text-white'>+92 326 4774776</span>
+                                            <span className='text-xl font-sans text-white'>+1 (718) 395-9596</span>
                                         </div>
                                         <div className='flex flex-row items-center gap-4'>
                                             <div className='bg-[#B83DC8] w-12 h-12 rounded-full flex justify-center items-center'>
                                             <i className="ri-whatsapp-line text-white text-2xl"></i>
                                             </div>
-                                            <span className='text-xl font-sans text-white'>+92 326 4774776</span>
+                                            <span className='text-xl font-sans text-white'>+1 (602) 566-0822</span>
                                         </div>
                                         <div className='flex flex-row items-center gap-4'>
                                             <div className='bg-[#B83DC8] w-12 h-12 rounded-full flex justify-center items-center'>

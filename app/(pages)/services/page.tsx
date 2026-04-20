@@ -30,28 +30,12 @@ import Link from 'next/link'
 
 const services = [
   {
-    id: 1,
-    title: "Content Marketing",
-    description:
-      "In today’s fast-paced digital world, content marketing services are the backbone of successful online strategies.",
-    image: sp1,
-    link: "#",
-  },
-  {
     id: 2,
     title: "Affordable Digital Marketing",
     description:
       "SISPN Tech’s comprehensive digital marketing services deliver more sales, leads, conversions, and revenue.",
     image: sp2,
-    link: "/services",
-  },
-  {
-    id: 3,
-    title: "E-Commerce Marketing",
-    description:
-      "Our team of passionate marketing specialists drives growth and maximizes ROI for your eCommerce business.",
-    image: sp3,
-    link: "#",
+    link: "/service/Affordable-marketing",
   },
   {
     id: 4,
@@ -59,7 +43,7 @@ const services = [
     description:
       "Transform your digital identity with our advanced CMS and custom website development services.",
     image: sp4,
-    link: "#",
+    link: "/services/website-design-and-development",
   },
   {
     id: 5,
@@ -67,7 +51,7 @@ const services = [
     description:
       "Build trust and strengthen your brand’s online presence with expert reputation management.",
     image: sp5,
-    link: "#",
+    link: "/services/online-reputation",
   },
   {
     id: 6,
@@ -75,7 +59,7 @@ const services = [
     description:
       "Get found online with proven SEO strategies tailored to improve visibility and rankings.",
     image: sp6,
-    link: "#",
+    link: "/services/seo",
   },
   {
     id: 7,
@@ -83,7 +67,7 @@ const services = [
     description:
       "Transform your email campaigns into revenue-generating assets with targeted strategies.",
     image: sp7,
-    link: "#",
+    link: "/services/email-marketing",
   },
   {
     id: 8,
@@ -91,7 +75,7 @@ const services = [
     description:
       "Run high-performing ad campaigns using Google Ads to boost traffic, leads, and sales.",
     image: sp8,
-    link: "#",
+    link: "/services/google-ads",
   },
   {
     id: 9,
@@ -99,7 +83,7 @@ const services = [
     description:
       "Create visually stunning designs from logos to branding materials with our expert designers.",
     image: sp9,
-    link: "#",
+    link: "/services/graphic-designing",
   },
 ];
 
@@ -147,7 +131,7 @@ export default function page() {
       </section>
       <section className='my-20 grid lg:grid-cols-3 gap-8 grid-cols-1 lg:px-20 px-7'>
         {services?.map((item) => (
-          <ProjectCard key={item.id} image={item.image} title={item.title} description={item.description} />
+          <ProjectCard link={item.link} key={item.id} image={item.image} title={item.title} description={item.description} />
         ))}
       </section>
       <Newsletter />

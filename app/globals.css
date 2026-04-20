@@ -54,3 +54,34 @@ body {
 .slick-list {
   margin: 0 -10px; /* balance outer spacing */
 }
+
+
+.graphic{
+  background: url('./../public/graphic/milad-fakurian-pP5gt6Qbzig-unsplash.png') center ;
+  background-size:cover;
+
+}
+.repo{
+  background: url('./../public/reputation/giorgio-tomassetti-mTslIt14OUo-unsplash.png') center ;
+  background-size:cover;
+}
+.google{
+  background: url('./../public/google/Group\ 163432.png') center ;
+  background-size:cover;
+}
+.social{
+  background: url('./../public/social/Group\ 163473@2x.png') center ;
+  background-size:cover;
+}
+
+.web{
+  background: url('./../public/web-bg.png') center ;
+  background-size:cover;
+}
+
+.sidenav{
+  background: url('./../public/mobile-bav.svg') center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50px;
+}
