@@ -18,7 +18,7 @@ export default function Navbar() {
 
 
   return (
-    <div className='flex items-center justify-between lg:px-20 md:px-10 px-4 bg-black py-3 md:py-4 fixed w-full opacity-90 backdrop-blur-2xl z-10'>
+    <div className='flex items-center justify-between lg:px-20 md:px-10 px-4 bg-black py-3 md:py-4 fixed w-full opacity-90 backdrop-blur-2xl z-12'>
 
       {/* Logo */}
       <Image src={logo} alt="logo" className='md:w-[150px] md:h-[70px] w-[100px] h-[70px]' />
@@ -31,7 +31,7 @@ export default function Navbar() {
         <div className="relative group">
           <button
             className='hover:text-[#B83DC8] text-white text-sm lg:text-lg font-medium font-sans flex items-center gap-1 transition'
-            
+
           >
             Services <i className="ri-arrow-drop-down-line text-lg"></i>
           </button>
@@ -64,7 +64,7 @@ export default function Navbar() {
               className="block px-4 py-3 text-center text-xs lg:text-sm border-b border-b-white/30 text-white hover:bg-white/10 transition">
               Online Reputation
             </Link>
-            <Link href="/services/social-media-maketing"
+            <Link href="/services/social-media-marketing"
               className="block px-4 py-3 text-center text-xs lg:text-sm border-b border-b-white/30 text-white hover:bg-white/10 transition">
               Social Media Marketing
             </Link>

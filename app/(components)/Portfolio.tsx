@@ -66,7 +66,7 @@ export default function Portfolio() {
   }
 
   return (
-    <section className='flex flex-col gap-8 py-10 overflow-x-hidden overflow-y-hidden'>
+    <section className='flex flex-col gap-8 py-10 overflow-x-hidden overflow-y-hidden' data-aos="zoom-in-down">
       <div className='flex flex-col gap-4 items-center text-center'>
         <p className='text-[#414141] font-normal text-3xl '>Our Latest Projects</p>
         <h3 className='text-[#414141] text-5xl font-normal'>EXPLORE <span className='text-[#81358A] font-bold'>OUR PORTFOLIO</span> </h3>
@@ -75,7 +75,7 @@ export default function Portfolio() {
         {projects.map((project) => (
           <div
             key={project.id}
-            className="group relative overflow-hidden rounded-2xl shadow-2xl shadow-white mx-"
+            className="group relative overflow-hidden rounded-2xl shadow-2xl shadow-white"
           >
             <img
               src={project.image}

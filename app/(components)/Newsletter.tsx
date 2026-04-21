@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Newsletter() {
   return (
-    <section className='project my-15 py-28'>
+    <section className='project my-15 py-28' data-aos="zoom-in-down">
         <div className='flex flex-col gap-12 max-w-374.5 mx-auto w-full'>
             <h4 className='lg:text-[40px] text-2xl leading-13 font-medium text-white text-center'>A CUSTOM WEBSITE DEVELOPMENT COMPANY THAT SPECIALIZES IN CREATING UNPARALLELED USER EXPERIENCES</h4>
             <div className='flex lg:flex-row flex-col gap-8 px-20 w-full'>

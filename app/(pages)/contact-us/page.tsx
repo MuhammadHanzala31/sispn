@@ -1,9 +1,80 @@
-import React from 'react'
+"use client"
+
+import React, { useState } from 'react'
+import toast from 'react-hot-toast';
 
 export default function page() {
+
+    const [form, setForm] = useState({
+        name: '',
+        email: '',
+        phone: '',
+        city: '',
+        message: '',
+    });
+
+    const [loading, setLoading] = useState(false);
+    const [success, setSuccess] = useState(false);
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        setForm({
+            ...form,
+            [e.target.name]: e.target.value,
+        });
+    };
+
+    const handleSubmit = async (e : any) => {
+        e.preventDefault()
+        try {
+            setLoading(true);
+            setSuccess(false);
+
+            const res = await fetch('/api/email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(form),
+            });
+
+            const data = await res.json();
+
+            if (data.success) {
+                setSuccess(true);
+                setForm({
+                    name: '',
+                    email: '',
+                    phone: '',
+                    city: '',
+                    message: '',
+                });
+
+                toast.success('email send successfully')
+            }
+        } catch (error) {
+            console.log(error);
+            toast.error('email not sent')
+        } finally {
+            setLoading(false);
+        }
+    };
+
+
+
     return (
         <main>
-            <section className='lg:py-52 py-10 flex flex-col justify-center items-center hero-banner'>
+            <section className='lg:py-52 py-10 flex flex-col justify-center items-center relative z-10'>
+                <div className="w-screen absolute left-0 justify-center top-0 -z-1 items-center flex h-full">
+                    <video
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        className="w-full h-full object-cover"
+                    >
+                        <source src="/hero-bg.mp4" type="video/mp4" />
+                    </video>
+                </div>
                 <div className='container mx-auto max-w-[1344px] '>
                     <div className='flex flex-col items-center gap-12 justify-center'>
                         <div className='flex flex-col gap-5 max-w-[996px] mx-auto'>
@@ -18,19 +89,19 @@ export default function page() {
                                     <div className='flex flex-col gap-4'>
                                         <div className='flex flex-row items-center gap-4'>
                                             <div className='bg-[#B83DC8] w-12 h-12 rounded-full flex justify-center items-center'>
-                                            <i className="ri-phone-line text-white text-2xl"></i>
+                                                <i className="ri-phone-line text-white text-2xl"></i>
                                             </div>
                                             <span className='text-xl font-sans text-white'>+1 (718) 395-9596</span>
                                         </div>
                                         <div className='flex flex-row items-center gap-4'>
                                             <div className='bg-[#B83DC8] w-12 h-12 rounded-full flex justify-center items-center'>
-                                            <i className="ri-whatsapp-line text-white text-2xl"></i>
+                                                <i className="ri-whatsapp-line text-white text-2xl"></i>
                                             </div>
                                             <span className='text-xl font-sans text-white'>+1 (602) 566-0822</span>
                                         </div>
                                         <div className='flex flex-row items-center gap-4'>
                                             <div className='bg-[#B83DC8] w-12 h-12 rounded-full flex justify-center items-center'>
-                                            <i className="ri-mail-line text-white text-2xl"></i>
+                                                <i className="ri-mail-line text-white text-2xl"></i>
                                             </div>
                                             <span className='text-xl font-sans text-white'>info@sispntech.com</span>
                                         </div>
@@ -44,19 +115,19 @@ export default function page() {
                                     <div className='flex flex-col gap-4'>
                                         <div className='flex flex-row items-center gap-4'>
                                             <div className='bg-[#B83DC8] w-12 h-12 rounded-full flex justify-center items-center'>
-                                            <i className="ri-phone-line text-white text-2xl"></i>
+                                                <i className="ri-phone-line text-white text-2xl"></i>
                                             </div>
                                             <span className='text-xl font-sans text-white'>+1 (718) 395-9596</span>
                                         </div>
                                         <div className='flex flex-row items-center gap-4'>
                                             <div className='bg-[#B83DC8] w-12 h-12 rounded-full flex justify-center items-center'>
-                                            <i className="ri-whatsapp-line text-white text-2xl"></i>
+                                                <i className="ri-whatsapp-line text-white text-2xl"></i>
                                             </div>
                                             <span className='text-xl font-sans text-white'>+1 (602) 566-0822</span>
                                         </div>
                                         <div className='flex flex-row items-center gap-4'>
                                             <div className='bg-[#B83DC8] w-12 h-12 rounded-full flex justify-center items-center'>
-                                            <i className="ri-mail-line text-white text-2xl"></i>
+                                                <i className="ri-mail-line text-white text-2xl"></i>
                                             </div>
                                             <span className='text-xl font-sans text-white'>info@sispntech.com</span>
                                         </div>
@@ -70,21 +141,71 @@ export default function page() {
                                 </div>
                             </div>
                             <div className=' lg:w-[60%] w-full bg-black/70 p-4 rounded-2xl'>
-                                <div className=' flex flex-col gap-6 w-full' >
+                                <div className='flex flex-col gap-6 w-full'>
+
+                                    {/* Row 1 */}
                                     <div className='flex lg:flex-row flex-col gap-5 items-center'>
-                                        <input type="text" className='text-white placeholder:text-white text-lg placeholder:text-lg p-3 border-b border-white/70 outline-none w-1/2' placeholder='Name *' />
-                                        <input type="Email" className='text-white placeholder:text-white text-lg placeholder:text-lg p-3 border-b border-white/70 outline-none w-1/2' placeholder='Email *' />
+                                        <input
+                                            name="name"
+                                            value={form.name}
+                                            onChange={handleChange}
+                                            className='text-white p-3 border-b border-white/70 w-1/2 outline-none'
+                                            placeholder='Name *'
+                                        />
+
+                                        <input
+                                            name="email"
+                                            value={form.email}
+                                            onChange={handleChange}
+                                            className='text-white p-3 border-b border-white/70 w-1/2 outline-none'
+                                            placeholder='Email *'
+                                        />
                                     </div>
-                                    <div className='flex lg:flex-row gap-5 flex-col items-center'>
-                                        <input type="tel" className='text-white placeholder:text-white text-lg placeholder:text-lg p-3 border-b border-white/70 outline-none w-1/2' placeholder='Phone Number*' />
-                                        <input type="text" className='text-white placeholder:text-white text-lg placeholder:text-lg p-3 border-b border-white/70 outline-none w-1/2' placeholder='Country*' />
+
+                                    {/* Row 2 */}
+                                    <div className='flex lg:flex-row flex-col gap-5 items-center'>
+                                        <input
+                                            name="phone"
+                                            value={form.phone}
+                                            onChange={handleChange}
+                                            className='text-white p-3 border-b border-white/70 w-1/2 outline-none'
+                                            placeholder='Phone Number *'
+                                        />
+
+                                        <input
+                                            name="city"
+                                            value={form.city}
+                                            onChange={handleChange}
+                                            className='text-white p-3 border-b border-white/70 w-1/2 outline-none'
+                                            placeholder='Country / City *'
+                                        />
                                     </div>
-                                    <textarea className="text-white/30 h-[120px] resize-none placeholder:text-white text-lg placeholder:text-lg p-3 border-b border-white/70 outline-none w-full" placeholder='How can we help you*'></textarea>
-                                    <div className='flex flex-row items-center gap-2 justify-center'>
-                                        <input type={'checkbox'} />
-                                        <span className='text-lg text-white font-normal'>By submitting you agree to our terms and policy.</span>
+
+                                    {/* Message */}
+                                    <textarea
+                                        name="message"
+                                        value={form.message}
+                                        onChange={handleChange}
+                                        className="text-white h-[120px] resize-none p-3 border-b border-white/70 outline-none w-full"
+                                        placeholder='How can we help you *'
+                                    />
+
+                                    {/* Checkbox */}
+                                    <div className='flex items-center gap-2 justify-center'>
+                                        <input type='checkbox' />
+                                        <span className='text-white text-sm'>
+                                            By submitting you agree to our terms and policy.
+                                        </span>
                                     </div>
-                                    <button className='px-6 py-3.5 rounded-lg text-white text-lg font-medium cursor-pointer  bg-linear-to-t hover:scale-[0.9] transition-all to-[#8E2391] from-[#421C47] w-fit mx-auto'>Send Message</button>
+
+                                    {/* Button */}
+                                    <button
+                                        onClick={handleSubmit}
+                                        disabled={loading}
+                                        className='px-6 py-3.5 rounded-lg text-white bg-gradient-to-t from-[#421C47] to-[#8E2391] w-fit mx-auto'
+                                    >
+                                        {loading ? 'Sending...' : 'Send Message'}
+                                    </button>
                                 </div>
                             </div>
                         </div>

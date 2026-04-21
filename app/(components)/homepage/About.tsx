@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function About() {
   return (
-    <section className='
+    <section data-aos="fade-left" className='
       flex flex-col lg:flex-row items-center gap-10
       px-4 sm:px-6 lg:px-20
       py-8 sm:py-12 lg:py-16
@@ -11,6 +11,7 @@ export default function About() {
       rounded-xl lg:rounded-3xl
       relative lg:-top-24
       shadow-2xl
+      z-10      
     '>
 
       {/* LEFT CONTENT */}

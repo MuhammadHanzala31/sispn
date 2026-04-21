@@ -1,3 +1,5 @@
+'use client';
+
 import Image from 'next/image'
 import React from 'react'
 import brand from '@/public/brand-1/Component 87 – 9.png'
@@ -24,9 +26,7 @@ import brand6 from '@/public/b-6.png'
 import brand7 from '@/public/b-7.png'
 import brand8 from '@/public/b-8.png'
 import Link from 'next/link'
-
-
-
+import VideoBg from '@/app/(components)/Video'
 
 const services = [
   {
@@ -87,55 +87,123 @@ const services = [
   },
 ];
 
-
 export default function page() {
   return (
     <main>
-      <section className='lg:py-52 py-10 flex flex-col justify-center items-center hero-banner'>
+
+      {/* HERO */}
+      <section className='lg:py-30 py-10 pb-[60px] flex flex-col justify-center items-center relative z-10'>
+        <VideoBg/>
+
         <div className='container mx-auto max-w-[1344px] '>
           <div className='flex flex-col items-center gap-8 justify-center'>
-            <h1 className='text-[69px] font-white text-shadow-amber-50 text-center text-white font-bold'>SERVICES</h1>
+
+            <h1 data-aos="fade-down" className='text-[69px] text-center text-white font-bold'>
+              SERVICES
+            </h1>
+
             <div className='flex lg:flex-row flex-col gap-8 items-center w-full'>
-              <div className='flex flex-col gap-2 lg:w-1/2 w-full'>
-                <p className='text-xl font-sans text-white'>What Can We Do</p>
-                <span className='text-3xl font-sans font-bold text-white'>SERVICES WE CAN HELP YOU WITH</span>
+
+              <div data-aos="fade-right" className='flex flex-col gap-2 lg:w-1/2 w-full'>
+                <p className='text-xl text-white'>What Can We Do</p>
+                <span className='text-3xl font-bold text-white'>
+                  SERVICES WE CAN HELP YOU WITH
+                </span>
               </div>
+
               <div className='grid grid-cols-3 gap-8 lg:w-1/2 w-full relative'>
-                <Image src={brand1} alt='brand1' />
-                <Image src={brand2} alt='brand1' className='relative -top-28' />
-                <Image src={brand3} alt='brand1' />
+                <Image data-aos="zoom-in" src={brand1} alt='brand1' />
+                <Image data-aos="zoom-in" data-aos-delay="100" src={brand2} alt='brand2' className='relative -top-28' />
+                <Image data-aos="zoom-in" data-aos-delay="200" src={brand3} alt='brand3' />
               </div>
+
             </div>
+
             <div className='flex flex-row items-center gap-4'>
+
               <div className='grid grid-cols-3 gap-8 lg:w-1/2 w-full relative'>
-                <Image src={brand4} alt='brand1' />
-                <Image src={brand5} alt='brand1' className='relative top-28' />
-                <Image src={brand6} alt='brand1' />
+                <Image data-aos="fade-up" src={brand4} alt='brand4' />
+                <Image data-aos="fade-up" data-aos-delay="100" src={brand5} alt='brand5' className='relative top-28' />
+                <Image data-aos="fade-up" data-aos-delay="200" src={brand6} alt='brand6' />
               </div>
+
               <div className='grid grid-cols-3 gap-8 lg:w-1/2 w-full relative'>
-                <Image src={brand7} alt='brand1 ' className='relative top-18' />
-                <Image src={brand8} alt='brand1' className='relative -top-22' />
-                <Image src={brand3} alt='brand1' />
+                <Image data-aos="fade-up" src={brand7} alt='brand7' className='relative top-18' />
+                <Image data-aos="fade-up" data-aos-delay="100" src={brand8} alt='brand8' className='relative -top-22' />
+                <Image data-aos="fade-up" data-aos-delay="200" src={brand3} alt='brand3' />
               </div>
+
             </div>
+
           </div>
         </div>
       </section>
-      <section className='my-15 max-w-375.5  mx-auto flex gap-8 flex-col items-center text-center'>
-        <p className='text-[#414141] text-2xl font-normal'>What Can We Do</p>
-        <h3 className='text-[#81358A] text-4xl font-bold'>SERVICES WE CAN HELP YOU WITH</h3>
-        <p className='text-[#414141] text-xl font-normal leading-9'>There is no denying that the future is digital. Every digital touchpoint offers a chance to establish a connection with a business’s audience.</p>
-        <p className='text-[#414141] text-xl font-normal leading-9'> <span className='text-[#81358A] font-bold'>SISPN Technology </span> helps you scale your business faster than you think possible. Partnering with us gives you access to our custom website development services. We are a leading provider of digital marketing services for small businesses, with innovative designers and some of the most creative writers in the industry. Our white-label services ensure that 100% of your requirements are fulfilled, and you own 100% of the work. Our partners enjoy unlimited changes, rechecks, and projects, fast turnaround, flawless human support, and flexible pricing.</p>
-        <span className='text-[#414141] text-xl font-bold'>What’s stopping you? <br /> Budget? Time? Trust?</span>
-        <Link href={'/contact-us'} className='px-6 py-3.5 rounded-lg text-white text-xl font-medium cursor-pointer  bg-linear-to-t hover:scale-[0.9] transition-all to-[#8E2391] from-[#421C47] w-fit'>Let’s take your business to the next level!</Link>
+
+
+      {/* CONTENT */}
+      <section className='my-15 max-w-375.5 mx-auto flex gap-8 flex-col items-center text-center'>
+
+        <p data-aos="fade-up" className='text-[#414141] text-2xl'>
+          What Can We Do
+        </p>
+
+        <h3 data-aos="fade-up" data-aos-delay="100" className='text-[#81358A] text-4xl font-bold'>
+          SERVICES WE CAN HELP YOU WITH
+        </h3>
+
+        <p data-aos="fade-up" data-aos-delay="200" className='text-[#414141] text-xl leading-9'>
+          There is no denying that the future is digital. Every digital touchpoint offers a chance to establish a connection with a business’s audience.
+        </p>
+
+        <p data-aos="fade-up" data-aos-delay="300" className='text-[#414141] text-xl leading-9'>
+          <span className='text-[#81358A] font-bold'>SISPN Technology </span>
+          helps you scale your business faster than you think possible...
+        </p>
+
+        <span data-aos="zoom-in" data-aos-delay="400" className='text-[#414141] text-xl font-bold'>
+          What’s stopping you? <br /> Budget? Time? Trust?
+        </span>
+
+        <Link 
+          data-aos="zoom-in-up"
+          data-aos-delay="500"
+          href={'/contact-us'} 
+          className='px-6 py-3.5 rounded-lg text-white text-xl bg-linear-to-t hover:scale-[0.9] transition-all to-[#8E2391] from-[#421C47]'
+        >
+          Let’s take your business to the next level!
+        </Link>
+
       </section>
+
+
+      {/* SERVICES GRID */}
       <section className='my-20 grid lg:grid-cols-3 gap-8 grid-cols-1 lg:px-20 px-7'>
-        {services?.map((item) => (
-          <ProjectCard link={item.link} key={item.id} image={item.image} title={item.title} description={item.description} />
+
+        {services?.map((item, index) => (
+          <div
+            key={item.id}
+            data-aos="fade-up"
+            data-aos-delay={index * 100}
+          >
+            <ProjectCard
+              link={item.link}
+              image={item.image}
+              title={item.title}
+              description={item.description}
+            />
+          </div>
         ))}
+
       </section>
-      <Newsletter />
-      <RequestForm />
+
+      <div data-aos="fade-up">
+        <Newsletter />
+      </div>
+
+      <div data-aos="fade-up" data-aos-delay="200">
+        <RequestForm />
+      </div>
+
     </main>
   )
 }

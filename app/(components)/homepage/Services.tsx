@@ -12,7 +12,7 @@ import Link from 'next/link'
 
 export default function Services() {
   return (
-    <section className='py-10 flex gap-6 lg:flex-row items-center flex-col justify-center lg:px-[80px] md:px-[40px] px-6'  >
+    <section data-aos="fade-down" className='py-10 flex gap-6 lg:flex-row items-center flex-col justify-center lg:px-[80px] md:px-[40px] px-6'  >
         <div className='flex flex-col gap-5 lg:w-1/2 w-full'>
             <p className='text-[#414141] text-2xl font-normal'>What Can We Do</p>
             <h3 className='text-[#81358A] text-4xl font-bold'>SERVICES WE CAN HELP YOU WITH</h3>

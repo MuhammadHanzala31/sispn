@@ -142,8 +142,9 @@ const googleAdsServices = [
       title: "Certified Google Ads Professionals",
       description:
         "Our team consists of certified Google Ads experts who ensure your campaigns are optimized and aligned with best practices.",
-      image: "https://images.unsplash.com/photo-1581091870627-3d6d1c7b9b45?w=800&q=80"
-    },
+image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1000&q=80"
+
+},
     {
       id: 6,
       title: "Dedicated Support",

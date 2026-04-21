@@ -2,10 +2,10 @@
 
 import PortfolioSection from '@/app/(components)/PortfolioTabs'
 import RequestForm from '@/app/(components)/RequestForm';
+import VideoBg from '@/app/(components)/Video';
 import React, { useState } from 'react'
 
 const tabs = ["All", "Web Design", "UI/UX Design", "Mobile Apps", "Logo Design"];
-
 
 const projects = [
     {
@@ -46,7 +46,6 @@ const projects = [
     },
 ];
 
-
 export default function page() {
     const [activeTab, setActiveTab] = useState("All");
 
@@ -55,25 +54,48 @@ export default function page() {
             ? projects
             : projects.filter((p) => p.category === activeTab);
 
-
     return (
         <main>
-            <section className='hero-banner lg:px-[80px] md:px-[40px] px-6 lg:py-52 py-10'>
-                <h2 className='text-[69px] text-white font-bold text-center'>SISPN FOLIO</h2>
+
+            {/* HERO */}
+            <section className='relative z-10 lg:px-[80px] md:px-[40px] px-6 lg:py-52 py-10'>
+                
+                <VideoBg/>
+
+                <h2 
+                    data-aos="fade-down"
+                    className='text-[69px] text-white font-bold text-center'
+                >
+                    SISPN FOLIO
+                </h2>
+
                 <div className='flex flex-row items-center justify-between'>
-                    <div className='flex flex-col gap-4'>
+
+                    <div 
+                        data-aos="fade-right"
+                        className='flex flex-col gap-4'
+                    >
                         <p className='text-white text-2xl'>Our Portfolio</p>
-                        <h4 className='text-[#B83DC8] text-4xl font-bold'>SOME RECENT WORK</h4>
+                        <h4 className='text-[#B83DC8] text-4xl font-bold'>
+                            SOME RECENT WORK
+                        </h4>
                     </div>
-                    <div className=" border-b border-white flex flex-wrap gap-2">
-                        {tabs.map((tab) => (
+
+                    <div 
+                        data-aos="fade-left"
+                        className="border-b border-white flex flex-wrap gap-2"
+                    >
+                        {tabs.map((tab, index) => (
                             <button
                                 key={tab}
                                 onClick={() => setActiveTab(tab)}
-                                className={` px-5 py-3 font-semibold transition-all duration-300 cursor-pointer text-xl ${activeTab === tab
-                                    ? "text-[#e040fb] border-b-2 border-[#e040fb]"
-                                    : "text-white"
-                                    }`}
+                                data-aos="zoom-in"
+                                data-aos-delay={index * 80}
+                                className={`px-5 py-3 font-semibold transition-all duration-300 cursor-pointer text-xl ${
+                                    activeTab === tab
+                                        ? "text-[#e040fb] border-b-2 border-[#e040fb]"
+                                        : "text-white"
+                                }`}
                             >
                                 {tab}
                             </button>
@@ -81,10 +103,15 @@ export default function page() {
                     </div>
 
                 </div>
+
+                {/* PROJECT GRID */}
                 <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 mt-7">
-                    {filtered.map((project) => (
+
+                    {filtered.map((project, index) => (
                         <div
                             key={project.id}
+                            data-aos="fade-up"
+                            data-aos-delay={index * 100}
                             className="group relative overflow-hidden rounded-2xl shadow-2xl shadow-white"
                         >
                             <img
@@ -92,18 +119,32 @@ export default function page() {
                                 alt={project.title}
                                 className="h-64 w-full object-cover transition-transform duration-500 group-hover:scale-105 md:h-72"
                             />
+
                             {/* Overlay */}
                             <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/80 via-black/20 to-transparent p-5 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+
                                 <span className="mb-1 text-xs font-semibold uppercase tracking-widest text-[#e040fb]">
                                     {project.category}
                                 </span>
-                                <h3 className="text-lg font-bold text-white">{project.title}</h3>
+
+                                <h3 className="text-lg font-bold text-white">
+                                    {project.title}
+                                </h3>
+
                             </div>
+
                         </div>
                     ))}
+
                 </div>
+
             </section>
-            <RequestForm/>
+
+            {/* FORM */}
+            <div data-aos="fade-up">
+                <RequestForm/>
+            </div>
+
         </main>
     )
 }

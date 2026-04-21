@@ -78,7 +78,7 @@ const googleAdsServices = [
         id: 1,
         title: "Search Ads",
         image:
-            "https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?auto=format&fit=crop&w=1000&q=80",
+            "https://images.unsplash.com/photo-1556155092-490a1ba16284?auto=format&fit=crop&w=1000&q=80",
         description:
             "We create ads for the keywords with high intent so that your advertisements appear at the very top in Google Search when customers look for services or products similar to yours. This identifies leads who are ready to buy and brings relevant and purchase-intent traffic to your website.",
     },
@@ -86,15 +86,15 @@ const googleAdsServices = [
         id: 2,
         title: "Display Ads",
         image:
-            "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1000&q=80",
+            "https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&w=1000&q=80",
         description:
-            "SISPN Tech designs visually appealing images and banner ads that run on the Google Display Network, reaching potential customers across millions of apps and websites. Through showcasing your companyâ€™s brand on relevant websites, display campaigns increase the visibility of your business.",
+            "SISPN Tech designs visually appealing images and banner ads that run on the Google Display Network, reaching potential customers across millions of apps and websites. Through showcasing your company’s brand on relevant websites, display campaigns increase the visibility of your business.",
     },
     {
         id: 3,
         title: "Shopping Ads",
         image:
-            "https://images.unsplash.com/photo-1515165562835-c3b8b47a6a9c?auto=format&fit=crop&w=1000&q=80",
+            "https://images.unsplash.com/photo-1607083206869-4c7672e72a8a?auto=format&fit=crop&w=1000&q=80",
         description:
             "For e-commerce businesses, our shopping campaigns display captivating product images as well as prices and other details directly in Google results. The customers see your products and are able to click through to purchase, which increases the likelihood of buying and can help you convert browsers into customers.",
     },
@@ -102,7 +102,7 @@ const googleAdsServices = [
         id: 4,
         title: "Video Ads",
         image:
-            "https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=1000&q=80",
+            "https://images.unsplash.com/photo-1522199710521-72d69614c702?auto=format&fit=crop&w=1000&q=80",
         description:
             "We create compelling video advertisements on YouTube along with other Google partner websites, employing the power of storytelling and innovative visuals to draw the attention of viewers. Video ads are perfect to showcase products and build brand loyalty in a format that is engaging beyond the text-based approach.",
     },
@@ -110,7 +110,7 @@ const googleAdsServices = [
         id: 5,
         title: "Remarketing Ads",
         image:
-            "https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1000&q=80",
+            "https://images.unsplash.com/photo-1556742049-908d8e5f8b46?auto=format&fit=crop&w=1000&q=80",
         description:
             "We encourage the visitors to return who have previously visited your website or shown any interest in the displayed ads while browsing the internet or apps. In keeping your brand at the forefront of their minds, remarketing campaigns help to encourage potential customers to come back and make a purchase.",
     },
@@ -120,7 +120,7 @@ const googleAdsServices = [
         image:
             "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1000&q=80",
         description:
-            "SISPN Tech offers Local Service Ads that connect your business with customers in the area where they are searching for your services. These ads highlight your company prominently (often with a â€œGoogle Guaranteedâ€ badge) and offer direct phone or text messaging options that make it easy for potential customers in the area to reach out right away.",
+            "SISPN Tech offers Local Service Ads that connect your business with customers in the area where they are searching for your services. These ads highlight your company prominently (often with a “Google Guaranteed” badge) and offer direct phone or text messaging options that make it easy for potential customers in the area to reach out right away.",
     },
     {
         id: 7,
@@ -128,7 +128,7 @@ const googleAdsServices = [
         image:
             "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=1000&q=80",
         description:
-            "If youâ€™ve developed a mobile app, our App Promotion Ads can target advertisements on smartphones on Google Search, YouTube, and the Play Store to encourage installations and increase engagement. We make use of the data from the app store to design advertisements that are appealing to those who are most susceptible to downloading and installing your app.",
+            "If you’ve developed a mobile app, our App Promotion Ads can target advertisements on smartphones on Google Search, YouTube, and the Play Store to encourage installations and increase engagement. We make use of the data from the app store to design advertisements that are appealing to those who are most susceptible to downloading and installing your app.",
     },
     {
         id: 8,
@@ -142,9 +142,9 @@ const googleAdsServices = [
         id: 9,
         title: "Performance Max",
         image:
-            "https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=1000&q=80",
+            "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1000&q=80",
         description:
-            "Performance Max campaigns of SISPN Tech utilize Googleâ€™s AI to deliver goal-driven ads across all Google channels from a single campaign, including Search, Display, YouTube, Gmail, Maps, and Discover. By using your marketing objective, creative assets, and budget, Performance Max optimizes the ads and bids for maximum conversions and ROI.",
+            "Performance Max campaigns of SISPN Tech utilize Google’s AI to deliver goal-driven ads across all Google channels from a single campaign, including Search, Display, YouTube, Gmail, Maps, and Discover. By using your marketing objective, creative assets, and budget, Performance Max optimizes the ads and bids for maximum conversions and ROI.",
     },
 ];
 
@@ -153,7 +153,7 @@ const googleAdsWhyChooseUs = [
         id: 1,
         title: "Customized Strategies",
         image:
-            "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1000&q=80",
+            "https://images.unsplash.com/photo-1492724441997-5dc865305da7",
         description:
             "We know very well that each business is different from the other. Our team creates custom Google Ads strategies and funnel that are aligned with your business's specific objectives, goals and the specific industry aspects. This approach is customized to ensure higher engagement and higher return on investment.",
     },
@@ -161,7 +161,7 @@ const googleAdsWhyChooseUs = [
         id: 2,
         title: "Data-Driven Decision Making",
         image:
-            "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1000&q=80",
+            "https://images.unsplash.com/photo-1556155092-8707de31f9c4",
         description:
             "Our campaigns are rooted in facts. We monitor the performance of our campaigns on regular basis as well as analyze user behaviour and adapt strategies in real time to maximize the outcomes. Our commitment to analytics will ensure that the advertising budget you pay for is utilized efficiently.",
     },
@@ -169,7 +169,7 @@ const googleAdsWhyChooseUs = [
         id: 3,
         title: "Transparent Communication",
         image:
-            "https://images.unsplash.com/photo-1556742049-908d8e5f8b46?auto=format&fit=crop&w=1000&q=80",
+            "https://images.unsplash.com/photo-1556761175-b413da4baf72",
         description:
             "Our company believes in establishing trust by being transparent. We will send you regular, comprehensive reports of your campaign's success and our team is always ready for discussions on strategies and to respond the questions for sharing information.",
     },
@@ -177,7 +177,7 @@ const googleAdsWhyChooseUs = [
         id: 4,
         title: "Advanced Tools and Technologies",
         image:
-            "https://images.unsplash.com/photo-1581091870627-3b1a4fef9d66?auto=format&fit=crop&w=1000&q=80",
+            "https://images.unsplash.com/photo-1518779578993-ec3579fee39f",
         description:
             "SISPN Tech uses the most up-to-date techniques and tools to remain ahead of this changing digital advertising industry. This lets us implement new and innovative strategies that yield higher results from your advertising campaigns.",
     },
@@ -185,7 +185,7 @@ const googleAdsWhyChooseUs = [
         id: 5,
         title: "Certified Google Ads Professionals",
         image:
-            "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1000&q=80",
+            "https://images.unsplash.com/photo-1522071820081-009f0129c71c",
         description:
             "Our team at SISPN consists of experts who are certified Google Ads professionals. We bring the most authentic expertise and experience to your ads. This ensures that your advertisements are optimized for effectiveness and are in compliance with the most effective practices.",
     },
@@ -193,7 +193,7 @@ const googleAdsWhyChooseUs = [
         id: 6,
         title: "Dedicated Support",
         image:
-            "https://images.unsplash.com/photo-1521791055366-0d553872125f?auto=format&fit=crop&w=1000&q=80",
+            "https://images.unsplash.com/photo-1551434678-e076c223a692",
         description:
             "When you work with SISPN Tech, you're not just another customer for us. You'll get an account manager who understands your needs and is dedicated to your achievement. This personal service ensures that your campaigns receive the right time and attention they need.",
     },

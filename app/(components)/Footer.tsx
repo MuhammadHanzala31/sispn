@@ -20,17 +20,17 @@ const menu = [
         links: [
             { label: 'Search Engine Optimization', href: '/services/seo' },
             { label: 'Website Development', href: '/website-design-and-development' },
-            { label: 'Content Marketing', href: '/services' },
-            { label: 'E-Commerce Marketing', href: '/services' },
+            { label: 'Google Ads', href: '/services/google-ads' },
+            { label: 'Graphic Designing', href: '/services/graphic-designing' },
         ],
     },
 ];
 
 const socialLinks = [
-    { label: 'Facebook', href: '#', iconClass: 'ri-facebook-circle-fill' },
-    { label: 'Instagram', href: '#', iconClass: 'ri-instagram-line' },
-    { label: 'LinkedIn', href: '#', iconClass: 'ri-linkedin-box-fill' },
-    { label: 'Twitter', href: '#', iconClass: 'ri-twitter-x-fill' },
+    { label: 'Facebook', href: 'https://www.facebook.com/sispntech', iconClass: 'ri-facebook-circle-fill' },
+    { label: 'Instagram', href: 'https://www.instagram.com/sispntech', iconClass: 'ri-instagram-line' },
+    { label: 'LinkedIn', href: 'https://www.linkedin.com/company/sispntech/', iconClass: 'ri-linkedin-box-fill' },
+    { label: 'Twitter', href: 'https://x.com/sispntech', iconClass: 'ri-twitter-x-fill' },
 ];
 
 export default function Footer() {

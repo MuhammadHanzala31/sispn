@@ -4,7 +4,7 @@ import img from '@/public/r-form-img.png'
 
 export default function RequestForm() {
     return (
-        <section className='lg:px-[80px] md:px-[40px] px-6 my-15 flex lg:flex-row flex-col items-center gap-8'>
+        <section className='lg:px-[80px] md:px-[40px] px-6 my-15 flex lg:flex-row flex-col items-center gap-8' data-aos="flip-up">
             <div className='lg:w-1/2 w-full'>
                 <Image src={img} alt='r-form' />
             </div>
