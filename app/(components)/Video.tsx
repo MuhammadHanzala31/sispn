@@ -8,7 +8,7 @@ export default function VideoBg() {
         playsInline
         className="w-full h-full object-cover"
       >
-        <source src="/hero-bg.mp4" type="video/mp4" />
+        <source src="https://res.cloudinary.com/dvcfuwk8i/video/upload/v1776793699/hero-bg_jj0uzu.mp4" type="video/mp4" />
       </video>
     </div>
   );
