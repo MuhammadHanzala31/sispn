@@ -80,6 +80,10 @@ body {
   background: url('./../public/web-bg.png') center ;
   background-size:cover;
 }
+.email{
+  background: url('./../public/email.png') center ;
+  background-size:cover;
+}
 
 .sidenav{
   background: url('./../public/mobile-bav.svg') center;
