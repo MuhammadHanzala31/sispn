@@ -6,7 +6,6 @@ export default function Hero() {
   return (
     <section className='py-16  sm:py-40 pt-50 md:py-28 lg:py-40 flex items-center justify-center relative z-10'>
       <VideoBg />
-      <AOSProvider>
         <div className=' mx-auto max-w-[1344px] px-4 sm:px-6 lg:px-8' data-aos="fade-up">
 
           <div className='flex flex-col items-center gap-6 sm:gap-8 text-center'>
@@ -43,7 +42,7 @@ export default function Hero() {
           </div>
 
         </div>
-      </AOSProvider>
+      
 
     </section>
   )
