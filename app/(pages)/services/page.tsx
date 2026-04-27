@@ -27,6 +27,7 @@ import brand7 from '@/public/b-7.png'
 import brand8 from '@/public/b-8.png'
 import Link from 'next/link'
 import VideoBg from '@/app/(components)/Video'
+import PricingSection from '@/app/(components)/PricingSection';
 
 const services = [
   {
@@ -114,7 +115,7 @@ export default function page() {
               <div className='grid grid-cols-3 gap-8 lg:w-1/2 w-full relative'>
                 <Image data-aos="zoom-in" src={brand1} alt='brand1' />
                 <Image data-aos="zoom-in" data-aos-delay="100" src={brand2} alt='brand2' className='relative -top-28' />
-                <Image data-aos="zoom-in" data-aos-delay="200" src={brand3} alt='brand3' />
+                {/* <Image data-aos="zoom-in" data-aos-delay="200" src={brand3} alt='brand3' /> */}
               </div>
 
             </div>
@@ -122,7 +123,7 @@ export default function page() {
             <div className='flex flex-row items-center gap-4'>
 
               <div className='grid grid-cols-3 gap-8 lg:w-1/2 w-full relative'>
-                <Image data-aos="fade-up" src={brand4} alt='brand4' />
+                <Image data-aos="fade-up" src={brand3} alt='brand4' />
                 <Image data-aos="fade-up" data-aos-delay="100" src={brand5} alt='brand5' className='relative top-28' />
                 <Image data-aos="fade-up" data-aos-delay="200" src={brand6} alt='brand6' />
               </div>
@@ -195,6 +196,7 @@ export default function page() {
         ))}
 
       </section>
+      <PricingSection/>
 
       <div data-aos="fade-up">
         <Newsletter />

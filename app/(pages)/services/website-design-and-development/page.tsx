@@ -10,6 +10,11 @@ import p6 from '@/public/d-p-6/azwedo-l-lc-nT4WsKUoLo4-unsplash.png'
 import p7 from '@/public/d-p-7/dmitriy-demidov-iuuJC_pjLU0-unsplash.png'
 import StrategyCard from '@/app/(components)/StrategyCard';
 import RequestForm from '@/app/(components)/RequestForm'
+import { webDevPricing } from '@/app/pricingData'
+import PricingCard from '@/app/(components)/PricingCard'
+import Image from 'next/image'
+import bg from '@/public/packages-bg.webp'
+
 
 
 
@@ -27,31 +32,31 @@ const services = [
             "Easily manage your site content with customized CMS platforms. Whether it's WordPress, Drupal, Joomla, or a headless CMS solution, we tailor the setup to give you full control without requiring technical expertise.",
     },
     {
-        image : p3,
+        image: p3,
         title: "E-Commerce Development",
         description:
             "Turn visitors into customers with secure, fast, and conversion-focused online product catalogs. From setup, payment gateway integration, inventory sync, and smooth checkout flows designed to reduce cart abandonment.",
     },
     {
-        image : p4,
+        image: p4,
         title: "Front-End & Back-End Development",
         description:
             "From sleek user interfaces to solid, secure backend systems, we handle both ends of development. Our front-end stack includes HTML5, CSS3, JavaScript, React, Angular, and Vue.js. On the backend, we use Python, Java, PHP, .NET, and more to ensure your site runs smoothly at scale.",
     },
     {
-        image : p5,
+        image: p5,
         title: "Web Portals & Intranets",
         description:
             "We design secure, role-based portals for employees, customers, or partners. From document sharing to real-time dashboards, we help streamline internal processes and external collaboration.",
     },
     {
-        image : p6,
+        image: p6,
         title: "Mobile-Responsive Web Design",
         description:
             "We create websites that adapt perfectly to any device — desktop, tablet, or mobile. With a mobile-first approach and SEO optimization built in, your site won’t just look good; it will perform and rank better, too.",
     },
     {
-        image : p7,
+        image: p7,
         title: "Maintenance & Support",
         description:
             "Your digital platform is never 'done' — it evolves. That’s why we offer proactive post-launch services: performance monitoring, bug fixes, feature enhancements, and security patches to keep your site running flawlessly.",
@@ -144,6 +149,17 @@ export default function page() {
                     </div>
                 </div>
             </section>
+            <section className="py-16 bg-black relative z-1">
+                <h3 className="text-white text-4xl font-semibold text-center mb-4">Packages</h3>
+                <Image src={bg} alt="bg" className="w-full h-full absolute top-0 left-0 -z-1" />
+
+                <div className="flex flex-wrap justify-center gap-6 px-4">
+                    {webDevPricing.map((plan, index) => (
+                        <PricingCard key={index} {...plan} />
+                    ))}
+                </div>
+
+            </section>
             <section className='lg:py-15 py-12 lg:px-[80px] md:px-[40px] px-6'>
                 <div className='flex flex-col gap-5'>
                     <div className='flex flex-col gap-2 max-w-[791px] mx-auto'>
@@ -180,7 +196,7 @@ export default function page() {
                     </div>
                 </div>
             </section>
-            <RequestForm/>
+            <RequestForm />
         </main>
     )
 }

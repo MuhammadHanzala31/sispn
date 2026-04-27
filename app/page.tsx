@@ -6,6 +6,7 @@ import Portfolio from "./(components)/Portfolio";
 import AwardsSlider from "./(components)/Award";
 import RequestForm from "./(components)/RequestForm";
 import Newsletter from "./(components)/Newsletter";
+import PricingSection from "./(components)/PricingSection";
 
 export default function Home() {
   return (
@@ -13,11 +14,13 @@ export default function Home() {
       <Hero />
       <About/>
       <Services/>
+      <PricingSection/>
       <Projects/>
       <Portfolio/>
       <AwardsSlider/>
       <Newsletter/>
       <RequestForm/>
+      
     </main>
   );
 }

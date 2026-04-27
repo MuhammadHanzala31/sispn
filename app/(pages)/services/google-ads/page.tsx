@@ -110,7 +110,7 @@ const googleAdsServices = [
         id: 5,
         title: "Remarketing Ads",
         image:
-            "https://images.unsplash.com/photo-1556742049-908d8e5f8b46?auto=format&fit=crop&w=1000&q=80",
+            "https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=1000&q=80",
         description:
             "We encourage the visitors to return who have previously visited your website or shown any interest in the displayed ads while browsing the internet or apps. In keeping your brand at the forefront of their minds, remarketing campaigns help to encourage potential customers to come back and make a purchase.",
     },
@@ -266,7 +266,7 @@ export default function page() {
                     </div>
                 </div>
             </section>
-            <RequestForm/>
+            <RequestForm />
         </main>
     )
 }

@@ -3,6 +3,11 @@ import React from 'react'
 import imageCard from '@/public/seo-card.png'
 import StrategyCard from '@/app/(components)/StrategyCard';
 import RequestForm from '@/app/(components)/RequestForm';
+import { graphicPrice } from '@/app/pricingData';
+import PricingCard from '@/app/(components)/PricingCard';
+import Image from 'next/image';
+import bg from '@/public/packages-bg.webp'
+
 
 
 const reputationManagementBenefits = [
@@ -187,7 +192,7 @@ const googleAdsServices = [
       title: "Motion Graphics & Animation",
       description:
         "Engaging animated videos, explainer animations, and social media clips that bring your brand story to life.",
-      image: "https://images.unsplash.com/photo-1581091012184-5c1b5c8c6b0d?w=800&q=80"
+      image: "https://images.unsplash.com/photo-1690228254548-31ef53e40cd1?w=800&q=80"
     },
     {
       id: 9,
@@ -242,6 +247,17 @@ export default function page() {
                         {reputationManagementBenefits?.map((item, idx) => (<StrategyCard key={idx} title={item.title} description={item.description} />))}
                     </div> */}
                 </div>
+            </section>
+            <section className="py-16 bg-black relative z-1">
+                <h3 className="text-white text-4xl font-semibold text-center mb-4">Packages</h3>
+                <Image src={bg} alt="bg" className="w-full h-full absolute top-0 left-0 -z-1" />
+
+                <div className="flex flex-wrap justify-center gap-6 px-4">
+                    {graphicPrice.map((plan, index) => (
+                        <PricingCard key={index} {...plan} />
+                    ))}
+                </div>
+
             </section>
             <section className='lg:py-15 py-12 lg:px-[80px] md:px-[40px] px-6'>
                 <div className='flex flex-col gap-5'>

@@ -19,9 +19,9 @@ export async function POST(req: Request) {
         });
 
         await transporter.sendMail({
-            from: `Website Form" <${'onlinequrancourse.com'}>`,
-            to: email,
-            subject: "Sispn Tech Lead Form",
+            from: ` <${email}>`,
+            to: 'sispntech@gmail.com',
+            subject: "Sispn Tech Website Lead ",
             html: `
    <body
   style="
@@ -97,7 +97,7 @@ export async function POST(req: Request) {
                   <td>${name}</td>
                 </tr>
                 <tr>
-                  <td><strong>Email:</strong></td>
+                  <td><strong> From:</strong></td>
                   <td>${email}</td>
                 </tr>
                 <tr style="background:#1a1a1a;">

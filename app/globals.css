@@ -18,6 +18,9 @@
     --foreground: #ededed;
   }
 }
+/* html{
+  overflow-x:hidden !important;
+} */
 
 body {
   overflow-x: hidden !important;
@@ -90,4 +93,34 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 50px;
+}
+
+
+/* Scrollbar ki width set karne ke liye */
+::-webkit-scrollbar {
+  width: 10px; /* Vertical scrollbar ki chaurai */
+  height: 10px; /* Horizontal scrollbar ki unchai */
+}
+
+/* Scrollbar ka background track */
+::-webkit-scrollbar-track {
+  background: white; 
+  border-radius: 5px;
+}
+
+/* Scrollbar ka handle (jo move hota hai) */
+::-webkit-scrollbar-thumb {
+  background: #662C6D; 
+  border-radius: 2px; /* Isse scroll bar rounded ho jayega */
+  border: 2px solid #f1f1f1; /* Handle aur track ke darmiyan halka gap */
+}
+
+/* Scrollbar handle par hover effect */
+::-webkit-scrollbar-thumb:hover {
+  background: #4a204f; /* Hover karne par thoda dark color */
+}
+
+/* Scrollbar ke buttons (arrows) ko hide karne ke liye */
+::-webkit-scrollbar-button {
+  display: none;
 }

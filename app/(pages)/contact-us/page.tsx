@@ -49,7 +49,7 @@ export default function page() {
                     message: '',
                 });
 
-                toast.success('email send successfully')
+                toast.success('Thanks Email Received successfully')
             }
         } catch (error) {
             console.log(error);

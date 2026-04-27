@@ -33,7 +33,7 @@ export default function Services() {
             <Image src={brand4} alt='brand' width={200} />
           </Link>
           <Link className='hover:scale-[1.1] hover:rotate-1' href={'/services/social-media-marketing'}>
-            <Image src={brand5} alt='brand' width={200} />
+            <Image src={brand8} alt='brand' width={200} />
           </Link>
         </div>
         <div className='flex gap-7 justify-center'>
@@ -44,7 +44,7 @@ export default function Services() {
             <Image src={brand7} alt='brand' width={200} />
           </Link>
           <Link className='hover:scale-[1.1] hover:rotate-1' href={'/services/website-design-and-development'}>
-            <Image src={brand7} alt='brand' width={200} />
+            <Image src={brand2} alt='brand' width={200} />
           </Link>
         </div>
       </div>
