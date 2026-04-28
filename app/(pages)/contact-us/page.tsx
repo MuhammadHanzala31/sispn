@@ -86,7 +86,7 @@ export default function page() {
                                 <p className='text-2xl font-sans text-white'>Getting Touch</p>
                                 <span className='text-5xl font-sans font-bold text-[#B83DC8]'>DO YOU HAVE AN IDEA FOR A PROJECT?</span>
                                 <div className='flex flex-row justify-between items-center'>
-                                    <div className='flex flex-col gap-4'>
+                                    {/* <div className='flex flex-col gap-4'>
                                         <div className='flex flex-row items-center gap-4'>
                                             <div className='bg-[#B83DC8] w-12 h-12 rounded-full flex justify-center items-center'>
                                                 <i className="ri-phone-line text-white text-2xl"></i>
@@ -105,13 +105,7 @@ export default function page() {
                                             </div>
                                             <span className='text-xl font-sans text-white'>info@sispntech.com</span>
                                         </div>
-                                        {/* <div className='flex flex-row items-center gap-4'>
-                                            <div className='bg-[#B83DC8] w-12 h-12 rounded-full flex justify-center items-center'>
-                                            <i className="ri-map-pin-line text-white text-2xl"></i>
-                                            </div>
-                                            <span className='text-2xl font-sans text-white'>364 E Main Street Suite 1902 Middletown, DE 19709</span>
-                                        </div> */}
-                                    </div>
+                                    </div> */}
                                     <div className='flex flex-col gap-4'>
                                         <div className='flex flex-row items-center gap-4'>
                                             <div className='bg-[#B83DC8] w-12 h-12 rounded-full flex justify-center items-center'>
@@ -130,6 +124,12 @@ export default function page() {
                                                 <i className="ri-mail-line text-white text-2xl"></i>
                                             </div>
                                             <span className='text-xl font-sans text-white'>info@sispntech.com</span>
+                                        </div>
+                                        <div className='flex flex-row items-center gap-4'>
+                                            <div className='bg-[#B83DC8] w-12 h-12 rounded-full flex justify-center items-center'>
+                                            <i className="ri-map-pin-line text-white text-2xl"></i>
+                                            </div>
+                                            <span className='text-2xl font-sans text-white'>364 E Main Street Suite 1902 Middletown, DE 19709</span>
                                         </div>
                                         {/* <div className='flex flex-row items-center gap-4'>
                                             <div className='bg-[#B83DC8] w-12 h-12 rounded-full flex justify-center items-center'>

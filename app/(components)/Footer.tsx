@@ -19,7 +19,7 @@ const menu = [
         title: 'Services',
         links: [
             { label: 'Search Engine Optimization', href: '/services/seo' },
-            { label: 'Website Development', href: '/website-design-and-development' },
+            { label: 'Website Development', href: '/services/website-design-and-development' },
             { label: 'Google Ads', href: '/services/google-ads' },
             { label: 'Graphic Designing', href: '/services/graphic-designing' },
         ],

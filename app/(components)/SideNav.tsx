@@ -37,10 +37,6 @@ export default function SideNav({ isOpen, onClose }: any) {
           <h3 className="text-white text-4xl max-w-[330px] font-bold w-full">
             CONNECT US
           </h3>
-
-
-
-
           <div className="flex flex-col gap-4">
             <div className="flex flex-row gap-4 items-center">
               <div className="bg-white h-12 w-12 rounded-full flex justify-center items-center">
@@ -73,42 +69,6 @@ export default function SideNav({ isOpen, onClose }: any) {
             </div>
           </div>
 
-          <div className="w-[80%] bg-white h-1 mx-auto"></div>
-
-
-
-
-          <div className="flex flex-col gap-4">
-            <div className="flex flex-row gap-4 items-center">
-              <div className="bg-white h-12 w-12 rounded-full flex justify-center items-center">
-                <i className="ri-phone-line text-[#672b6c] text-2xl"></i>
-              </div>
-              <span className="text-xl text-white">+92 326 4774776</span>
-            </div>
-
-            <div className="flex flex-row gap-4 items-center">
-              <div className="bg-white h-12 w-12 rounded-full flex justify-center items-center">
-                <i className="ri-whatsapp-line text-[#672b6c] text-2xl"></i>
-              </div>
-              <span className="text-xl text-white">+92 326 4774776</span>
-            </div>
-
-            <div className="flex flex-row gap-4 items-center">
-              <div className="bg-white h-12 w-12 rounded-full flex justify-center items-center">
-                <i className="ri-mail-line text-[#672b6c] text-2xl"></i>
-              </div>
-              <span className="text-xl text-white">info@sispntech.com</span>
-            </div>
-
-            <div className="flex flex-row gap-4 items-center">
-              <div className="bg-white h-12 w-12 rounded-full flex justify-center items-center">
-                <i className="ri-map-pin-line text-[#672b6c] text-2xl"></i>
-              </div>
-              <span className="text-xl text-white">
-                Plot # A 287, gulshan-e-iqbal, block 2, Karachi, Pakistan.
-              </span>
-            </div>
-          </div>
         </div>
       </section>
     </>
