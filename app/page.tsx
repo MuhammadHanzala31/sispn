@@ -14,10 +14,10 @@ export default function Home() {
       <Hero />
       <About/>
       <Services/>
-      <PricingSection/>
-      <Projects/>
+      {/* <PricingSection/> */}
       <Portfolio/>
       <AwardsSlider/>
+      <Projects/>
       <Newsletter/>
       <RequestForm/>
       

@@ -64,6 +64,10 @@ export default function Navbar() {
               className="block px-4 py-3 text-center text-xs lg:text-sm border-b border-b-white/30 text-white hover:bg-white/10 transition">
               Online Reputation
             </Link>
+            <Link href="/services/affordable-marketing"
+              className="block px-4 py-3 text-center text-xs lg:text-sm border-b border-b-white/30 text-white hover:bg-white/10 transition">
+               Affordable marketing
+            </Link>
             <Link href="/services/social-media-marketing"
               className="block px-4 py-3 text-center text-xs lg:text-sm border-b border-b-white/30 text-white hover:bg-white/10 transition">
               Social Media Marketing

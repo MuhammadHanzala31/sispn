@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 export default function About() {
@@ -16,7 +17,7 @@ export default function About() {
 
       {/* LEFT CONTENT */}
       <div className='flex flex-col gap-4 lg:w-1/2 w-full text-center lg:text-left'>
-        
+
         <h4 className='
           text-2xl 
           sm:text-3xl 
@@ -40,12 +41,14 @@ export default function About() {
           Over the years, we have expanded into application development, e-commerce systems, web portals,
           and digital marketing.
         </p>
+        <Link href={'/contact-us'} className='px-6 mt-3.5 py-3.5 rounded-lg text-white text-xl font-medium cursor-pointer  bg-linear-to-t hover:scale-[0.9] transition-all to-[#8E2391] from-[#421C47] w-fit'>Free Consultation</Link>
+
 
       </div>
 
       {/* RIGHT STATS */}
       <div className='grid grid-cols-2 gap-6 lg:w-1/2 w-full'>
-        
+
         {[
           { value: "2K +", label: "GLOBAL HAPPY CLIENTS" },
           { value: "4K +", label: "PROJECT COMPLETED" },
@@ -53,7 +56,7 @@ export default function About() {
           { value: "8 +", label: "GLORIOUS YEARS" },
         ].map((item, i) => (
           <div key={i} className='flex flex-col items-center gap-2'>
-            
+
             <span className='
               text-3xl 
               sm:text-4xl 
