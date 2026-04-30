@@ -27,8 +27,8 @@ export default function PricingCard({
 
       <ul className="space-y-2 max-h-[250px] overflow-y-auto pr-2">
         {features.map((item, i) => (
-          <li key={i} className="flex gap-2 text-sm">
-           <i className="ri-check-double-fill"></i> <span>{item}</span>
+          <li key={i} className="flex gap-2 text-sm items-center">
+           <i className="ri-checkbox-circle-fill text-2xl"></i> <span>{item}</span>
           </li>
         ))}
       </ul>
