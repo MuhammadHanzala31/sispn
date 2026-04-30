@@ -4,7 +4,7 @@ import brand1 from '@/public/b-1.png'
 import brand2 from '@/public/b-2.png'
 import brand3 from '@/public/b-3.png'
 import brand4 from '@/public/b-4.png'
-import brand5 from '@/public/b-5.png'
+import brand5 from '@/public/brand-g.png'
 import brand6 from '@/public/b-6.png'
 import brand7 from '@/public/b-7.png'
 import brand8 from '@/public/b-8.png'
@@ -32,8 +32,8 @@ export default function Services() {
           <Link className='hover:scale-[1.1] hover:rotate-1' href={'/services/social-media-marketing'}>
             <Image src={brand4} alt='brand' width={200} />
           </Link>
-          <Link className='hover:scale-[1.1] hover:rotate-1' href={'/services/social-media-marketing'}>
-            <Image src={brand8} alt='brand' width={200} />
+          <Link className='hover:scale-[1.1] hover:rotate-1' href={'/services/graphic-designing'}>
+            <Image src={brand5} alt='brand' width={200} />
           </Link>
         </div>
         <div className='flex gap-7 justify-center'>

@@ -20,7 +20,7 @@ import RequestForm from '@/app/(components)/RequestForm'
 import brand1 from '@/public/b-1.png'
 import brand2 from '@/public/b-2.png'
 import brand3 from '@/public/b-3.png'
-import brand4 from '@/public/b-4.png'
+import brandg from '@/public/brand-g.png'
 import brand5 from '@/public/b-5.png'
 import brand6 from '@/public/b-6.png'
 import brand7 from '@/public/b-7.png'
@@ -115,7 +115,7 @@ export default function page() {
               <div className='grid grid-cols-3 gap-8 lg:w-1/2 w-full relative'>
                 <Image data-aos="zoom-in" src={brand1} alt='brand1' />
                 <Image data-aos="zoom-in" data-aos-delay="100" src={brand2} alt='brand2' className='relative -top-28' />
-                {/* <Image data-aos="zoom-in" data-aos-delay="200" src={brand3} alt='brand3' /> */}
+                <Image data-aos="zoom-in" data-aos-delay="200" src={brandg} alt='brand3' />
               </div>
 
             </div>
