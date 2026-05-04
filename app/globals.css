@@ -18,9 +18,9 @@
     --foreground: #ededed;
   }
 }
-/* html{
+html{
   overflow-x:hidden !important;
-} */
+}
 
 body {
   overflow-x: hidden !important;

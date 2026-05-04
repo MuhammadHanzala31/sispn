@@ -97,10 +97,10 @@ export default function page() {
     return (
         <main className=''>
             <section className='lg:py-50 py-12 lg:px-[80px] md:px-[40px] px-6 seo flex justify-center items-center'>
-                <div className='flex flex-col gap-8 items-end justify-center text-center max-w-[1298px] mx-auto'>
+                <div className='flex flex-col gap-8  justify-center text-center max-w-[1298px] mx-auto'>
                     <h4 className='text-white font-medium text-[50px] leading-18' >AFFORDABLE DIGITAL MARKETING <br /> <span className='font-bold'>DELIVER MORE SALES WITH SISPN TECH</span></h4>
                     <p className='text-white text-lg leading-9 px-12'>SISPN Tech's comprehensive digital marketing services deliver more sales, leads, conversions, and revenue by leveraging years of industry experience and proven strategies. We serve businesses of all sizes across diverse industries with transparent methods grounded in organic and paid marketing best practices to maximize ROI and align with your business objectives. With worldwide reach and a reliable, performance-focused approach, our experienced team ensures every marketing investment drives measurable success.</p>
-                    <Link href={'/contact-us'} className='px-6 py-3.5 rounded-lg text-white text-xl font-medium cursor-pointer  bg-linear-to-t hover:scale-[0.9] transition-all to-[#8E2391] from-[#421C47] w-fit'>Let’s take your business to the next level!</Link>
+                    <Link href={'/contact-us'} className='px-6 py-3.5 rounded-lg mx-auto text-white text-xl font-medium cursor-pointer  bg-linear-to-t hover:scale-[0.9] transition-all to-[#8E2391] from-[#421C47] w-fit'>Let’s take your business to the next level!</Link>
 
                 </div>
             </section>
@@ -112,13 +112,15 @@ export default function page() {
                     </div>
                     <div className='flex flex-col gap-8 items-center max-w-[1566px] mx-auto'>
                         <p className='text-[#414141] text-xl text-center'> At SISPN Tech, we provide a combination of advanced digital marketing services that are customer-oriented and guaranteed to surpass expectations. Our work starts with an in-depth analysis of the industry and the audience to ensure the marketing campaigns resonate well with your business's objectives. Our exclusive technology and advanced software tools help optimize custom strategies for our clients in the changing digital landscape. We develop long-lasting business partnerships with our clients to enable direct communication and build trust with each step taken, ensuring their business receives tailored marketing strategies beyond simple marketing services. This allows clients to target social media and other channels where audiences can be accessed with precision. This methodology of digital marketing, coupled with our industry experience ensures that the outcomes achieve the desired results, leading to a dual win scenario for both us and the client through an increase in profits. Clients are provided with professional-grade reports stating real-time business insights. SISPN Tech has dedicated itself to the continuous enhancement of business performance and customer engagement through unparalleled streamlining.</p>
+                        <Link href={'/contact-us'} className='px-6 py-3.5 rounded-lg mx-auto text-white text-xl font-medium cursor-pointer  bg-linear-to-t hover:scale-[0.9] transition-all to-[#8E2391] from-[#421C47] w-fit'>Free Consultation</Link>
+
                     </div>
                 </div>
             </section>
             <div className='lg:py-15 py-12 lg:px-[80px] md:px-[40px] px-6 gap-4 project'>
                 <div className='flex flex-col gap-4'>
-                    <h4 className='text-4xl font-bold text-white text-center '>OUR SEO PROCESS</h4>
-                    <p className='text-white text-xl text-center max-w-[1450px] mx-auto'>In today’s digital world, having a website is just the beginning of your online journey. In order to be truly successful online, your business needs to be credible, visible and easily discoverable by your target audience. This is the reason that Search Engine Optimization (SEO) is in the picture. In SISPN Tech, we specialize in offering comprehensive SEO services specifically tailored to your business goals to improve your web presence, bring relevant traffic, and convert visitors to loyal customers.</p>
+                    <h4 className='text-4xl font-bold text-white text-center '>FEATURED ONLINE MARKETING SERVICES BY SISPN TECH</h4>
+                    <p className='text-white text-xl text-center max-w-[1450px] mx-auto'>At SISPN Tech, we provide a complete suite of customizable online marketing services that drive tangible business growth. We do not use a formulaic approach unlike other firms. Instead, we use a tailored approach to each campaign designed with distinct goals, ideal customers, and marketplace nuances. Our experts blend cutting-edge analytics and tailored strategies to achieve superior SEO, PPC, content, and social media marketing results. SISPN Tech will help you achieve optimal brand visibility, conversions, and sustained loyalty, and partner with you every step of the way.</p>
                     <div className='grid lg:grid-cols-3 grid-cols-2 gap-5'>
                         {seoBenefits?.map((item, idx) => (<div key={idx} className='flex flex-col gap-2 border-2 bg-white border-white rounded-2xl p-4'>
                             <h4 className='text-2xl font-bold text-[#81358A] text-center'>{item.title}</h4>
