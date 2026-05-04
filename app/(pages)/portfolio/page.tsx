@@ -4,6 +4,7 @@ import PortfolioSection from '@/app/(components)/PortfolioTabs'
 import RequestForm from '@/app/(components)/RequestForm';
 import VideoBg from '@/app/(components)/Video';
 import React, { useState } from 'react'
+import test from '@/public/test.png'
 
 const tabs = ["All", "Web Design", "UI/UX Design", "Mobile Apps", "Logo Design"];
 
@@ -18,7 +19,8 @@ const projects = [
         id: 2,
         category: "UI/UX Design",
         title: "Make – Workflow Platform",
-        image: "https://images.unsplash.com/photo-1618788372246-79faff0c3742?w=600&q=80",
+        // image: "https://images.unsplash.com/photo-1618788372246-79faff0c3742?w=600&q=80",
+        image : test.src
     },
     {
         id: 3,
@@ -117,7 +119,7 @@ export default function page() {
                             <img
                                 src={project.image}
                                 alt={project.title}
-                                className="h-64 w-full object-cover transition-transform duration-500 group-hover:scale-105 md:h-72"
+                                className="h-[300px] w-full object-cover transition-transform duration-500 group-hover:scale-105 md:h-72"
                             />
 
                             {/* Overlay */}

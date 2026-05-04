@@ -24,7 +24,7 @@ export default function Home() {
       <Portfolio/>
       <AwardsSlider/>
       <Projects/>
-      <Popup isOpen={open} onClose={()=>setOpen(false)}/>
+      {/* <Popup isOpen={open} onClose={()=>setOpen(false)}/> */}
       <Newsletter/>
       <RequestForm/>
       

@@ -18,12 +18,12 @@ export default function Navbar() {
 
 
   return (
-    <div className='flex items-center justify-between lg:px-20 md:px-10 px-4 bg-black py-3 md:py-4 fixed w-full opacity-90 backdrop-blur-2xl z-12'>
+    <div className='flex navbar items-center justify-between lg:px-20 md:px-10 px-4 bg-black py-3 md:py-4 fixed w-[100vw] opacity-90 backdrop-blur-2xl z-12'>
 
       {/* Logo */}
       <Image src={logo} alt="logo" className='md:w-[150px] md:h-[70px] w-[100px] h-[70px]' />
 
-      {/* Desktop Menu */}
+      {/* Deskto p Menu */}
       <div className='hidden md:flex items-center gap-8 lg:gap-12'>
         <Link className='hover:text-[#B83DC8] text-white text-sm lg:text-lg font-medium font-sans transition' href="/">Home</Link>
 
