@@ -6,6 +6,7 @@ import image1 from '@/public/aw-1/Group 163129.png'
 import image2 from '@/public/aw-2/Group 163130.png'
 import image3 from '@/public/aw-3/Group 163131.png'
 import Link from 'next/link';
+import { useModal } from '../context/store';
 
 interface Award {
   id: number;
@@ -56,6 +57,8 @@ const awards: Award[] = [
 export default function AwardsSlider() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlay, setIsAutoPlay] = useState(true);
+
+  const {openModal } = useModal()
 
   const visibleCards = 3;
   const maxIndex = awards.length - visibleCards;
@@ -110,7 +113,7 @@ export default function AwardsSlider() {
             <p className="text-gray-600 text-base md:text-2xl mb-8">
               Being appreciated by clients we work with means world to us. it also translate beautifully into our official ratings and awards.
             </p>
-            <Link href={'/contact-us'} className='px-6 mt-3.5 py-3.5 rounded-lg text-white text-xl font-medium cursor-pointer  bg-linear-to-t hover:scale-[0.9] transition-all to-[#8E2391] from-[#421C47] w-fit'>Let’s Talk About Project</Link>
+            <button onClick={openModal} className='px-6 mt-3.5 py-3.5 rounded-lg text-white text-xl font-medium cursor-pointer  bg-linear-to-t hover:scale-[0.9] transition-all to-[#8E2391] from-[#421C47] w-fit'>Let’s Talk About Project</button>
 
 
             {/* Buttons */}

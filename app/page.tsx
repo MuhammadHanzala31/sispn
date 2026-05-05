@@ -11,23 +11,23 @@ import Newsletter from "./(components)/Newsletter";
 import PricingSection from "./(components)/PricingSection";
 import Popup from "./(components)/Popup";
 import { useState } from "react";
+import { useModal } from "./context/store";
 
 export default function Home() {
-    const [open, setOpen] = useState(true);
-
+  const { isOpen, closeModal } = useModal()
   return (
     <main>
       <Hero />
-      <About/>
-      <Services/>
+      <Services />
+      <About />
       {/* <PricingSection/> */}
-      <Portfolio/>
-      <AwardsSlider/>
-      <Projects/>
-      {/* <Popup isOpen={open} onClose={()=>setOpen(false)}/> */}
-      <Newsletter/>
-      <RequestForm/>
-      
+      <Portfolio />
+      <AwardsSlider />
+      <Projects />
+      <Popup isOpen={isOpen} onClose={closeModal} />
+      <Newsletter />
+      <RequestForm />
+
     </main>
   );
 }

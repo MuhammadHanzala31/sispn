@@ -1,7 +1,12 @@
+import { useModal } from '@/app/context/store'
 import Link from 'next/link'
 import React from 'react'
 
 export default function About() {
+
+  const {openModal} = useModal()
+
+
   return (
     <section data-aos="fade-left" className='
       flex flex-col lg:flex-row items-center gap-10
@@ -10,9 +15,9 @@ export default function About() {
       max-w-[1400px] mx-auto
       bg-white/90 backdrop-blur-lg
       rounded-xl lg:rounded-3xl
-      relative lg:-top-24
+      relative 
       shadow-2xl
-      z-10      
+      // z-10      
     '>
 
       {/* LEFT CONTENT */}
@@ -41,7 +46,7 @@ export default function About() {
           Over the years, we have expanded into application development, e-commerce systems, web portals,
           and digital marketing.
         </p>
-        <Link href={'/contact-us'} className='px-6 mt-3.5 py-3.5 rounded-lg text-white text-xl font-medium cursor-pointer  bg-linear-to-t hover:scale-[0.9] transition-all to-[#8E2391] from-[#421C47] w-fit'>Free Consultation</Link>
+        <button onClick={openModal} className='px-6 mt-3.5 py-3.5 rounded-lg text-white text-xl font-medium cursor-pointer  bg-linear-to-t hover:scale-[0.9] transition-all to-[#8E2391] from-[#421C47] w-fit'>Free Consultation</button>
 
 
       </div>

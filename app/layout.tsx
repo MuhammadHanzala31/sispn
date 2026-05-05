@@ -1,3 +1,5 @@
+
+
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import 'remixicon/fonts/remixicon.css'
@@ -7,6 +9,8 @@ import Navbar from "./(components)/Navbar";
 import Footer from "./(components)/Footer";
 import AOSProvider from "./(components)/AosWrapper";
 import { Toaster } from "react-hot-toast";
+import { ModalProvider, useModal } from "./context/store";
+import Popup from "./(components)/Popup";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,6 +32,9 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+
+  
   return (
     <html
       lang="en"
@@ -36,11 +43,14 @@ export default function RootLayout({
 
       <body className="h-screen flex flex-col relative">
         <Navbar />
-        <Toaster/>
-        <AOSProvider>
-          {children}
-        </AOSProvider>
-        <Footer />
+        <ModalProvider>
+
+          <Toaster />
+          <AOSProvider>
+            {children}
+          </AOSProvider>
+          <Footer />
+        </ModalProvider>
       </body>
     </html>
   );
