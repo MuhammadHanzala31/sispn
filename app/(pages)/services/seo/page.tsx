@@ -1,3 +1,4 @@
+"use client"
 import ProjectCard from '@/app/(components)/ProjectCard'
 import React from 'react'
 import imageCard from '@/public/seo-card.png';
