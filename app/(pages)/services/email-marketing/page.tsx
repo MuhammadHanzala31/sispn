@@ -1,3 +1,4 @@
+"use client"
 import ProjectCard from '@/app/(components)/ProjectCard'
 import React from 'react'
 import imageCard from '@/public/seo-card.png';
@@ -9,6 +10,8 @@ import seop5 from '@/public/seo-p-5.png'
 import seop6 from '@/public/seo-p-6.png'
 import StrategyCard from '@/app/(components)/StrategyCard';
 import RequestForm from '@/app/(components)/RequestForm';
+import { useModal } from '@/app/context/store';
+import Popup from '@/app/(components)/Popup';
 
 const features = [
   {
@@ -136,12 +139,18 @@ const services = [
 
 
 export default function page() {
+
+  const { isOpen, closeModal, openModal } = useModal()
+
+
   return (
     <main className=''>
       <section className='lg:py-50 py-12 lg:px-[80px] md:px-[40px] px-6 email flex justify-center items-center'>
         <div className='flex flex-col gap-8 items-end justify-center text-center max-w-[1298px] mx-auto'>
           <h4 className='text-white font-medium text-[50px] leading-18' >EMAIL MARKETING <br /> <span className='font-bold'>FULL-SERVICE EMAIL MARKETING WITH SISPN TECH</span></h4>
           <p className='text-white text-lg leading-9 px-12'>As a leading full-service email marketing agency, SISPN Tech transforms your email campaigns into revenue-generating assets. We craft targeted, data-driven strategies that build customer loyalty and drive conversions. By blending creative content, precise segmentation, and advanced automation, our email marketing services ensure your messages reach the right inbox at the right time— unlocking measurable ROI and accelerating your business growth.</p>
+          <button onClick={openModal} className='px-6 mt-3.5 py-3.5 rounded-lg text-white text-xl font-medium cursor-pointer mx-auto  bg-linear-to-t hover:scale-[0.9] transition-all to-[#8E2391] from-[#421C47] w-fit'>Get a Free Consultation</button>
+
         </div>
       </section>
       <section className='lg:py-15 py-12 lg:px-[80px] md:px-[40px] px-6'>
@@ -154,6 +163,20 @@ export default function page() {
             <p className='text-[#414141] text-xl text-center'> At SISPN Tech, we don’t just send emails — we build intelligent, conversion-ready communication systems tailored to your business. As a full-service email marketing agency, we align strategy, design, automation, and analytics to help you turn subscribers into loyal customers.</p>
             <p className='text-[#414141] text-xl text-center'> Whether you're scaling an ecommerce brand, launching a new product, or reactivating dormant leads, our campaigns are designed to deliver measurable impact — not just opens and clicks, but real business growth. With a dedicated team, proven tools, and a data-first mindset, SISPN Tech is the email marketing company businesses trust to drive results that matter.</p>
             <p className='text-[#414141] text-xl text-center'>Let’s turn your inbox into your highest-performing sales channel</p>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div className='lg:py-15 py-12 lg:px-[80px] md:px-[40px] px-6 gap-4 project'>
+          <div className='flex flex-col gap-4'>
+            <h4 className='text-4xl font-bold text-white text-center '>BENEFITS OF PROFESSIONAL EMAIL MARKETING</h4>
+            <p className='text-white text-xl text-center max-w-[1450px] mx-auto'>Email marketing remains one of the most powerful channels for engaging customers. Working with SISPN Tech’s full-service email marketing agency offers many advantages</p>
+            <div className='grid lg:grid-cols-2 grid-cols-1 gap-5'>
+              {benefits?.map((item, idx) => (<div key={idx} className='flex flex-col gap-2 border-2 bg-white border-white rounded-2xl p-4'>
+                <h4 className='text-2xl font-bold text-[#81358A] text-center'>{item.title}</h4>
+                <p className='text-[#414141] text-xl text-center'>{item.description}</p>
+              </div>))}
+            </div>
           </div>
         </div>
       </section>
@@ -182,21 +205,10 @@ export default function page() {
         </div>
       </section>
 
-      <section>
-        <div className='lg:py-15 py-12 lg:px-[80px] md:px-[40px] px-6 gap-4 project'>
-          <div className='flex flex-col gap-4'>
-            <h4 className='text-4xl font-bold text-white text-center '>BENEFITS OF PROFESSIONAL EMAIL MARKETING</h4>
-            <p className='text-white text-xl text-center max-w-[1450px] mx-auto'>Email marketing remains one of the most powerful channels for engaging customers. Working with SISPN Tech’s full-service email marketing agency offers many advantages</p>
-            <div className='grid lg:grid-cols-2 grid-cols-1 gap-5'>
-              {benefits?.map((item, idx) => (<div key={idx} className='flex flex-col gap-2 border-2 bg-white border-white rounded-2xl p-4'>
-                <h4 className='text-2xl font-bold text-[#81358A] text-center'>{item.title}</h4>
-                <p className='text-[#414141] text-xl text-center'>{item.description}</p>
-              </div>))}
-            </div>
-          </div>
-        </div>
-      </section>
+
       <RequestForm />
+      <Popup isOpen={isOpen} onClose={closeModal} />
+
     </main>
   )
 }

@@ -9,10 +9,12 @@ import seop5 from '@/public/seo-p-5.png'
 import seop6 from '@/public/seo-p-6.png'
 import StrategyCard from '@/app/(components)/StrategyCard';
 import RequestForm from '@/app/(components)/RequestForm';
-import {seoPricig} from '@/app/pricingData'
+import { seoPricig } from '@/app/pricingData'
 import Image from 'next/image';
 import PricingCard from '@/app/(components)/PricingCard';
 import bg from '@/public/packages-bg.webp'
+import { useModal } from '@/app/context/store';
+import Popup from '@/app/(components)/Popup';
 
 
 const seoProcess = [
@@ -79,6 +81,8 @@ const seoBenefits = [
 
 
 export default function page() {
+    const { isOpen, closeModal, openModal } = useModal()
+
     return (
         <main className=''>
             <section className='lg:py-50 py-12 lg:px-[80px] md:px-[40px] px-6 seo flex justify-center items-center'>
@@ -86,6 +90,8 @@ export default function page() {
                     <h4 className='text-white font-medium text-[50px] leading-18' >SEARCH ENGINE OPTIMIZATION <br /> <span className='font-bold'>INCREASE TARGETED TRAFFIC WITH SISPN TECH</span></h4>
                     <p className='text-white text-lg leading-9 px-12'>At SISPN Tech, we specialize in providing Search Engine Optimization services that are tailored to your needs, increase targeted traffic, improve the visibility of your website, and improve the conversion rates as well. Our extensive SEO Services are created to be in line with your business goals, providing real growth and an advantage in the competitive digital world.</p>
                     <p className='text-white text-lg leading-9 px-12'>Are you ready to dominate search engine rankings and speed up your business's expansion? Join SISPN Tech today and experience the difference in SEO strategy with visible results.</p>
+                    <button onClick={openModal} className='px-6 mx-auto mt-3.5 py-3.5 rounded-lg text-white text-xl font-medium cursor-pointer  bg-linear-to-t hover:scale-[0.9] transition-all to-[#8E2391] from-[#421C47] w-fit'>Get a Free Consultation</button>
+
                 </div>
             </section>
             <section className='lg:py-15 py-12 lg:px-[80px] md:px-[40px] px-6'>
@@ -158,6 +164,8 @@ export default function page() {
 
 
             <RequestForm />
+            <Popup isOpen={isOpen} onClose={closeModal} />
+
         </main>
     )
 }

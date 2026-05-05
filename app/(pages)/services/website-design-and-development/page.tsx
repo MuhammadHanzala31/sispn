@@ -14,6 +14,8 @@ import { webDevPricing } from '@/app/pricingData'
 import PricingCard from '@/app/(components)/PricingCard'
 import Image from 'next/image'
 import bg from '@/public/packages-bg.webp'
+import { useModal } from '@/app/context/store'
+import Popup from '@/app/(components)/Popup'
 
 
 
@@ -128,12 +130,15 @@ const seoBenefits = [
 
 
 export default function page() {
+    const { isOpen, closeModal, openModal } = useModal()
+
     return (
         <main className='text-center'>
             <section className='lg:py-50 py-12 lg:px-[80px] md:px-[40px] px-6 web flex justify-center items-center'>
                 <div className='flex flex-col gap-8 items-end justify-center text-center max-w-[1298px] mx-auto'>
                     <h4 className='text-white font-medium text-[50px] leading-18' >CUSTOM WEB DESIGN & DEVELOPMENT <br /> <span className='font-bold'>WEBSITE DEVELOPMENT SERVICES WITH SISPN TECH</span></h4>
                     <p className='text-white text-lg leading-9 px-12'>Transform your digital identity with our advanced CMS and Custom Website Development Services. SISPN Tech offers professional website development services designed to elevate your online presence. Our seasoned team creates attractive, user-friendly, responsive, fully functional, high-performance websites and online ecommerce stores that engage users and support business growth. We blend intuitive UI/UX design with scalable, secure back-end development to build sites that reflect your brand’s vision, ensuring a smooth user experience and strong visibility on all devices.</p>
+                    <button onClick={openModal} className='px-6 mt-3.5 py-3.5 rounded-lg text-white text-xl font-medium cursor-pointer  bg-linear-to-t  mx-auto hover:scale-[0.9] transition-all to-[#8E2391] from-[#421C47] w-fit'>Get A Free Consultation</button>
                 </div>
             </section>
             <section className='lg:py-15 py-12 lg:px-[80px] md:px-[40px] px-6'>
@@ -197,6 +202,8 @@ export default function page() {
                 </div>
             </section>
             <RequestForm />
+            <Popup isOpen={isOpen} onClose={closeModal} />
+
         </main>
     )
 }

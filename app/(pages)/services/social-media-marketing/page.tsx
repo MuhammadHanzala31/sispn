@@ -3,6 +3,8 @@ import React from 'react'
 import imageCard from '@/public/seo-card.png'
 import StrategyCard from '@/app/(components)/StrategyCard';
 import RequestForm from '@/app/(components)/RequestForm';
+import { useModal } from '@/app/context/store';
+import Popup from '@/app/(components)/Popup';
 
 
 const reputationManagementBenefits = [
@@ -84,7 +86,8 @@ const seoBenefits = [
     {
         id: 1,
         title: "Direct Access to Targeted Audiences",
-        description:"With precise targeting based on the characteristics, interests, or demographics, you can reach actual potential customers. Not just followers."    },
+        description: "With precise targeting based on the characteristics, interests, or demographics, you can reach actual potential customers. Not just followers."
+    },
     {
         id: 2,
         title: "Design & Develop",
@@ -108,31 +111,31 @@ const seoBenefits = [
 
 const marketingFeatures = [
     {
-      title: "Platform-Specific Strategies",
-      description: "We do not believe in generic campaigns. No matter which platform you're using, Instagram, LinkedIn, TikTok or Facebook, our strategies are tailored to the specific algorithms of each platform and user-generated behaviour."
+        title: "Platform-Specific Strategies",
+        description: "We do not believe in generic campaigns. No matter which platform you're using, Instagram, LinkedIn, TikTok or Facebook, our strategies are tailored to the specific algorithms of each platform and user-generated behaviour."
     },
     {
-      title: "ROI-Focused Campaigns",
-      description: "Each post, ad, and story we write is created with performance in mind. We measure KPIs that match your objectives--be it the creation of leads, brand awareness and direct sales."
+        title: "ROI-Focused Campaigns",
+        description: "Each post, ad, and story we write is created with performance in mind. We measure KPIs that match your objectives--be it the creation of leads, brand awareness and direct sales."
     },
     {
-      title: "Proactive Content Management",
-      description: "From planning to publishing, we create top-quality content calendars that are a hit with your target audience and keep a an unison brand voice across platforms."
+        title: "Proactive Content Management",
+        description: "From planning to publishing, we create top-quality content calendars that are a hit with your target audience and keep a an unison brand voice across platforms."
     },
     {
-      title: "Transparent Communication",
-      description: "You'll always be aware of where your campaign stands. We timely share clear reports and our team is available to discuss results, ideas and future steps."
+        title: "Transparent Communication",
+        description: "You'll always be aware of where your campaign stands. We timely share clear reports and our team is available to discuss results, ideas and future steps."
     },
     {
-      title: "Experienced Marketing Team",
-      description: "Our team of experts have years of experience in the field. We're more than just marketers, we're growth strategists who are committed to producing outcomes."
+        title: "Experienced Marketing Team",
+        description: "Our team of experts have years of experience in the field. We're more than just marketers, we're growth strategists who are committed to producing outcomes."
     },
     {
-      title: "Scalable Solutions for Every Business",
-      description: "No matter if you're a small-scale startup or a growing enterprise, we can tailor our Social Media Marketing Services to fit your company's size, goals and budget, so you can expand the way you want to."
+        title: "Scalable Solutions for Every Business",
+        description: "No matter if you're a small-scale startup or a growing enterprise, we can tailor our Social Media Marketing Services to fit your company's size, goals and budget, so you can expand the way you want to."
     }
-  ];
-  
+];
+
 
 const googleAdsServices = [
     {
@@ -199,12 +202,16 @@ const googleAdsServices = [
 
 
 export default function page() {
+    const { isOpen, closeModal, openModal } = useModal()
+
     return (
         <main className=''>
             <section className='lg:py-50 py-12 lg:px-[80px] md:px-[40px] px-6 social relative flex justify-center items-center'>
                 <div className='flex flex-col gap-8  text-center max-w-[1298px] mx-auto'>
                     <h4 className='text-white font-medium text-[50px] leading-18' >STRATEGIES THAT DRIVE REAL GROWTH & ROI <br /> <span className='font-bold'>SOCIAL MEDIA MARKETING SERVICES WITH SISPN TECH</span></h4>
                     <p className='text-white text-lg leading-9 px-12'>Increase your brand's visibility faster by using SISPN Tech, a results-focused and performance-oriented Social Media Marketing Agency. We assist businesses in converting audience to recurring customers using strategies that are specifically tailored to platforms like Facebook, Instagram, LinkedIn, TikTok & more. Our skilled team blends imagination with analytics to design campaigns that not only appear attractive but are actually effective for conversions. From captivating content to hyper-targeted advertisements, we provide social media marketing solutions that are in line with your company's goals and ensure an ongoing, sustainable success.</p>
+                    <button onClick={openModal} className='px-6 mt-3.5 mx-auto py-3.5 rounded-lg text-white text-xl font-medium cursor-pointer  bg-linear-to-t hover:scale-[0.9] transition-all to-[#8E2391] from-[#421C47] w-fit'>Get A Free Consultation</button>
+
                 </div>
             </section>
             <section className='lg:py-15 py-12 lg:px-[80px] md:px-[40px] px-6'>
@@ -228,7 +235,7 @@ export default function page() {
                         {reputationManagementBenefits?.map((item, idx) => (<StrategyCard key={idx} title={item.title} description={item.description} />))}
                     </div> */}
                 </div>
-             
+
             </section>
             <section className='lg:py-15 py-12 lg:px-[80px] md:px-[40px] px-6'>
                 <div className='flex flex-col gap-5'>
@@ -244,14 +251,14 @@ export default function page() {
                 </div>
             </section>
             <section className='lg:py-15 py-12 lg:px-[80px] md:px-[40px] px-6'>
-                    <div className='flex flex-col gap-4 items-center'>
-                        <h4 className='text-4xl font-bold text-[#81358A]'>OUR PROVEN SOCIAL MEDIA MARKETING EXECUTION FRAMEWORK</h4>
-                        <p className='text-[#414141] text-xl text-center max-w-[1450px] mx-auto'>Here at SISPN Tech, we don't believe in guesswork. We are a result-driven Social Media Marketing Agency. Our approach is built on the clarity of performance, as well as the real ROI. We can turn your social channels into profit- generating machines:</p>
-                        <div className='grid grid-cols-3 gap-5'>
-                            {seoProcess?.map((item, idx) => (<StrategyCard key={idx} title={item.title} description={item.description} />))}
-                        </div>
+                <div className='flex flex-col gap-4 items-center'>
+                    <h4 className='text-4xl font-bold text-[#81358A]'>OUR PROVEN SOCIAL MEDIA MARKETING EXECUTION FRAMEWORK</h4>
+                    <p className='text-[#414141] text-xl text-center max-w-[1450px] mx-auto'>Here at SISPN Tech, we don't believe in guesswork. We are a result-driven Social Media Marketing Agency. Our approach is built on the clarity of performance, as well as the real ROI. We can turn your social channels into profit- generating machines:</p>
+                    <div className='grid grid-cols-3 gap-5'>
+                        {seoProcess?.map((item, idx) => (<StrategyCard key={idx} title={item.title} description={item.description} />))}
                     </div>
-                </section>
+                </div>
+            </section>
             <section>
                 <div className='lg:py-15 py-12 lg:px-[80px] md:px-[40px] px-6 gap-4 project'>
                     <div className='flex flex-col gap-4'>
@@ -277,6 +284,8 @@ export default function page() {
                 </div>
             </section>
             <RequestForm />
+            <Popup isOpen={isOpen} onClose={closeModal} />
+
         </main>
     )
 }

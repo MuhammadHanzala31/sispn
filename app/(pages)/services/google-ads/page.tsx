@@ -1,8 +1,11 @@
+"use client"
 import ProjectCard from '@/app/(components)/ProjectCard'
 import React from 'react'
 import imageCard from '@/public/seo-card.png'
 import StrategyCard from '@/app/(components)/StrategyCard';
 import RequestForm from '@/app/(components)/RequestForm';
+import { useModal } from '@/app/context/store';
+import Popup from '@/app/(components)/Popup';
 
 
 const seoProcess = [
@@ -203,12 +206,18 @@ const googleAdsWhyChooseUs = [
 
 
 export default function page() {
+
+    const { isOpen, closeModal, openModal } = useModal()
+
+
     return (
         <main className='text-center'>
             <section className='lg:py-50 py-12 lg:px-[80px] md:px-[40px] px-6 google relative flex justify-center items-center'>
                 <div className='flex flex-col gap-8 justify-center text-center max-w-[1298px] mx-auto'>
                     <h4 className='text-white font-medium text-[50px] leading-18' >GOOGLE ADS <br /> <span className='font-bold'>GOOGLE ADS SERVICES WITH SISPN TECH</span></h4>
                     <p className='text-white text-lg leading-9 px-12'>Are you looking to expand your business by using Google Ads Services? SISPN Tech can assist you in achieving your goals. At SISPN Tech, we help businesses realize their fullest potential in digital advertising with carefully managed Google Ads campaigns. We have certified Google Ads experts who go beyond clicks and impressions, focusing on driving tangible growth of sales, revenue and ROI for your company. We provide complete, all-inclusive assistance to all Google Ads campaign types of campaigns which include Search ads, Shopping, Video ads, and much more. Large and reputable companies across all sectors take guidance from SISPN Tech for significant gains. With advanced data-driven strategies along with real-time tools for optimization, we customize each campaign to meet your specific objectives, which ensures the highest efficiency, continual performance gains and a long-lasting competitive advantage.</p>
+                    <button onClick={openModal} className='px-6 mt-3.5 py-3.5 rounded-lg text-white text-xl font-medium cursor-pointer  bg-linear-to-t hover:scale-[0.9] transition-all to-[#8E2391] from-[#421C47] w-fit mx-auto'>Get a Free Consultation</button>
+
                 </div>
             </section>
             <section className='lg:py-15 py-12 lg:px-[80px] md:px-[40px] px-6 text-center'>
@@ -267,6 +276,7 @@ export default function page() {
                 </div>
             </section>
             <RequestForm />
+            <Popup isOpen={isOpen} onClose={closeModal} />
         </main>
     )
 }

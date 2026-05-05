@@ -19,7 +19,7 @@ const CONFIG = {
   budget: {
     min:    500,
     max:    50000,
-    prefix: "PKR",
+    prefix: "$",
   },
   services: [
     "Web Development",

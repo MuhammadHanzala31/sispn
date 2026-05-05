@@ -1,8 +1,11 @@
+"use client"
 import ProjectCard from '@/app/(components)/ProjectCard'
 import React from 'react'
 import imageCard from '@/public/seo-card.png'
 import StrategyCard from '@/app/(components)/StrategyCard';
 import RequestForm from '@/app/(components)/RequestForm';
+import { useModal } from '@/app/context/store';
+import Popup from '@/app/(components)/Popup';
 
 
 const reputationManagementBenefits = [
@@ -110,49 +113,49 @@ const seoBenefits = [
 
 const googleAdsServices = [
     {
-      id: 1,
-      title: "Customized Strategies",
-      description:
-        "We know very well that each business is different. Our team creates custom Google Ads strategies and funnels aligned with your business goals and industry to ensure higher engagement and ROI.",
-      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80"
+        id: 1,
+        title: "Customized Strategies",
+        description:
+            "We know very well that each business is different. Our team creates custom Google Ads strategies and funnels aligned with your business goals and industry to ensure higher engagement and ROI.",
+        image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80"
     },
     {
-      id: 2,
-      title: "Data-Driven Decision Making",
-      description:
-        "Our campaigns are rooted in facts. We monitor performance regularly, analyze user behavior, and optimize strategies in real-time to maximize outcomes and budget efficiency.",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80"
+        id: 2,
+        title: "Data-Driven Decision Making",
+        description:
+            "Our campaigns are rooted in facts. We monitor performance regularly, analyze user behavior, and optimize strategies in real-time to maximize outcomes and budget efficiency.",
+        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80"
     },
     {
-      id: 3,
-      title: "Transparent Communication",
-      description:
-        "Our company believes in establishing trust by being transparent. We provide regular reports and stay available for discussions and questions.",
-      image: "https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?w=800&q=80"
+        id: 3,
+        title: "Transparent Communication",
+        description:
+            "Our company believes in establishing trust by being transparent. We provide regular reports and stay available for discussions and questions.",
+        image: "https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?w=800&q=80"
     },
     {
-      id: 4,
-      title: "Advanced Tools and Technologies",
-      description:
-        "We use the most up-to-date tools and techniques to stay ahead in the digital advertising industry and deliver better campaign results.",
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80"
+        id: 4,
+        title: "Advanced Tools and Technologies",
+        description:
+            "We use the most up-to-date tools and techniques to stay ahead in the digital advertising industry and deliver better campaign results.",
+        image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80"
     },
     {
-      id: 5,
-      title: "Certified Google Ads Professionals",
-      description:
-        "Our team consists of certified Google Ads experts who ensure your campaigns are optimized and aligned with best practices.",
-image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1000&q=80"
+        id: 5,
+        title: "Certified Google Ads Professionals",
+        description:
+            "Our team consists of certified Google Ads experts who ensure your campaigns are optimized and aligned with best practices.",
+        image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1000&q=80"
 
-},
+    },
     {
-      id: 6,
-      title: "Dedicated Support",
-      description:
-        "Youâ€™ll get a dedicated account manager who understands your needs and ensures your campaigns receive proper attention.",
-      image: "https://images.unsplash.com/photo-1556745757-8d76bdb6984b?w=800&q=80"
+        id: 6,
+        title: "Dedicated Support",
+        description:
+            "Youâ€™ll get a dedicated account manager who understands your needs and ensures your campaigns receive proper attention.",
+        image: "https://images.unsplash.com/photo-1556745757-8d76bdb6984b?w=800&q=80"
     }
-  ];
+];
 
 
 
@@ -160,14 +163,20 @@ image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format
 
 
 export default function page() {
+
+    const { isOpen, closeModal, openModal } = useModal()
+
+
     return (
         <main className=''>
             <section className='lg:py-50 py-12 lg:px-[80px] md:px-[40px] px-6 repo relative flex justify-center items-center'>
-            <div className='bg-black/70 absolute  h-full w-[100vw] z-0'></div>
+                <div className='bg-black/70 absolute  h-full w-[100vw] z-0'></div>
 
                 <div className='flex flex-col gap-8  text-center max-w-[1298px] mx-auto relative z-1'>
                     <h4 className='text-white font-medium text-[50px] leading-18' >ONLINE REPUTATION MANAGEMENT <br /> <span className='font-bold'>ONLINE REPUTATION SERVICES WITH SISPN TECH</span></h4>
                     <p className='text-white text-lg leading-9 px-12'>Are you looking to expand your business by using Google Ads Services? SISPN Tech can assist you in achieving your goals. At SISPN Tech, we help businesses realize their fullest potential in digital advertising with carefully managed Google Ads campaigns. We have certified Google Ads experts who go beyond clicks and impressions, focusing on driving tangible growth of sales, revenue and ROI for your company. We provide complete, all-inclusive assistance to all Google Ads campaign types of campaigns which include Search ads, Shopping, Video ads, and much more. Large and reputable companies across all sectors take guidance from SISPN Tech for significant gains. With advanced data-driven strategies along with real-time tools for optimization, we customize each campaign to meet your specific objectives, which ensures the highest efficiency, continual performance gains and a long-lasting competitive advantage.</p>
+                    <button onClick={openModal} className='px-6 mx-auto mt-3.5 py-3.5 rounded-lg text-white text-xl font-medium cursor-pointer  bg-linear-to-t hover:scale-[0.9] transition-all to-[#8E2391] from-[#421C47] w-fit'>Get a Free Consultation</button>
+
                 </div>
             </section>
             <section className='lg:py-15 py-12 lg:px-[80px] md:px-[40px] px-6'>
@@ -211,7 +220,8 @@ export default function page() {
                     </div>
                 </div>
             </section>
-            <RequestForm/>
+            <RequestForm />
+            <Popup isOpen={isOpen} onClose={closeModal} />
         </main>
     )
 }
