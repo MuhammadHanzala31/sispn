@@ -2,16 +2,17 @@
 import ProjectCard from '@/app/(components)/ProjectCard'
 import React from 'react'
 import imageCard from '@/public/seo-card.png';
-import seop1 from '@/public/seo-p-1.png'
-import seop2 from '@/public/seo-p-2.png'
-import seop3 from '@/public/seo-p-3.png'
-import seop4 from '@/public/seo-p-4.png'
+import p1 from '@/public/email-p-1.jpg'
+import p2 from '@/public/email-p-2.jpg'
+import p3 from '@/public/email-p-3.jpg'
+import p4 from '@/public/email-p-4.jpg'
 import seop5 from '@/public/seo-p-5.png'
 import seop6 from '@/public/seo-p-6.png'
 import StrategyCard from '@/app/(components)/StrategyCard';
 import RequestForm from '@/app/(components)/RequestForm';
 import { useModal } from '@/app/context/store';
 import Popup from '@/app/(components)/Popup';
+import ServiceForm from '@/app/(components)/ServicesForm';
 
 const features = [
   {
@@ -38,12 +39,7 @@ const features = [
     description:
       "We continuously analyze campaign performance using real-time data. By tracking metrics like open rates, click-through rates, and conversions, we refine strategies to maximize results and ROI.",
   },
-  {
-    id: 5,
-    title: "Clear Calls-to-Action",
-    description:
-      "We engineer emails with prominent, persuasive CTAs that guide subscribers toward your goals (sales, sign-ups, downloads). Every message is crafted to move readers one step closer to conversion.",
-  },
+
 ];
 
 
@@ -91,39 +87,35 @@ const services = [
     id: 1,
     title: "Audit & Strategy",
     description:
-      "We analyze your current email efforts and audience data, then develop a custom plan.",
-    image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
+      "We analyze your brand, performance, and digital presence to identify growth opportunities and build smart strategies that drive measurable results From market insights to execution planning, we help you make confident digital decisions.",
+    image: p1.src,
   },
   {
     id: 2,
     title: "Email Design & Copywriting",
     description:
-      "Our designers and copywriters create beautiful, on-brand email templates.",
-    image:
-      "https://images.unsplash.com/photo-1559028012-481c04fa702d?w=600&h=400&fit=crop",
+      "We create visually engaging email designs and compelling copy that capture attention, strengthen your brand message, and drive customer engagement. From promotional campaigns to automated email sequences.",
+    image: p2.src,
   },
   {
     id: 3,
     title: "Subscriber List Growth",
     description:
-      "We design sign-up forms, landing pages, and lead magnets to grow your audience.",
-    image:
-      "https://images.unsplash.com/photo-1556157382-97eda2d62296?w=600&h=400&fit=crop",
+      "We help grow your subscriber base through targeted strategies, optimized lead capture systems, and engaging campaigns that attract the right audience. By focusing on quality leads and audience engagement, we turn visitors into loyal subscribers and long-term customers.",
+    image: p3.src,
   },
   {
     id: 4,
     title: "Automated Workflows",
     description:
-      "We implement workflows that automate customer journeys and emails.",
-    image:
-      "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=600&h=400&fit=crop",
+      "We build smart automated workflows that streamline repetitive tasks, improve efficiency, and enhance customer experiences. From email automation to business process integration, our solutions help you save time, reduce manual work, and scale operations more effectively.",
+    image: p4.src,
   },
   {
     id: 5,
     title: "Testing & Optimization",
     description:
-      "We A/B test subject lines, designs, and copy to improve performance.",
+      "We continuously test and optimize your digital campaigns, user experience, and performance to ensure maximum results. Through data-driven insights, A/B testing, and strategic improvements, we help increase engagement, conversions, and overall business growth.",
     image:
       "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
   },
@@ -131,7 +123,7 @@ const services = [
     id: 6,
     title: "Reporting & Analytics",
     description:
-      "We provide reports showing ROI, engagement, and performance insights.",
+      "We provide detailed reporting and analytics to help you track performance, measure results, and make informed business decisions. By turning complex data into clear insights, we help you understand customer behavior, optimize strategies, and drive continuous growth.",
     image:
       "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&h=400&fit=crop",
   },
@@ -145,13 +137,14 @@ export default function page() {
 
   return (
     <main className=''>
-      <section className='lg:py-50 py-12 lg:px-[80px] md:px-[40px] px-6 email flex justify-center items-center'>
-        <div className='flex flex-col gap-8 items-end justify-center text-center max-w-[1298px] mx-auto'>
-          <h4 className='text-white font-medium text-[50px] leading-18' >EMAIL MARKETING <br /> <span className='font-bold'>FULL-SERVICE EMAIL MARKETING WITH SISPN TECH</span></h4>
-          <p className='text-white text-lg leading-9 px-12'>As a leading full-service email marketing agency, SISPN Tech transforms your email campaigns into revenue-generating assets. We craft targeted, data-driven strategies that build customer loyalty and drive conversions. By blending creative content, precise segmentation, and advanced automation, our email marketing services ensure your messages reach the right inbox at the right time— unlocking measurable ROI and accelerating your business growth.</p>
-          <button onClick={openModal} className='px-6 mt-3.5 py-3.5 rounded-lg text-white text-xl font-medium cursor-pointer mx-auto  bg-linear-to-t hover:scale-[0.9] transition-all to-[#8E2391] from-[#421C47] w-fit'>Get a Free Consultation</button>
+      <section className='lg:py-20 py-12 lg:px-[80px] md:px-[40px] px-6 email flex lg:flex-row flex-col justify-between items-center'>
+        <div className='flex flex-col gap-8  justify-center text-start max-w-[1298px] mx-auto'>
+          <h4 className='text-white font-medium text-[50px] leading-18' >FULL-SERVICE EMAIL MARKETING <br /> <span className='font-bold'> WITH SISPN TECH</span></h4>
+          <p className='text-white text-lg leading-9 pr-12'>As a leading full-service email marketing agency, SISPN Tech transforms your email campaigns into revenue-generating assets. We craft targeted, data-driven strategies that build customer loyalty and drive conversions. By blending creative content, precise segmentation, and advanced automation, our email marketing services ensure your messages reach the right inbox at the right time— unlocking measurable ROI and accelerating your business growth.</p>
+          <button onClick={openModal} className='px-6 mt-3.5 py-3.5 rounded-lg text-white text-xl font-medium cursor-pointer  bg-linear-to-t hover:scale-[0.9] transition-all to-[#8E2391] from-[#421C47] w-fit'>Get a Free Consultation</button>
 
         </div>
+        <ServiceForm />
       </section>
       <section className='lg:py-15 py-12 lg:px-[80px] md:px-[40px] px-6'>
         <div className='flex flex-col gap-5'>
@@ -184,7 +177,7 @@ export default function page() {
         <div className='flex flex-col gap-4 items-center'>
           <h4 className='text-4xl font-bold text-[#81358A]'>STRATEGIC EMAIL CAMPAIGNS THAT CONVERT</h4>
           <p className='text-[#414141] text-xl text-center max-w-[1450px] mx-auto'>Effective email marketing is more than just sending messages – it’s about creating meaningful connections. Our approach includes:</p>
-          <div className='grid lg:grid-cols-3 grid-cols-1 gap-5'>
+          <div className='grid lg:grid-cols-2 grid-cols-1 gap-5'>
             {features?.map((item, idx) => (<StrategyCard key={idx} title={item.title} description={item.description} />))}
           </div>
         </div>

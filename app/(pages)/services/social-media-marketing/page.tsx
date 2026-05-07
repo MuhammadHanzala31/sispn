@@ -1,11 +1,13 @@
 "use client"
 import ProjectCard from '@/app/(components)/ProjectCard'
 import React from 'react'
-import imageCard from '@/public/seo-card.png'
+import p3 from '@/public/social-p-3.png'
+import p4 from '@/public/social-p-4.png'
 import StrategyCard from '@/app/(components)/StrategyCard';
 import RequestForm from '@/app/(components)/RequestForm';
 import { useModal } from '@/app/context/store';
 import Popup from '@/app/(components)/Popup';
+import ServiceForm from '@/app/(components)/ServicesForm';
 
 
 const reputationManagementBenefits = [
@@ -158,14 +160,14 @@ const googleAdsServices = [
         title: "Organic Marketing",
         description:
             "Build a consistent presence with a balanced content strategy that drives engagement, builds trust, and ensures long-term visibility.",
-        image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=80"
+        image: p3.src
     },
     {
         id: 4,
         title: "Brand Development",
         description:
             "We align your brandâ€™s visuals and messaging across platforms to create a distinct, recognizable, and consistent identity.",
-        image: "https://images.unsplash.com/photo-1492724441997-5dc865305da7?w=800&q=80"
+        image: p4.src
     },
     {
         id: 5,
@@ -207,13 +209,14 @@ export default function page() {
 
     return (
         <main className=''>
-            <section className='lg:py-50 py-12 lg:px-[80px] md:px-[40px] px-6 social relative flex justify-center items-center'>
-                <div className='flex flex-col gap-8  text-center max-w-[1298px] mx-auto'>
-                    <h4 className='text-white font-medium text-[50px] leading-18' >STRATEGIES THAT DRIVE REAL GROWTH & ROI <br /> <span className='font-bold'>SOCIAL MEDIA MARKETING SERVICES WITH SISPN TECH</span></h4>
-                    <p className='text-white text-lg leading-9 px-12'>Increase your brand's visibility faster by using SISPN Tech, a results-focused and performance-oriented Social Media Marketing Agency. We assist businesses in converting audience to recurring customers using strategies that are specifically tailored to platforms like Facebook, Instagram, LinkedIn, TikTok & more. Our skilled team blends imagination with analytics to design campaigns that not only appear attractive but are actually effective for conversions. From captivating content to hyper-targeted advertisements, we provide social media marketing solutions that are in line with your company's goals and ensure an ongoing, sustainable success.</p>
-                    <button onClick={openModal} className='px-6 mt-3.5 mx-auto py-3.5 rounded-lg text-white text-xl font-medium cursor-pointer  bg-linear-to-t hover:scale-[0.9] transition-all to-[#8E2391] from-[#421C47] w-fit'>Get A Free Consultation</button>
+            <section className='lg:py-20 py-12 lg:px-[80px] md:px-[40px] px-6 social relative flex lg:flex-row flex-col justify-center items-center'>
+                <div className='flex flex-col gap-8  text-start max-w-[1298px] mx-auto'>
+                    <h4 className='text-white font-medium text-[50px] leading-18' >SOCIAL MEDIA MARKETING <br /> <span className='font-bold'> SERVICES WITH SISPN TECH</span></h4>
+                    <p className='text-white text-lg leading-9 pr-12'>Increase your brand's visibility faster by using SISPN Tech, a results-focused and performance-oriented Social Media Marketing Agency. We assist businesses in converting audience to recurring customers using strategies that are specifically tailored to platforms like Facebook, Instagram, LinkedIn, TikTok & more. Our skilled team blends imagination with analytics to design campaigns that not only appear attractive but are actually effective for conversions. From captivating content to hyper-targeted advertisements, we provide social media marketing solutions that are in line with your company's goals and ensure an ongoing, sustainable success.</p>
+                    <button onClick={openModal} className='px-6 mt-3.5  py-3.5 rounded-lg text-white text-xl font-medium cursor-pointer  bg-linear-to-t hover:scale-[0.9] transition-all to-[#8E2391] from-[#421C47] w-fit'>Get A Free Consultation</button>
 
                 </div>
+                <ServiceForm />
             </section>
             <section className='lg:py-15 py-12 lg:px-[80px] md:px-[40px] px-6'>
                 <div className='flex flex-col gap-5'>
@@ -255,7 +258,7 @@ export default function page() {
                 <div className='flex flex-col gap-4 items-center'>
                     <h4 className='text-4xl font-bold text-[#81358A]'>OUR PROVEN SOCIAL MEDIA MARKETING EXECUTION FRAMEWORK</h4>
                     <p className='text-[#414141] text-xl text-center max-w-[1450px] mx-auto'>Here at SISPN Tech, we don't believe in guesswork. We are a result-driven Social Media Marketing Agency. Our approach is built on the clarity of performance, as well as the real ROI. We can turn your social channels into profit- generating machines:</p>
-                    <div className='grid grid-cols-3 gap-5'>
+                    <div className='grid grid-cols-2 gap-5'>
                         {seoProcess?.map((item, idx) => (<StrategyCard key={idx} title={item.title} description={item.description} />))}
                     </div>
                 </div>
@@ -279,9 +282,9 @@ export default function page() {
                 <div className='flex flex-col gap-4 items-center'>
                     <h4 className='text-4xl font-bold text-[#81358A]'>OUR PROVEN SOCIAL MEDIA MARKETING EXECUTION FRAMEWORK</h4>
                     <p className='text-[#414141] text-xl text-center max-w-[1450px] mx-auto'>Here at SISPN Tech, we don't believe in guesswork. We are a result-driven Social Media Marketing Agency. Our approach is built on the clarity of performance, as well as the real ROI. We can turn your social channels into profit- generating machines:</p>
-                    <div className='grid grid-cols-3 gap-5'>
+                    <div className='grid grid-cols-2 gap-5'>
                         {marketingFeatures?.map((item, idx) => (<StrategyCard key={idx} title={item.title} description={item.description} />))}
-                    </div>`
+                    </div>
                 </div>
             </section>
             <RequestForm />

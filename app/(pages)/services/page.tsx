@@ -12,7 +12,7 @@ import sp6 from '@/public/s-p-6.png'
 import sp7 from '@/public/s-p-7.png'
 import sp8 from '@/public/s-p-8.png'
 import sp9 from '@/public/s-p-9.png'
-import sp10 from '@/public/s-p-10.png'
+import sp10 from '@/public/service-o.png'
 import ProjectCard from '@/app/(components)/ProjectCard'
 import Newsletter from '@/app/(components)/Newsletter'
 import RequestForm from '@/app/(components)/RequestForm'
@@ -123,7 +123,7 @@ export default function page() {
             <div className='flex flex-row items-center gap-4'>
 
               <div className='grid grid-cols-3 gap-8 lg:w-1/2 w-full relative'>
-                <Image data-aos="fade-up" src={brand3} alt='brand4' />
+                <Image data-aos="fade-up" src={sp10} alt='brand4' />
                 <Image data-aos="fade-up" data-aos-delay="100" src={brand5} alt='brand5' className='relative top-28' />
                 <Image data-aos="fade-up" data-aos-delay="200" src={brand6} alt='brand6' />
               </div>

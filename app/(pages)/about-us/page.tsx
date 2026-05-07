@@ -199,8 +199,8 @@
 import Image from 'next/image'
 import React from 'react'
 import about1 from '@/public/about-1.png'
-import about2 from '@/public/about-2.png'
-import about3 from '@/public/about-3.png'
+import about2 from '@/public/reputation/giorgio-tomassetti-mTslIt14OUo-unsplash.png'
+import about3 from '@/public/vision.jpg'
 import aboutb3 from '@/public/about-b-3.png'
 import aboutb4 from '@/public/about-b-4.png'
 import RequestForm from '@/app/(components)/RequestForm'
@@ -296,10 +296,11 @@ export default function page() {
                 <div className='flex lg:flex-row flex-col gap-8 items-center w-full'>
 
                     <div data-aos="flip-left" className='lg:w-1/2 w-full'>
-                        <Image src={about2} alt='about2' />
+                        <Image src={about2} alt='about2' className='w-full rounded-2xl' />
                     </div>
 
-                    <div data-aos="fade-up" data-aos-delay="200" className='lg:w-1/2 w-full'>
+                    <div data-aos="fade-up" data-aos-delay="200" className='lg:w-1/2 w-full flex flex-col gap-5'>
+                        
                         <p className='text-xl text-[#414141] leading-9'>
                             What sets us apart is our commitment to understanding each client’s unique goals. We don’t just build products—we build
                             solutions aligned with your business strategy. Our collaborative approach ensures transparency, efficiency, and results
@@ -339,7 +340,7 @@ export default function page() {
                 <div className='flex lg:flex-row flex-col gap-8 items-center w-full'>
 
                     <div data-aos="fade-right" className='lg:w-1/2 w-full order-2'>
-                        <Image src={about3} alt='about3' />
+                        <Image src={about3} alt='about3' className='w-[80%] rounded-2xl'/>
                     </div>
 
                     <div data-aos="fade-left" className='lg:w-1/2 w-full order-1'>

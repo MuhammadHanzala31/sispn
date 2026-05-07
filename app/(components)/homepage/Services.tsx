@@ -24,7 +24,7 @@ export default function Services() {
       <div className='flex flex-col gap-4 lg:w-1/2 w-full'>
         <div className='flex gap-7 justify-center'>
           <Link className='hover:scale-[1.1] hover:rotate-1' href={'/services/graphic-designing'}><Image src={brand1} alt='brand' width={200} /></Link>
-          <Link className='hover:scale-[1.1] hover:rotate-1' href={'/services/website-design-and-development'}><Image src={brand2} alt='brand' width={200} /></Link>
+          <Link className='hover:scale-[1.1] hover:rotate-1' href={'/services/website-design-and-development'}><Image src={brand8} alt='brand' width={200} /></Link>
           <Link className='hover:scale-[1.1] hover:rotate-1' href={'/services/graphic-designing'}> <Image src={brand3} alt='brand' width={200} />
           </Link>
         </div>

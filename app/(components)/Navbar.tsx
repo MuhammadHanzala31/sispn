@@ -80,7 +80,7 @@ export default function Navbar() {
         </div>
 
         {/* Insights Dropdown */}
-        <div className="relative group">
+        {/* <div className="relative group">
           <div className='hover:text-[#B83DC8] text-white text-sm lg:text-lg font-medium font-sans flex items-center gap-1 cursor-pointer transition'>
             Insights <i className="ri-arrow-drop-down-line text-lg"></i>
           </div>
@@ -98,8 +98,9 @@ export default function Navbar() {
               Blogs
             </Link>
           </div>
-        </div>
+        </div> */}
 
+        <Link className='hover:text-[#B83DC8] text-white text-sm lg:text-lg font-medium font-sans transition' href="/about-us">About Us</Link>
         <Link className='hover:text-[#B83DC8] text-white text-sm lg:text-lg font-medium font-sans transition' href="/portfolio">Portfolio</Link>
         <Link className='hover:text-[#B83DC8] text-white text-sm lg:text-lg font-medium font-sans transition' href="/contact-us">Contact</Link>
       </div>

@@ -1,11 +1,21 @@
 "use client"
 import ProjectCard from '@/app/(components)/ProjectCard'
 import React from 'react'
-import imageCard from '@/public/seo-card.png'
+import p1 from '@/public/ads-p-1.jpg'
+import p2 from '@/public/ads-p-3.jpg'
+import p22 from '@/public/ads-2.jpg'
+import p3 from '@/public/ads-p-3.jpg'
+import p4 from '@/public/ads-p-4.jpg'
+import p5 from '@/public/ads-p-5.jpg'
+import p6 from '@/public/ads-p-6.jpg'
+import p7 from '@/public/ads-p-7.jpg'
+import p8 from '@/public/ads-p-8.jpg'
+import p9 from '@/public/ads-p-9.jpg'
 import StrategyCard from '@/app/(components)/StrategyCard';
 import RequestForm from '@/app/(components)/RequestForm';
 import { useModal } from '@/app/context/store';
 import Popup from '@/app/(components)/Popup';
+import ServiceForm from '@/app/(components)/ServicesForm'
 
 
 const seoProcess = [
@@ -19,7 +29,7 @@ const seoProcess = [
         id: 2,
         title: "Instant Visibility",
         description:
-            "When your campaign is launched, your ads will be displayed instantly, providing immediate exposure to prospective customers.",
+            "Once your campaign goes live, your ads are activated instantly, giving your business immediate visibility across your target audience. This ensures that potential customers can start discovering your products or services right away, without any delay. It helps you gain quick exposure, drive traffic, and start generating leads from the very first moment your campaign is launched.",
     },
     {
         id: 3,
@@ -33,12 +43,7 @@ const seoProcess = [
         description:
             "You can create a budget for the day or month that is in line with your goals in financial terms. This will ensure that you donâ€™t overspend while reaching your goals.",
     },
-    {
-        id: 5,
-        title: "Brand Awareness",
-        description:
-            "Even if people do not click on your advertisements, constant visibility across the Google display network can help increase brand recognition over the period of time.",
-    },
+
 ];
 
 
@@ -80,73 +85,63 @@ const googleAdsServices = [
     {
         id: 1,
         title: "Search Ads",
-        image:
-            "https://images.unsplash.com/photo-1556155092-490a1ba16284?auto=format&fit=crop&w=1000&q=80",
+        image: p1,
         description:
             "We create ads for the keywords with high intent so that your advertisements appear at the very top in Google Search when customers look for services or products similar to yours. This identifies leads who are ready to buy and brings relevant and purchase-intent traffic to your website.",
     },
     {
         id: 2,
         title: "Display Ads",
-        image:
-            "https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&w=1000&q=80",
+        image: p22,
         description:
             "SISPN Tech designs visually appealing images and banner ads that run on the Google Display Network, reaching potential customers across millions of apps and websites. Through showcasing your company’s brand on relevant websites, display campaigns increase the visibility of your business.",
     },
     {
         id: 3,
         title: "Shopping Ads",
-        image:
-            "https://images.unsplash.com/photo-1607083206869-4c7672e72a8a?auto=format&fit=crop&w=1000&q=80",
+        image: p3,
         description:
             "For e-commerce businesses, our shopping campaigns display captivating product images as well as prices and other details directly in Google results. The customers see your products and are able to click through to purchase, which increases the likelihood of buying and can help you convert browsers into customers.",
     },
     {
         id: 4,
         title: "Video Ads",
-        image:
-            "https://images.unsplash.com/photo-1522199710521-72d69614c702?auto=format&fit=crop&w=1000&q=80",
+        image: p4,
         description:
             "We create compelling video advertisements on YouTube along with other Google partner websites, employing the power of storytelling and innovative visuals to draw the attention of viewers. Video ads are perfect to showcase products and build brand loyalty in a format that is engaging beyond the text-based approach.",
     },
     {
         id: 5,
         title: "Remarketing Ads",
-        image:
-            "https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=1000&q=80",
+        image: p5,
         description:
             "We encourage the visitors to return who have previously visited your website or shown any interest in the displayed ads while browsing the internet or apps. In keeping your brand at the forefront of their minds, remarketing campaigns help to encourage potential customers to come back and make a purchase.",
     },
     {
         id: 6,
         title: "Local Service Ads",
-        image:
-            "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1000&q=80",
+        image: p6,
         description:
             "SISPN Tech offers Local Service Ads that connect your business with customers in the area where they are searching for your services. These ads highlight your company prominently (often with a “Google Guaranteed” badge) and offer direct phone or text messaging options that make it easy for potential customers in the area to reach out right away.",
     },
     {
         id: 7,
         title: "App Promotion Ads",
-        image:
-            "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=1000&q=80",
+        image: p7,
         description:
             "If you’ve developed a mobile app, our App Promotion Ads can target advertisements on smartphones on Google Search, YouTube, and the Play Store to encourage installations and increase engagement. We make use of the data from the app store to design advertisements that are appealing to those who are most susceptible to downloading and installing your app.",
     },
     {
         id: 8,
         title: "PPC Management",
-        image:
-            "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1000&q=80",
+        image: p8,
         description:
             "We offer full-service PPC management that ties the various channels. Our experts constantly tweak bids, budgets and the targeting across campaigns to ensure that each dollar is optimized to yield the highest ROI and sales.",
     },
     {
         id: 9,
         title: "Performance Max",
-        image:
-            "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1000&q=80",
-        description:
+        image: p9, description:
             "Performance Max campaigns of SISPN Tech utilize Google’s AI to deliver goal-driven ads across all Google channels from a single campaign, including Search, Display, YouTube, Gmail, Maps, and Discover. By using your marketing objective, creative assets, and budget, Performance Max optimizes the ads and bids for maximum conversions and ROI.",
     },
 ];
@@ -212,13 +207,13 @@ export default function page() {
 
     return (
         <main className='text-center'>
-            <section className='lg:py-50 py-12 lg:px-[80px] md:px-[40px] px-6 google relative flex justify-center items-center'>
-                <div className='flex flex-col gap-8 justify-center text-center max-w-[1298px] mx-auto'>
-                    <h4 className='text-white font-medium text-[50px] leading-18' >GOOGLE ADS <br /> <span className='font-bold'>GOOGLE ADS SERVICES WITH SISPN TECH</span></h4>
-                    <p className='text-white text-lg leading-9 px-12'>Are you looking to expand your business by using Google Ads Services? SISPN Tech can assist you in achieving your goals. At SISPN Tech, we help businesses realize their fullest potential in digital advertising with carefully managed Google Ads campaigns. We have certified Google Ads experts who go beyond clicks and impressions, focusing on driving tangible growth of sales, revenue and ROI for your company. We provide complete, all-inclusive assistance to all Google Ads campaign types of campaigns which include Search ads, Shopping, Video ads, and much more. Large and reputable companies across all sectors take guidance from SISPN Tech for significant gains. With advanced data-driven strategies along with real-time tools for optimization, we customize each campaign to meet your specific objectives, which ensures the highest efficiency, continual performance gains and a long-lasting competitive advantage.</p>
-                    <button onClick={openModal} className='px-6 mt-3.5 py-3.5 rounded-lg text-white text-xl font-medium cursor-pointer  bg-linear-to-t hover:scale-[0.9] transition-all to-[#8E2391] from-[#421C47] w-fit mx-auto'>Get a Free Consultation</button>
-
+            <section className='lg:py-20 py-12 lg:px-[80px] md:px-[40px] px-6 google relative flex lg:flex-row flex-col justify-between items-center'>
+                <div className='flex flex-col gap-8 justify-center text-start max-w-[1298px] mx-auto'>
+                    <h4 className='text-white font-medium text-[50px] leading-18' >GOOGLE ADS SERVICES <br /> <span className='font-bold'> WITH SISPN TECH</span></h4>
+                    <p className='text-white text-lg leading-9 pr-12'>Looking to grow your business with Google Ads? SISPN Tech helps you achieve real results through expertly managed, data-driven campaigns. Our certified specialists focus on more than just clicks—we drive sales, revenue, and ROI. From Search and Shopping to Video ads, we create tailored strategies that deliver consistent performance and long-term growth.</p>
+                    <button onClick={openModal} className='px-6 mt-3.5 py-3.5 rounded-lg text-white text-xl font-medium cursor-pointer  bg-linear-to-t hover:scale-[0.9] transition-all to-[#8E2391] from-[#421C47] w-fit'>Get a Free Consultation</button>
                 </div>
+                <ServiceForm/>
             </section>
             <section className='lg:py-15 py-12 lg:px-[80px] md:px-[40px] px-6 text-center'>
                 <div className='flex flex-col gap-5'>
@@ -248,9 +243,9 @@ export default function page() {
                 <div className='flex flex-col gap-4 items-center'>
                     <h4 className='text-4xl font-bold text-[#81358A]'>WHAT ARE GOOGLE ADS AND HOW CAN THEY BOOST YOUR BUSINESS?</h4>
                     <p className='text-[#414141] text-xl text-center max-w-[1450px] mx-auto'>Google Ads is a powerful online advertising platform created by Google. It allows businesses to place ads on Google's vast network of sites, including results from searches, YouTube, Google Maps and other partner sites. It operates on a pay-per-click (PPC) model that allows advertisers to pay only for each time a user clicks on their advertisements. This makes it an efficient method to reach customers in search of similar products or services to those of the advertisers.</p>
-                    <div className='grid grid-cols-3 gap-5'>
+                    <div className='grid grid-cols-2 gap-5'>
                         {seoProcess?.map((item, idx) => (<StrategyCard key={idx} title={item.title} description={item.description} />))}
-                    </div>``
+                    </div>
                 </div>
             </section>
             <section>
@@ -262,7 +257,7 @@ export default function page() {
                     </div>
                 </div>
             </section>
-            <section className='lg:py-15 py-12 lg:px-[80px] md:px-[40px] px-6'>
+            {/* <section className='lg:py-15 py-12 lg:px-[80px] md:px-[40px] px-6'>
                 <div className='flex flex-col gap-5'>
                     <div className='flex flex-col gap-2 max-w-[791px] mx-auto'>
                         <h4 className='text-4xl font-bold text-center text-[#81358A]'>WHY CHOOSE SISPN TECH FOR GOOGLE ADS SERVICES?</h4>
@@ -274,7 +269,7 @@ export default function page() {
                         ))}
                     </div>
                 </div>
-            </section>
+            </section> */}
             <RequestForm />
             <Popup isOpen={isOpen} onClose={closeModal} />
         </main>

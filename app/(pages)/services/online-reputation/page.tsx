@@ -1,11 +1,15 @@
 "use client"
 import ProjectCard from '@/app/(components)/ProjectCard'
 import React from 'react'
-import imageCard from '@/public/seo-card.png'
+import p2 from '@/public/online-p-2.jpg'
+import p3 from '@/public/online-p-3.jpg'
+import p5 from '@/public/online-p-5.jpg'
+import p6 from '@/public/online-p-6.jpg'
 import StrategyCard from '@/app/(components)/StrategyCard';
 import RequestForm from '@/app/(components)/RequestForm';
 import { useModal } from '@/app/context/store';
 import Popup from '@/app/(components)/Popup';
+import ServiceForm from '@/app/(components)/ServicesForm';
 
 
 const reputationManagementBenefits = [
@@ -33,12 +37,7 @@ const reputationManagementBenefits = [
         description:
             "A professional online image doesn't just draw in clients, but can also attract the top-quality job seekers who want to work for a trusted and reputable brand with a future-oriented image, showing integrity and professionalism in the industry.",
     },
-    {
-        id: 5,
-        title: "Mitigate Risks",
-        description:
-            "We monitor your digital channels in real-time to identify and respond to any potential threats in a timely manner. This proactive approach stops escalation and protects your brand's credibility and guarantees a consistent management of your brand's narrative.",
-    },
+
 ];
 
 
@@ -124,14 +123,14 @@ const googleAdsServices = [
         title: "Data-Driven Decision Making",
         description:
             "Our campaigns are rooted in facts. We monitor performance regularly, analyze user behavior, and optimize strategies in real-time to maximize outcomes and budget efficiency.",
-        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80"
+        image: p2.src
     },
     {
         id: 3,
         title: "Transparent Communication",
         description:
             "Our company believes in establishing trust by being transparent. We provide regular reports and stay available for discussions and questions.",
-        image: "https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?w=800&q=80"
+        image: p3.src
     },
     {
         id: 4,
@@ -145,7 +144,7 @@ const googleAdsServices = [
         title: "Certified Google Ads Professionals",
         description:
             "Our team consists of certified Google Ads experts who ensure your campaigns are optimized and aligned with best practices.",
-        image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1000&q=80"
+        image: p5.src
 
     },
     {
@@ -153,7 +152,7 @@ const googleAdsServices = [
         title: "Dedicated Support",
         description:
             "Youâ€™ll get a dedicated account manager who understands your needs and ensures your campaigns receive proper attention.",
-        image: "https://images.unsplash.com/photo-1556745757-8d76bdb6984b?w=800&q=80"
+        image: p6.src
     }
 ];
 
@@ -172,12 +171,12 @@ export default function page() {
             <section className='lg:py-50 py-12 lg:px-[80px] md:px-[40px] px-6 repo relative flex justify-center items-center'>
                 <div className='bg-black/70 absolute  h-full w-[100vw] z-0'></div>
 
-                <div className='flex flex-col gap-8  text-center max-w-[1298px] mx-auto relative z-1'>
-                    <h4 className='text-white font-medium text-[50px] leading-18' >ONLINE REPUTATION MANAGEMENT <br /> <span className='font-bold'>ONLINE REPUTATION SERVICES WITH SISPN TECH</span></h4>
-                    <p className='text-white text-lg leading-9 px-12'>Are you looking to expand your business by using Google Ads Services? SISPN Tech can assist you in achieving your goals. At SISPN Tech, we help businesses realize their fullest potential in digital advertising with carefully managed Google Ads campaigns. We have certified Google Ads experts who go beyond clicks and impressions, focusing on driving tangible growth of sales, revenue and ROI for your company. We provide complete, all-inclusive assistance to all Google Ads campaign types of campaigns which include Search ads, Shopping, Video ads, and much more. Large and reputable companies across all sectors take guidance from SISPN Tech for significant gains. With advanced data-driven strategies along with real-time tools for optimization, we customize each campaign to meet your specific objectives, which ensures the highest efficiency, continual performance gains and a long-lasting competitive advantage.</p>
-                    <button onClick={openModal} className='px-6 mx-auto mt-3.5 py-3.5 rounded-lg text-white text-xl font-medium cursor-pointer  bg-linear-to-t hover:scale-[0.9] transition-all to-[#8E2391] from-[#421C47] w-fit'>Get a Free Consultation</button>
-
+                <div className='flex flex-col gap-8  text-start max-w-[1298px] mx-auto relative z-1'>
+                    <h4 className='text-white font-medium text-[50px] leading-18' >ONLINE REPUTATION  <br /> <span className='font-bold'>SERVICES WITH SISPN TECH</span></h4>
+                    <p className='text-white text-lg leading-9 pr-12'>Looking to grow with Google Ads? SISPN Tech delivers data-driven campaigns that go beyond clicks—focusing on real growth in sales, revenue, and ROI. From Search to Shopping and Video ads, we create tailored strategies that drive consistent performance and long-term success.</p>
+                    <button onClick={openModal} className='px-6 mt-3.5 py-3.5 rounded-lg text-white text-xl font-medium cursor-pointer  bg-linear-to-t hover:scale-[0.9] transition-all to-[#8E2391] from-[#421C47] w-fit'>Get a Free Consultation</button>
                 </div>
+                <ServiceForm/>
             </section>
             <section className='lg:py-15 py-12 lg:px-[80px] md:px-[40px] px-6'>
                 <div className='flex flex-col gap-5'>
@@ -188,7 +187,7 @@ export default function page() {
                     <div className='flex flex-col gap-8 items-center max-w-[1566px] mx-auto'>
                         <p className='text-[#414141] text-xl text-center'> Your online reputation isn't simply a list of reviews. It's a reflection of your company or brandâ€™s reliability and credibility for the customers. Here at SISPN Tech, we help you build a strong image that matches your vision for your business and goals. Your online reputation can be a valuable tool to propel your company ahead. Here's how it can be possible:</p>
                     </div>
-                    <div className='grid grid-cols-3 gap-5'>
+                    <div className='grid grid-cols-2 gap-5'>
                         {reputationManagementBenefits?.map((item, idx) => (<StrategyCard key={idx} title={item.title} description={item.description} />))}
                     </div>
                 </div>

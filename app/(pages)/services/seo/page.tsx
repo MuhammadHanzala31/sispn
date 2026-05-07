@@ -2,12 +2,12 @@
 import ProjectCard from '@/app/(components)/ProjectCard'
 import React from 'react'
 import imageCard from '@/public/seo-card.png';
-import seop1 from '@/public/seo-p-1.png'
+import seop1 from '@/public/seo-p-1.jpg'
 import seop2 from '@/public/seo-p-2.png'
 import seop3 from '@/public/seo-p-3.png'
 import seop4 from '@/public/seo-p-4.png'
-import seop5 from '@/public/seo-p-5.png'
-import seop6 from '@/public/seo-p-6.png'
+import seop5 from '@/public/seo-p-5.jpg'
+import seop6 from '@/public/seo-p-6.jpg'
 import StrategyCard from '@/app/(components)/StrategyCard';
 import RequestForm from '@/app/(components)/RequestForm';
 import { seoPricig } from '@/app/pricingData'
@@ -16,6 +16,7 @@ import PricingCard from '@/app/(components)/PricingCard';
 import bg from '@/public/packages-bg.webp'
 import { useModal } from '@/app/context/store';
 import Popup from '@/app/(components)/Popup';
+import ServiceForm from '@/app/(components)/ServicesForm';
 
 
 const seoProcess = [
@@ -39,11 +40,7 @@ const seoProcess = [
         description:
             "To ensure the efficiency of our SEO strategies, we continuously evaluate key performance indicators, like organic traffic, keywords rankings as well as conversion rate. Our transparent reporting keeps you up-to-date about the progress we've made and gives you insight into areas of improvement to ensure that your investment produces real outcomes.",
     },
-    {
-        title: "Continuous Improvement",
-        description:
-            "SEO is an ongoing process. At SISPN Tech, we believe in continuous refinements and the required adjustments. We stay aware of the algorithms and industry trends and keep updating our strategies accordingly in order to ensure you improve and maintain the search engine ranking of your website. Continuous optimization guarantees the long-term success of your web presence.",
-    },
+
 ];
 
 
@@ -86,14 +83,15 @@ export default function page() {
 
     return (
         <main className=''>
-            <section className='lg:py-50 py-12 lg:px-[80px] md:px-[40px] px-6 seo flex justify-center items-center'>
-                <div className='flex flex-col gap-8 items-end justify-center text-center max-w-[1298px] mx-auto'>
-                    <h4 className='text-white font-medium text-[50px] leading-18' >SEARCH ENGINE OPTIMIZATION <br /> <span className='font-bold'>INCREASE TARGETED TRAFFIC WITH SISPN TECH</span></h4>
-                    <p className='text-white text-lg leading-9 px-12'>At SISPN Tech, we specialize in providing Search Engine Optimization services that are tailored to your needs, increase targeted traffic, improve the visibility of your website, and improve the conversion rates as well. Our extensive SEO Services are created to be in line with your business goals, providing real growth and an advantage in the competitive digital world.</p>
-                    <p className='text-white text-lg leading-9 px-12'>Are you ready to dominate search engine rankings and speed up your business's expansion? Join SISPN Tech today and experience the difference in SEO strategy with visible results.</p>
-                    <button onClick={openModal} className='px-6 mx-auto mt-3.5 py-3.5 rounded-lg text-white text-xl font-medium cursor-pointer  bg-linear-to-t hover:scale-[0.9] transition-all to-[#8E2391] from-[#421C47] w-fit'>Get a Free Consultation</button>
+            <section className='lg:py-20 py-12 lg:px-[80px] md:px-[40px] px-6 seo flex lg:flex-row flex-col justify-between items-center'>
+                <div className='flex flex-col gap-8 justify-center text-start max-w-[1298px] mx-auto'>
+                    <h4 className='text-white font-medium text-[50px] leading-18' >INCREASE TARGETED TRAFFIC <br /> <span className='font-bold'> WITH SISPN TECH</span></h4>
+                    <p className='text-white text-lg leading-9 pr-12'>At SISPN Tech, we specialize in providing Search Engine Optimization services that are tailored to your needs, increase targeted traffic, improve the visibility of your website, and improve the conversion rates as well. Our extensive SEO Services are created to be in line with your business goals, providing real growth and an advantage in the competitive digital world.</p>
+                    <p className='text-white text-lg leading-9 pr-12'>Are you ready to dominate search engine rankings and speed up your business's expansion? Join SISPN Tech today and experience the difference in SEO strategy with visible results.</p>
+                    <button onClick={openModal} className='px-6 mt-3.5 py-3.5 rounded-lg text-white text-xl font-medium cursor-pointer  bg-linear-to-t hover:scale-[0.9] transition-all to-[#8E2391] from-[#421C47] w-fit'>Get a Free Consultation</button>
 
                 </div>
+                <ServiceForm/>
             </section>
             <section className='lg:py-15 py-12 lg:px-[80px] md:px-[40px] px-6'>
                 <div className='flex flex-col gap-5'>
@@ -143,9 +141,9 @@ export default function page() {
                 <div className='flex flex-col gap-4 items-center'>
                     <h4 className='text-4xl font-bold text-[#81358A]'>TAILORED SEO STRATEGY FOR SUSTAINABLE GROWTH</h4>
                     <p className='text-[#414141] text-xl text-center max-w-[1450px] mx-auto'>SISPN Tech understands that a universal approach doesn't perform in SEO campaigns. Our customized strategies are developed to meet your specific business goals. This ensures the long-term expansion of a digital business in a constantly evolving digital world. By focusing on long-term success and adjusting to the most recent SEO trends, we can help your business to stay ahead of your competitors.</p>
-                    <div className='grid lg:grid-cols-3 grid-cols-1 gap-5'>
+                    <div className='grid lg:grid-cols-2 grid-cols-1 gap-5'>
                         {seoProcess?.map((item, idx) => (<StrategyCard key={idx} title={item.title} description={item.description} />))}
-                    </div>``
+                    </div>
                 </div>
             </section>
             <section>

@@ -1,7 +1,12 @@
 "use client"
 import ProjectCard from '@/app/(components)/ProjectCard'
 import React from 'react'
-import imageCard from '@/public/seo-card.png'
+import p1 from '@/public/design-p-1.jpg'
+import p2 from '@/public/design-p-2.jpg'
+import p3 from '@/public/design-p-3.jpg'
+import p4 from '@/public/design-p-4.jpg'
+import p5 from '@/public/design-p-5.jpg'
+import p11 from '@/public/design-p-11.jpg'
 import StrategyCard from '@/app/(components)/StrategyCard';
 import RequestForm from '@/app/(components)/RequestForm';
 import { graphicPrice } from '@/app/pricingData';
@@ -10,6 +15,7 @@ import Image from 'next/image';
 import bg from '@/public/packages-bg.webp'
 import { useModal } from '@/app/context/store';
 import Popup from '@/app/(components)/Popup';
+import ServiceForm from '@/app/(components)/ServicesForm';
 
 
 
@@ -146,35 +152,35 @@ const googleAdsServices = [
     title: "Logo Design",
     description:
       "Memorable, custom logo designs that form the cornerstone of your brand identity and help you stand out in a crowded market.",
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80"
+    image: p1.src
   },
   {
     id: 2,
     title: "Advertising Design",
     description:
       "Eye-catching ad creatives and promotional materials for print and digital campaigns that boost engagement and brand awareness.",
-    image: "https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=800&q=80"
+    image: p2.src
   },
   {
     id: 3,
     title: "Brochure Design",
     description:
       "Professional brochures, catalogs, and flyers crafted to inform and inspire your audience while maintaining brand consistency.",
-    image: "https://images.unsplash.com/photo-1586717799252-bd134ad00e26?w=800&q=80"
+    image: p3.src
   },
   {
     id: 4,
     title: "Social Media Graphics",
     description:
       "Custom graphics for Facebook, Instagram, LinkedIn, Twitter, and more, optimized to increase likes, shares, and engagement.",
-    image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&q=80"
+    image: p4.src
   },
   {
     id: 5,
     title: "Banners (Web & Physical)",
     description:
       "High-impact web banners and physical banners (trade shows, posters, etc.) that capture attention at every touchpoint.",
-    image: "https://images.unsplash.com/photo-1509395176047-4a66953fd231?w=800&q=80"
+    image: p5.src
   },
   {
     id: 6,
@@ -216,7 +222,7 @@ const googleAdsServices = [
     title: "Branding & Identity",
     description:
       "Elegant, branded business card and identity designs that leave a lasting first impression and reinforce your professional image.",
-    image: "https://images.unsplash.com/photo-1557683316-973673baf926?w=800&q=80"
+    image: p11.src
   }
 ];
 
@@ -231,13 +237,14 @@ export default function page() {
 
   return (
     <main className=''>
-      <section className='lg:py-50 py-12 lg:px-[80px] md:px-[40px] px-6 relative graphic flex justify-center items-center'>
+      <section className='lg:py-20 py-12 lg:px-[80px] md:px-[40px] px-6 relative graphic flex justify-center items-center'>
         <div className='bg-black/70 absolute  h-[700px] w-[100vw] z-0'></div>
-        <div className='flex flex-col gap-8  text-center max-w-[1298px] mx-auto relative z-1'>
-          <h4 className='text-white font-medium text-[50px] leading-18' >PREMIER GRAPHICS DESIGNING <br /> <span className='font-bold'>CUSTOM GRAPHIC DESIGN SERVICES WITH SISPN TECH</span></h4>
-          <p className='text-white text-lg leading-9 px-12'>At SISPN Tech, we turn your ideas into stunning visual realities. Our award-winning design team specializes in a wide range of custom graphic design services, from logo design services that build brand identity to dynamic motion graphics and everything in between . As a leading graphics and creative design agency, we craft each asset, including brochures, social media graphics, website visuals, and more, to captivate your audience and drive results. Ready to elevate your brand with professional graphics? Get started with SISPN Tech today.</p>
-          <button onClick={openModal} className='px-6 mx-auto mt-3.5 py-3.5 rounded-lg text-white text-xl font-medium cursor-pointer  bg-linear-to-t hover:scale-[0.9] transition-all to-[#8E2391] from-[#421C47] w-fit'>Get a Free Consultation</button>
+        <div className='flex flex-col gap-8 text-start max-w-[1298px] mx-auto relative z-1'>
+          <h4 className='text-white font-medium text-[50px] leading-18' >CUSTOM GRAPHIC DESIGN<br /> <span className='font-bold'> SERVICES WITH SISPN TECH</span></h4>
+          <p className='text-white text-lg leading-9 pr-12'>At SISPN Tech, we turn your ideas into stunning visual realities. Our award-winning design team specializes in a wide range of custom graphic design services, from logo design services that build brand identity to dynamic motion graphics and everything in between . As a leading graphics and creative design agency, we craft each asset, including brochures, social media graphics, website visuals, and more, to captivate your audience and drive results. Ready to elevate your brand with professional graphics? Get started with SISPN Tech today.</p>
+          <button onClick={openModal} className='px-6 mt-3.5 py-3.5 rounded-lg text-white text-xl font-medium cursor-pointer  bg-linear-to-t hover:scale-[0.9] transition-all to-[#8E2391] from-[#421C47] w-fit'>Get a Free Consultation</button>
         </div>
+        <ServiceForm/>
       </section>
       <section className='lg:py-15 py-12 lg:px-[80px] md:px-[40px] px-6'>
         <div className='flex flex-col gap-5'>
@@ -297,9 +304,9 @@ export default function page() {
         <div className='flex flex-col gap-4 items-center'>
           <h4 className='text-4xl font-bold text-[#81358A]'>INDUSTRIES WE SERVE IN GRAPHICS DESIGNING</h4>
           <p className='text-[#414141] text-xl text-center max-w-[1450px] mx-auto'>Compelling visuals are crucial in every industry. In fact, a majority of B2B marketers make visual assets a top priority, underscoring that great design drives engagement no matter the sector. No matter your field, we adapt our creative approach to fit your market and target audience. Every industry has unique challenges; we ensure each design speaks the language of your sector. SISPN Tech has experience across a wide range of industries, including:</p>
-          <div className='grid grid-cols-3 gap-5'>
+          <div className='grid grid-cols-2 gap-5'>
             {seoProcess?.map((item, idx) => (<StrategyCard key={idx} title={item.title} description={item.description} />))}
-          </div>``
+          </div>
         </div>
       </section>
       <RequestForm />
