@@ -64,7 +64,7 @@ export default function Popup({ isOpen, onClose }: ContactPopupProps) {
     name:        "",
     company:     "",
     phone:       "",
-    phoneCode:   "+92",
+    phoneCode:   "+1",
     email:       "",
     service:     "",
     timeline:    "",
