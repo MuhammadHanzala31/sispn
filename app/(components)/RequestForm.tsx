@@ -5,7 +5,7 @@ import img from '@/public/r-form-img.png'
 export default function RequestForm() {
   return (
     <section className='lg:px-[80px] md:px-[40px] px-6 my-16'>
-      <div className='flex lg:flex-row flex-col rounded-2xl shadow-2xl   overflow-hidden border bg-black border-gray-100 min-h-[560px]'>
+      <div className='flex lg:flex-row flex-col rounded-2xl shadow-2xl   overflow-hidden border bg-black border-gray-100s min-h-[560px]'>
 
         {/* ── Left Panel ── */}
         <div className='relative lg:w-[42%] w-full bg-gradient-to-br from-[#421C47] via-[#81358A] to-[#a84db5] p-10 flex flex-col justify-between overflow-hidden'>

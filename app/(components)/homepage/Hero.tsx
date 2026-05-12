@@ -23,8 +23,8 @@ export default function Hero() {
             leading-tight
             capitalize
           '>
-            From branding to growth-driven  <br className="hidden sm:block" />
-            marketing and software solutions we create digital experiences that perform.            </h1>
+            Branding, marketing, and software <br/> solutions that drive growth.
+</h1>
 
           {/* Paragraph */}
           <p className='

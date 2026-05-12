@@ -9,7 +9,7 @@ export default function About() {
 
   return (
     <section data-aos="fade-left" className='
-      flex flex-col lg:flex-row items-center gap-10
+      flex flex-col items-center gap-10
       px-4 sm:px-6 lg:px-20
       py-8 sm:py-12 lg:py-16
       max-w-[1400px] mx-auto
@@ -18,10 +18,11 @@ export default function About() {
       relative 
       shadow-2xl
       // z-10      
+      text-center
     '>
 
       {/* LEFT CONTENT */}
-      <div className='flex flex-col gap-4 lg:w-1/2 w-full text-center lg:text-left'>
+      <div className='flex flex-col gap-4 w-full text-center'>
 
         <h4 className='
           text-2xl 
@@ -46,13 +47,12 @@ export default function About() {
           Over the years, we have expanded into application development, e-commerce systems, web portals,
           and digital marketing.
         </p>
-        <button onClick={openModal} className='px-6 mt-3.5 py-3.5 rounded-lg text-white text-xl font-medium cursor-pointer  bg-linear-to-t hover:scale-[0.9] transition-all to-[#8E2391] from-[#421C47] w-fit'>Free Consultation</button>
 
 
       </div>
 
       {/* RIGHT STATS */}
-      <div className='grid grid-cols-2 gap-6 lg:w-1/2 w-full'>
+      <div className='grid grid-cols-4 gap-6 w-full'>
 
         {[
           { value: "2K +", label: "GLOBAL HAPPY CLIENTS" },
@@ -88,6 +88,9 @@ export default function About() {
         ))}
 
       </div>
+
+              <button onClick={openModal} className='px-6 mt-3.5 py-3.5 rounded-lg text-white text-xl font-medium cursor-pointer  bg-linear-to-t hover:scale-[0.9] transition-all to-[#8E2391] from-[#421C47] w-fit'>Free Consultation</button>
+
 
     </section>
   )
