@@ -56,7 +56,7 @@ export default function SideNav({ isOpen, onClose }: any) {
               <div className="bg-white h-12 w-12 rounded-full flex justify-center items-center">
                 <i className="ri-mail-line text-[#672b6c] text-2xl"></i>
               </div>
-              <span className="text-xl text-white">info@sispntech.com</span>
+              <span className="text-xl text-white">sales@sispntech.com</span>
             </div>
 
             <div className="flex flex-row gap-4 items-center">

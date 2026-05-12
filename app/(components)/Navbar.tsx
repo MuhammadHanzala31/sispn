@@ -35,11 +35,10 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`flex items-center justify-between lg:px-20 md:px-10 px-4 py-3 md:py-4 fixed w-full z-50 transition-all duration-300 ${
-        scrolled
+      className={`flex items-center justify-between lg:px-20 md:px-10 px-4 py-3 md:py-4 fixed w-full z-50 transition-all duration-300 ${scrolled
           ? 'bg-black/90 backdrop-blur-2xl shadow-[0_4px_30px_rgba(0,0,0,0.4)] border-b border-white/5'
           : 'bg-black/80 backdrop-blur-xl'
-      }`}
+        }`}
     >
       {/* Logo */}
       <Link href="/">
@@ -69,9 +68,8 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`block px-5 py-3 text-sm text-white/80 hover:text-white hover:bg-white/10 transition-all duration-150 ${
-                  i < serviceLinks.length - 1 ? 'border-b border-white/8' : ''
-                }`}
+                className={`block px-5 py-3 text-sm text-white/80 hover:text-white hover:bg-white/10 transition-all duration-150 ${i < serviceLinks.length - 1 ? 'border-b border-white/8' : ''
+                  }`}
               >
                 {link.label}
               </Link>
@@ -85,7 +83,7 @@ export default function Navbar() {
         <Link className='hover:text-[#B83DC8] text-white/85 text-sm lg:text-base font-medium transition-colors duration-200' href="/portfolio">
           Portfolio
         </Link>
-      
+
         {/* CTA */}
         <Link
           href="/contact-us"

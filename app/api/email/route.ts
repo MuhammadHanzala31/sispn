@@ -159,7 +159,7 @@ export async function POST(req: Request) {
                 color:#888;
               "
             >
-              info@sispntech.com <br />
+              sales@sispntech.com <br />
               www.sispntech.com
             </td>
           </tr>

@@ -112,9 +112,9 @@ export default function Footer() {
                 <i className="ri-phone-line text-[#81358A]"></i>
                 +1 (315)-999-4142
               </a>
-              <a href="mailto:info@sispntech.com" className="text-white/60 hover:text-[#B83DC8] text-sm transition-colors flex items-center gap-2">
+              <a href="mailto:sales@sispntech.com" className="text-white/60 hover:text-[#B83DC8] text-sm transition-colors flex items-center gap-2">
                 <i className="ri-mail-line text-[#81358A]"></i>
-                info@sispntech.com
+                sales@sispntech.com
               </a>
             </div>
           </div>
