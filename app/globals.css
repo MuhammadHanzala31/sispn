@@ -74,6 +74,7 @@ body {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--purple-primary);
+  width: fit-content;
 }
 
 /* ── Gradient text ── */

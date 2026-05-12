@@ -85,10 +85,7 @@ export default function Navbar() {
         <Link className='hover:text-[#B83DC8] text-white/85 text-sm lg:text-base font-medium transition-colors duration-200' href="/portfolio">
           Portfolio
         </Link>
-        <Link className='hover:text-[#B83DC8] text-white/85 text-sm lg:text-base font-medium transition-colors duration-200' href="/contact-us">
-          Contact
-        </Link>
-
+      
         {/* CTA */}
         <Link
           href="/contact-us"
