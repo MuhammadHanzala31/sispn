@@ -1,216 +1,196 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import logo from '@/public/logo.png'
 import Image from 'next/image'
 import Link from 'next/link'
 import SideNav from './SideNav'
 
+const serviceLinks = [
+  { label: 'All Services', href: '/services' },
+  { label: 'Web Development', href: '/services/website-design-and-development' },
+  { label: 'SEO Optimization', href: '/services/seo' },
+  { label: 'Google Ads', href: '/services/google-ads' },
+  { label: 'Email Marketing', href: '/services/email-marketing' },
+  { label: 'Online Reputation', href: '/services/online-reputation' },
+  { label: 'Social Media Marketing', href: '/services/social-media-marketing' },
+  { label: 'Graphic Designing', href: '/services/graphic-designing' },
+]
+
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [openDropdown, setOpenDropdown] = useState(null)
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null)
+  const [isSideNavOpen, setIsSideNavOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
 
-  const toggleDropdown = (dropdown: any) => {
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 20)
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+
+  const toggleDropdown = (dropdown: string) => {
     setOpenDropdown(openDropdown === dropdown ? null : dropdown)
   }
 
-  const [isSideNavOpen, setIsSideNavOpen] = useState(false);
-
-
   return (
-    <div className='flex navbar items-center justify-between lg:px-20 md:px-10 px-4 bg-black py-3 md:py-4 fixed w-[100vw] opacity-90 backdrop-blur-2xl z-12'>
-
+    <nav
+      className={`flex items-center justify-between lg:px-20 md:px-10 px-4 py-3 md:py-4 fixed w-full z-50 transition-all duration-300 ${
+        scrolled
+          ? 'bg-black/90 backdrop-blur-2xl shadow-[0_4px_30px_rgba(0,0,0,0.4)] border-b border-white/5'
+          : 'bg-black/80 backdrop-blur-xl'
+      }`}
+    >
       {/* Logo */}
-      <Image src={logo} alt="logo" className='md:w-[150px] md:h-[70px] w-[100px] h-[70px]' />
+      <Link href="/">
+        <Image src={logo} alt="SISPN Tech" className='md:w-[150px] md:h-[60px] w-[110px] h-[50px] object-contain' />
+      </Link>
 
-      {/* Deskto p Menu */}
-      <div className='hidden md:flex items-center gap-8 lg:gap-12'>
-        <Link className='hover:text-[#B83DC8] text-white text-sm lg:text-lg font-medium font-sans transition' href="/">Home</Link>
+      {/* Desktop Menu */}
+      <div className='hidden md:flex items-center gap-8 lg:gap-10'>
+        <Link className='hover:text-[#B83DC8] text-white/85 text-sm lg:text-base font-medium transition-colors duration-200' href="/">
+          Home
+        </Link>
 
         {/* Services Dropdown */}
         <div className="relative group">
-          <button
-            className='hover:text-[#B83DC8] text-white text-sm lg:text-lg font-medium font-sans flex items-center gap-1 transition'
-
-          >
-            Services <i className="ri-arrow-drop-down-line text-lg"></i>
+          <button className='hover:text-[#B83DC8] text-white/85 text-sm lg:text-base font-medium flex items-center gap-1 transition-colors duration-200'>
+            Services
+            <i className="ri-arrow-drop-down-line text-xl transition-transform duration-200 group-hover:rotate-180"></i>
           </button>
 
-          <div className="absolute top-full px-2 left-0 mt-3 w-40 rounded-xl overflow-hidden 
-                          bg-gradient-to-b from-[#421C47] to-[#8E2391]
-                          opacity-0 invisible group-hover:opacity-100 group-hover:visible 
-                          transition-all duration-300 shadow-lg">
-            <Link href="/services"
-              className="block px-4 py-3 text-center text-xs lg:text-sm border-b border-b-white/30 text-white hover:bg-white/10 transition">
-              All Services
-            </Link>
-            <Link href="/services/website-design-and-development"
-              className="block px-4 py-3 text-center text-xs lg:text-sm border-b border-b-white/30 text-white hover:bg-white/10 transition">
-              Web Development
-            </Link>
-            <Link href="/services/seo"
-              className="block px-4 py-3 text-center text-xs lg:text-sm  border-b border-b-white/30 text-white hover:bg-white/10 transition">
-              SEO Optimization
-            </Link>
-            <Link href="/services/google-ads"
-              className="block px-4 py-3 text-center text-xs lg:text-sm border-b border-b-white/30 text-white hover:bg-white/10 transition">
-              Google Ads
-            </Link>
-            <Link href="/services/email-marketing"
-              className="block px-4 py-3 text-center text-xs lg:text-sm border-b border-b-white/30 text-white hover:bg-white/10 transition">
-              Email Marketing
-            </Link>
-            <Link href="/services/online-reputation"
-              className="block px-4 py-3 text-center text-xs lg:text-sm border-b border-b-white/30 text-white hover:bg-white/10 transition">
-              Online Reputation
-            </Link>
-            {/* <Link href="/services/affordable-marketing"
-              className="block px-4 py-3 text-center text-xs lg:text-sm border-b border-b-white/30 text-white hover:bg-white/10 transition">
-               Affordable marketing
-            </Link> */}
-            <Link href="/services/social-media-marketing"
-              className="block px-4 py-3 text-center text-xs lg:text-sm border-b border-b-white/30 text-white hover:bg-white/10 transition">
-              Social Media Marketing
-            </Link>
-            <Link href="/services/graphic-designing"
-              className="block px-4 py-3 text-center text-xs lg:text-sm border-b-white/30 text-white hover:bg-white/10 transition">
-              Graphic Designing
-            </Link>
+          <div className="absolute top-full left-1/2 -translate-x-1/2 mt-4 w-52 rounded-2xl overflow-hidden
+                          bg-gradient-to-b from-[#2a0d2e] to-[#1a0820]
+                          border border-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.5),0_0_30px_rgba(129,53,138,0.15)]
+                          opacity-0 invisible group-hover:opacity-100 group-hover:visible
+                          translate-y-2 group-hover:translate-y-0
+                          transition-all duration-300">
+            {serviceLinks.map((link, i) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`block px-5 py-3 text-sm text-white/80 hover:text-white hover:bg-white/10 transition-all duration-150 ${
+                  i < serviceLinks.length - 1 ? 'border-b border-white/8' : ''
+                }`}
+              >
+                {link.label}
+              </Link>
+            ))}
           </div>
         </div>
 
-        {/* Insights Dropdown */}
-        {/* <div className="relative group">
-          <div className='hover:text-[#B83DC8] text-white text-sm lg:text-lg font-medium font-sans flex items-center gap-1 cursor-pointer transition'>
-            Insights <i className="ri-arrow-drop-down-line text-lg"></i>
-          </div>
+        <Link className='hover:text-[#B83DC8] text-white/85 text-sm lg:text-base font-medium transition-colors duration-200' href="/about-us">
+          About Us
+        </Link>
+        <Link className='hover:text-[#B83DC8] text-white/85 text-sm lg:text-base font-medium transition-colors duration-200' href="/portfolio">
+          Portfolio
+        </Link>
+        <Link className='hover:text-[#B83DC8] text-white/85 text-sm lg:text-base font-medium transition-colors duration-200' href="/contact-us">
+          Contact
+        </Link>
 
-          <div className="absolute top-full px-2 left-0 mt-3 w-40 rounded-xl overflow-hidden 
-                          bg-gradient-to-b from-[#421C47] to-[#8E2391]
-                          opacity-0 invisible group-hover:opacity-100 group-hover:visible 
-                          transition-all duration-300 shadow-lg">
-            <Link href="/about-us"
-              className="block px-4 py-3 text-xs lg:text-sm border-b border-b-white/30 text-white hover:bg-white/10 transition">
-              About
-            </Link>
-            <Link href="/blogs"
-              className="block px-4 py-3 text-xs lg:text-sm text-white hover:bg-white/10 transition">
-              Blogs
-            </Link>
-          </div>
-        </div> */}
-
-        <Link className='hover:text-[#B83DC8] text-white text-sm lg:text-lg font-medium font-sans transition' href="/about-us">About Us</Link>
-        <Link className='hover:text-[#B83DC8] text-white text-sm lg:text-lg font-medium font-sans transition' href="/portfolio">Portfolio</Link>
-        <Link className='hover:text-[#B83DC8] text-white text-sm lg:text-lg font-medium font-sans transition' href="/contact-us">Contact</Link>
+        {/* CTA */}
+        <Link
+          href="/contact-us"
+          className='hidden lg:flex items-center gap-2 px-5 py-2.5 rounded-xl text-white text-sm font-semibold bg-gradient-to-br from-[#421C47] to-[#8E2391] hover:shadow-[0_4px_20px_rgba(129,53,138,0.5)] hover:-translate-y-0.5 transition-all duration-200'
+        >
+          Get Started
+          <i className="ri-arrow-right-line text-sm"></i>
+        </Link>
       </div>
 
-      {/* Menu Icon */}
-      <button
-        onClick={() => setIsSideNavOpen(true)}
-        className="text-[#8d7491] text-2xl cursor-pointer hidden lg:block"
-      >
-        <i className="ri-menu-2-line"></i>
-      </button>
+      {/* Right actions */}
+      <div className='flex items-center gap-3'>
+        {/* Side Nav trigger — desktop */}
+        <button
+          onClick={() => setIsSideNavOpen(true)}
+          className="text-white/60 hover:text-[#B83DC8] text-2xl cursor-pointer hidden lg:flex transition-colors duration-200"
+          aria-label="Open side menu"
+        >
+          <i className="ri-menu-2-line"></i>
+        </button>
 
-      {/* SideNav Component */}
+        {/* Mobile hamburger */}
+        <button
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          className='md:hidden text-white/70 hover:text-[#B83DC8] text-2xl cursor-pointer transition-colors duration-200'
+          aria-label="Toggle menu"
+        >
+          <i className={mobileMenuOpen ? 'ri-close-line' : 'ri-menu-2-line'}></i>
+        </button>
+      </div>
+
+      {/* SideNav */}
       <SideNav isOpen={isSideNavOpen} onClose={() => setIsSideNavOpen(false)} />
-
-      {/* Mobile Menu Button */}
-      <button
-        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-        className='md:hidden text-[#8d7491] text-2xl cursor-pointer'
-      >
-        <i className={mobileMenuOpen ? "ri-close-line" : "ri-menu-2-line"}></i>
-      </button>
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className='absolute top-full left-0 w-full bg-black/95 backdrop-blur-2xl border-t border-t-white/10 md:hidden'>
-          <div className='flex flex-col gap-4 p-4'>
+        <div className='absolute top-full left-0 w-full bg-black/95 backdrop-blur-2xl border-t border-white/10 md:hidden'>
+          <div className='flex flex-col p-4 gap-1'>
             <Link
-              className='hover:text-[#B83DC8] text-white text-base font-medium font-sans transition py-2'
+              className='hover:text-[#B83DC8] text-white/85 text-base font-medium transition-colors py-3 px-2 rounded-xl hover:bg-white/5'
               href="/"
               onClick={() => setMobileMenuOpen(false)}
             >
               Home
             </Link>
 
-            {/* Services Mobile Dropdown */}
             <div>
               <button
                 onClick={() => toggleDropdown('services')}
-                className='w-full text-left hover:text-[#B83DC8] text-white text-base font-medium font-sans flex items-center justify-between transition py-2'
+                className='w-full text-left hover:text-[#B83DC8] text-white/85 text-base font-medium flex items-center justify-between transition-colors py-3 px-2 rounded-xl hover:bg-white/5'
               >
                 Services
-                <i className={`ri-arrow-drop-down-line transition-transform ${openDropdown === 'services' ? 'rotate-180' : ''}`}></i>
+                <i className={`ri-arrow-drop-down-line text-xl transition-transform duration-200 ${openDropdown === 'services' ? 'rotate-180' : ''}`}></i>
               </button>
               {openDropdown === 'services' && (
-                <div className='flex flex-col gap-2 pl-4 mt-2 border-l border-l-[#B83DC8]/30'>
-                  <Link
-                    href="/services/website-design-and-development"
-                    className='text-white text-sm hover:text-[#B83DC8] transition py-1'
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    Web Development
-                  </Link>
-                  <Link
-                    href="/services/seo"
-                    className='text-white text-sm hover:text-[#B83DC8] transition py-1'
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    SEO Optimization
-                  </Link>
-                </div>
-              )}
-            </div>
-
-            {/* Insights Mobile Dropdown */}
-            <div>
-              <button
-                onClick={() => toggleDropdown('insights')}
-                className='w-full text-left hover:text-[#B83DC8] text-white text-base font-medium font-sans flex items-center justify-between transition py-2'
-              >
-                Insights
-                <i className={`ri-arrow-drop-down-line transition-transform ${openDropdown === 'insights' ? 'rotate-180' : ''}`}></i>
-              </button>
-              {openDropdown === 'insights' && (
-                <div className='flex flex-col gap-2 pl-4 mt-2 border-l border-l-[#B83DC8]/30'>
-                  <Link
-                    href="/about-us"
-                    className='text-white text-sm hover:text-[#B83DC8] transition py-1'
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    About
-                  </Link>
-                  <Link
-                    href="/blogs"
-                    className='text-white text-sm hover:text-[#B83DC8] transition py-1'
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    Blogs
-                  </Link>
+                <div className='flex flex-col gap-1 pl-4 mt-1 ml-2 border-l-2 border-[#81358A]/40'>
+                  {serviceLinks.map(link => (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      className='text-white/70 hover:text-[#B83DC8] text-sm transition-colors py-2 px-2'
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      {link.label}
+                    </Link>
+                  ))}
                 </div>
               )}
             </div>
 
             <Link
-              className='hover:text-[#B83DC8] text-white text-base font-medium font-sans transition py-2'
+              className='hover:text-[#B83DC8] text-white/85 text-base font-medium transition-colors py-3 px-2 rounded-xl hover:bg-white/5'
+              href="/about-us"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              About Us
+            </Link>
+            <Link
+              className='hover:text-[#B83DC8] text-white/85 text-base font-medium transition-colors py-3 px-2 rounded-xl hover:bg-white/5'
               href="/portfolio"
               onClick={() => setMobileMenuOpen(false)}
             >
               Portfolio
             </Link>
             <Link
-              className='hover:text-[#B83DC8] text-white text-base font-medium font-sans transition py-2'
+              className='hover:text-[#B83DC8] text-white/85 text-base font-medium transition-colors py-3 px-2 rounded-xl hover:bg-white/5'
               href="/contact-us"
               onClick={() => setMobileMenuOpen(false)}
             >
               Contact
             </Link>
+
+            <Link
+              href="/contact-us"
+              onClick={() => setMobileMenuOpen(false)}
+              className='mt-2 flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-white font-semibold bg-gradient-to-br from-[#421C47] to-[#8E2391]'
+            >
+              Get Started <i className="ri-arrow-right-line"></i>
+            </Link>
           </div>
         </div>
       )}
-    </div>
+    </nav>
   )
 }

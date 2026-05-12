@@ -1,6 +1,5 @@
 "use client"
 import ProjectCard from '@/app/(components)/ProjectCard'
-import React from 'react'
 import p1 from '@/public/ads-p-1.jpg'
 import p2 from '@/public/ads-p-3.jpg'
 import p22 from '@/public/ads-2.jpg'
@@ -11,267 +10,158 @@ import p6 from '@/public/ads-p-6.jpg'
 import p7 from '@/public/ads-p-7.jpg'
 import p8 from '@/public/ads-p-8.jpg'
 import p9 from '@/public/ads-p-9.jpg'
-import StrategyCard from '@/app/(components)/StrategyCard';
-import RequestForm from '@/app/(components)/RequestForm';
-import { useModal } from '@/app/context/store';
-import Popup from '@/app/(components)/Popup';
+import StrategyCard from '@/app/(components)/StrategyCard'
+import RequestForm from '@/app/(components)/RequestForm'
+import { useModal } from '@/app/context/store'
+import Popup from '@/app/(components)/Popup'
 import ServiceForm from '@/app/(components)/ServicesForm'
+import BenefitCard from '@/app/(components)/BenefitCard'
 
-
-const seoProcess = [
-    {
-        id: 1,
-        title: "Targeted Reach",
-        description:
-            "Google Ads allows users to target specific areas, demographics, interest, behaviour, devices or even specific channels, sites and platforms making sure that your ads are seen by the correct target audience at the right moment or when they specially search for specific keywords and your brand/products/services show up on the first page at the top of search result with most relevant keywords and Headlines and descriptions align with your business.",
-    },
-    {
-        id: 2,
-        title: "Instant Visibility",
-        description:
-            "Once your campaign goes live, your ads are activated instantly, giving your business immediate visibility across your target audience. This ensures that potential customers can start discovering your products or services right away, without any delay. It helps you gain quick exposure, drive traffic, and start generating leads from the very first moment your campaign is launched.",
-    },
-    {
-        id: 3,
-        title: "Measurable Results",
-        description:
-            "With detailed analysis, you can monitor the effectiveness of your advertisement and track conversions, monitor them, and make adjustments in real-time to increase ROI.",
-    },
-    {
-        id: 4,
-        title: "Budget Control",
-        description:
-            "You can create a budget for the day or month that is in line with your goals in financial terms. This will ensure that you donâ€™t overspend while reaching your goals.",
-    },
-
-];
-
-
-const seoBenefits = [
-    {
-        id: 1,
-        title: "Enhance Online Visibility And Rankings",
-        description:
-            "Effective SEO strategies ensure higher rankings in search results. By optimizing your website for targeted keywords, your website is more likely to be visible to prospective customers searching for your services or products or for the content you've published. The higher rankings do more than just improve the websiteâ€™s visibility and establish your company's standing in the market.",
-    },
-    {
-        id: 2,
-        title: "Drive Targeted Organic Traffic",
-        description:
-            "SEO aims to attract quality visitors and audiences who are truly interested in your products and services. We make sure that the content published on your site is aligned with the intent of targeted audience to draw visitors who are more likely to become customers. This targeted approach results in greater engagement and a higher CTR and ROI than generic traffic sources.",
-    },
-    {
-        id: 3,
-        title: "Build Trust And Credibility",
-        description:
-            "Being on the first page of results indicates the users that your business is well-reputed, reliable and trustworthy. High-quality consistent content, optimized website, user-friendly design and good customer reviews are the key points to improve your business credibility. This makes it easier for customers to select your product to purchase or service to avail over those of competitors.",
-    },
-    {
-        id: 4,
-        title: "Improved User Experience",
-        description:
-            "SEO isn't just about the web browsers. It's about offering a seamless experience to the visitors of your website. Optimized website speed, mobile responsiveness, improved user interface, and optimal content display are also ensured. Creating a seamless navigation leads to an enhanced user experience, which can ultimately increase conversion rates and customer satisfaction.",
-    },
-    {
-        id: 5,
-        title: "Deliver Long-Term Results And ROI",
-        description:
-            "Contrary to paid ads that stop the traffic generation when the budget reaches its limit, SEO offers sustainable, long-term advantages. A well-implemented, effective SEO strategy will continue to draw and increase the number of loyal customers it serves and provide a greater return on investment. This helps you get the opportunity to achieve continuous business growth.",
-    },
-];
-
+const googleAdsProcess = [
+  {
+    id: 1,
+    title: "Targeted Reach",
+    description: "Google Ads allows users to target specific areas, demographics, interests, behaviour, and devices — making sure your ads are seen by the right audience at the right moment, with the most relevant keywords and messaging.",
+  },
+  {
+    id: 2,
+    title: "Instant Visibility",
+    description: "Once your campaign goes live, your ads are activated instantly, giving your business immediate visibility across your target audience — driving traffic and generating leads from the very first moment.",
+  },
+  {
+    id: 3,
+    title: "Measurable Results",
+    description: "With detailed analytics, you can monitor effectiveness, track conversions, and make real-time adjustments to continuously increase ROI.",
+  },
+  {
+    id: 4,
+    title: "Budget Control",
+    description: "Set a daily or monthly budget aligned with your financial goals to ensure you never overspend while reaching your objectives.",
+  },
+]
 
 const googleAdsServices = [
-    {
-        id: 1,
-        title: "Search Ads",
-        image: p1,
-        description:
-            "We create ads for the keywords with high intent so that your advertisements appear at the very top in Google Search when customers look for services or products similar to yours. This identifies leads who are ready to buy and brings relevant and purchase-intent traffic to your website.",
-    },
-    {
-        id: 2,
-        title: "Display Ads",
-        image: p22,
-        description:
-            "SISPN Tech designs visually appealing images and banner ads that run on the Google Display Network, reaching potential customers across millions of apps and websites. Through showcasing your company’s brand on relevant websites, display campaigns increase the visibility of your business.",
-    },
-    {
-        id: 3,
-        title: "Shopping Ads",
-        image: p3,
-        description:
-            "For e-commerce businesses, our shopping campaigns display captivating product images as well as prices and other details directly in Google results. The customers see your products and are able to click through to purchase, which increases the likelihood of buying and can help you convert browsers into customers.",
-    },
-    {
-        id: 4,
-        title: "Video Ads",
-        image: p4,
-        description:
-            "We create compelling video advertisements on YouTube along with other Google partner websites, employing the power of storytelling and innovative visuals to draw the attention of viewers. Video ads are perfect to showcase products and build brand loyalty in a format that is engaging beyond the text-based approach.",
-    },
-    {
-        id: 5,
-        title: "Remarketing Ads",
-        image: p5,
-        description:
-            "We encourage the visitors to return who have previously visited your website or shown any interest in the displayed ads while browsing the internet or apps. In keeping your brand at the forefront of their minds, remarketing campaigns help to encourage potential customers to come back and make a purchase.",
-    },
-    {
-        id: 6,
-        title: "Local Service Ads",
-        image: p6,
-        description:
-            "SISPN Tech offers Local Service Ads that connect your business with customers in the area where they are searching for your services. These ads highlight your company prominently (often with a “Google Guaranteed” badge) and offer direct phone or text messaging options that make it easy for potential customers in the area to reach out right away.",
-    },
-    {
-        id: 7,
-        title: "App Promotion Ads",
-        image: p7,
-        description:
-            "If you’ve developed a mobile app, our App Promotion Ads can target advertisements on smartphones on Google Search, YouTube, and the Play Store to encourage installations and increase engagement. We make use of the data from the app store to design advertisements that are appealing to those who are most susceptible to downloading and installing your app.",
-    },
-    {
-        id: 8,
-        title: "PPC Management",
-        image: p8,
-        description:
-            "We offer full-service PPC management that ties the various channels. Our experts constantly tweak bids, budgets and the targeting across campaigns to ensure that each dollar is optimized to yield the highest ROI and sales.",
-    },
-    {
-        id: 9,
-        title: "Performance Max",
-        image: p9, description:
-            "Performance Max campaigns of SISPN Tech utilize Google’s AI to deliver goal-driven ads across all Google channels from a single campaign, including Search, Display, YouTube, Gmail, Maps, and Discover. By using your marketing objective, creative assets, and budget, Performance Max optimizes the ads and bids for maximum conversions and ROI.",
-    },
-];
+  { id: 1, title: "Search Ads", image: p1, description: "We create high-intent keyword ads that appear at the top of Google Search, capturing leads who are ready to buy and driving relevant, purchase-intent traffic to your site." },
+  { id: 2, title: "Display Ads", image: p22, description: "Visually appealing banner ads running on the Google Display Network — reaching potential customers across millions of apps and websites to boost brand visibility." },
+  { id: 3, title: "Shopping Ads", image: p3, description: "For e-commerce businesses, our shopping campaigns display product images, prices, and details directly in Google results — converting browsers into buyers." },
+  { id: 4, title: "Video Ads", image: p4, description: "Compelling video ads on YouTube and Google partner sites that use storytelling and creative visuals to capture viewer attention and build brand loyalty." },
+  { id: 5, title: "Remarketing Ads", image: p5, description: "Re-engage visitors who have previously shown interest in your brand, keeping your business top-of-mind and encouraging them to return and convert." },
+  { id: 6, title: "Local Service Ads", image: p6, description: "Connect with local customers searching for your services. Displayed with a 'Google Guaranteed' badge and direct contact options for instant lead capture." },
+  { id: 7, title: "App Promotion Ads", image: p7, description: "Drive app installs and engagement through targeted ads on Google Search, YouTube, and the Play Store — designed for users most likely to download your app." },
+  { id: 8, title: "PPC Management", image: p8, description: "Full-service PPC management with ongoing bid, budget, and targeting optimisation across campaigns to maximise ROI on every dollar spent." },
+  { id: 9, title: "Performance Max", image: p9, description: "AI-powered campaigns that deliver goal-driven ads across all Google channels — Search, Display, YouTube, Gmail, Maps, and Discover — from a single campaign." },
+]
 
-const googleAdsWhyChooseUs = [
-    {
-        id: 1,
-        title: "Customized Strategies",
-        image:
-            "https://images.unsplash.com/photo-1492724441997-5dc865305da7",
-        description:
-            "We know very well that each business is different from the other. Our team creates custom Google Ads strategies and funnel that are aligned with your business's specific objectives, goals and the specific industry aspects. This approach is customized to ensure higher engagement and higher return on investment.",
-    },
-    {
-        id: 2,
-        title: "Data-Driven Decision Making",
-        image:
-            "https://images.unsplash.com/photo-1556155092-8707de31f9c4",
-        description:
-            "Our campaigns are rooted in facts. We monitor the performance of our campaigns on regular basis as well as analyze user behaviour and adapt strategies in real time to maximize the outcomes. Our commitment to analytics will ensure that the advertising budget you pay for is utilized efficiently.",
-    },
-    {
-        id: 3,
-        title: "Transparent Communication",
-        image:
-            "https://images.unsplash.com/photo-1556761175-b413da4baf72",
-        description:
-            "Our company believes in establishing trust by being transparent. We will send you regular, comprehensive reports of your campaign's success and our team is always ready for discussions on strategies and to respond the questions for sharing information.",
-    },
-    {
-        id: 4,
-        title: "Advanced Tools and Technologies",
-        image:
-            "https://images.unsplash.com/photo-1518779578993-ec3579fee39f",
-        description:
-            "SISPN Tech uses the most up-to-date techniques and tools to remain ahead of this changing digital advertising industry. This lets us implement new and innovative strategies that yield higher results from your advertising campaigns.",
-    },
-    {
-        id: 5,
-        title: "Certified Google Ads Professionals",
-        image:
-            "https://images.unsplash.com/photo-1522071820081-009f0129c71c",
-        description:
-            "Our team at SISPN consists of experts who are certified Google Ads professionals. We bring the most authentic expertise and experience to your ads. This ensures that your advertisements are optimized for effectiveness and are in compliance with the most effective practices.",
-    },
-    {
-        id: 6,
-        title: "Dedicated Support",
-        image:
-            "https://images.unsplash.com/photo-1551434678-e076c223a692",
-        description:
-            "When you work with SISPN Tech, you're not just another customer for us. You'll get an account manager who understands your needs and is dedicated to your achievement. This personal service ensures that your campaigns receive the right time and attention they need.",
-    },
-];
-
-
-
+const whyChooseUs = [
+  { id: 1, title: "Customized Strategies", description: "We build bespoke Google Ads funnels aligned to your specific business objectives, industry nuances, and target audience for maximum engagement and ROI." },
+  { id: 2, title: "Data-Driven Decisions", description: "Performance is monitored constantly. We analyse user behaviour and adapt strategies in real-time, ensuring your budget is always working as hard as possible." },
+  { id: 3, title: "Transparent Reporting", description: "Regular, comprehensive reports on campaign performance. Our team is always available to discuss strategy, answer questions, and share insights." },
+  { id: 4, title: "Advanced Tools", description: "We use the most up-to-date techniques and platforms to stay ahead in the constantly evolving digital advertising landscape." },
+  { id: 5, title: "Certified Professionals", description: "Our certified Google Ads experts bring authentic expertise to your campaigns, ensuring best-practice optimisation and compliance." },
+  { id: 6, title: "Dedicated Support", description: "You get a dedicated account manager focused on your success — not just another client number." },
+]
 
 export default function page() {
+  const { isOpen, closeModal, openModal } = useModal()
 
-    const { isOpen, closeModal, openModal } = useModal()
+  return (
+    <main>
+      {/* ── Hero ── */}
+      <section className='min-h-[640px] lg:px-20 md:px-10 px-6 google relative flex lg:flex-row flex-col justify-between items-center pt-28 pb-16 gap-10'>
+        <div className='service-hero-overlay' />
+        <div className='relative z-10 flex flex-col gap-7 text-start max-w-2xl'>
+          <span className='section-badge border-white/20 text-white/80 bg-white/10'>
+            <i className="ri-google-line"></i>Google Ads
+          </span>
+          <h1 className='text-white font-bold text-4xl lg:text-5xl leading-tight'>
+            Google Ads Services<br />
+            <span className='bg-linear-to-r from-[#e070f0] to-[#B83DC8] bg-clip-text text-transparent'>With SISPN Tech</span>
+          </h1>
+          <p className='text-white/80 text-lg leading-8'>Looking to grow with Google Ads? SISPN Tech delivers data-driven campaigns that go beyond clicks — focusing on real growth in sales, revenue, and ROI. From Search and Shopping to Video, we create tailored strategies that deliver consistent, long-term performance.</p>
+          <button onClick={openModal} className='btn-primary w-fit'>
+            Get a Free Consultation
+            <i className="ri-arrow-right-line"></i>
+          </button>
+        </div>
+        <div className='relative z-10 w-full lg:max-w-md'>
+          <ServiceForm />
+        </div>
+      </section>
 
+      {/* ── Intro ── */}
+      <section className='py-16 lg:py-20 lg:px-20 md:px-10 px-6'>
+        <div className='flex flex-col gap-6 max-w-4xl mx-auto items-center text-center'>
+          <span className='section-badge'>
+            <i className="ri-rocket-line"></i>What Can We Do
+          </span>
+          <h2 className='text-3xl lg:text-4xl font-bold text-[#1a1a1a] leading-tight'>
+            Our Complete Suite of <span className='gradient-text'>Google Ads Campaign Services</span>
+          </h2>
+          <p className='text-[#555] text-lg leading-8'>
+            SISPN Tech's Google Ads expertise spans all major campaign formats — providing a multichannel advertising strategy that meets customers at every stage of their journey. From high-intent Search ads to retargeting, Shopping, and Performance Max, we select the right campaign type to achieve your business goals across Google's entire network.
+          </p>
+        </div>
+      </section>
 
-    return (
-        <main className='text-center'>
-            <section className='lg:py-20 py-12 lg:px-[80px] md:px-[40px] px-6 google relative flex lg:flex-row flex-col justify-between items-center'>
-                <div className='flex flex-col gap-8 justify-center text-start max-w-[1298px] mx-auto'>
-                    <h4 className='text-white font-medium text-[50px] leading-18' >GOOGLE ADS SERVICES <br /> <span className='font-bold'> WITH SISPN TECH</span></h4>
-                    <p className='text-white text-lg leading-9 pr-12'>Looking to grow your business with Google Ads? SISPN Tech helps you achieve real results through expertly managed, data-driven campaigns. Our certified specialists focus on more than just clicks—we drive sales, revenue, and ROI. From Search and Shopping to Video ads, we create tailored strategies that deliver consistent performance and long-term growth.</p>
-                    <button onClick={openModal} className='px-6 mt-3.5 py-3.5 rounded-lg text-white text-[16px] font-medium cursor-pointer  bg-linear-to-t hover:scale-[0.9] transition-all to-[#8E2391] from-[#421C47] w-fit'>Get a Free Consultation</button>
-                </div>
-                <ServiceForm/>
-            </section>
-            <section className='lg:py-15 py-12 lg:px-[80px] md:px-[40px] px-6 text-center'>
-                <div className='flex flex-col gap-5'>
-                    <div className='flex flex-col gap-2 max-w-[791px] mx-auto'>
-                        <p className='text-[16px] text-[#414141] text-center'>What Can We Do</p>
-                        <h4 className='text-4xl font-bold text-[#81358A]'>OUR COMPLETE SUITE OF GOOGLE ADS CAMPAIGN SERVICES</h4>
-                    </div>
-                    <div className='flex flex-col gap-8 items-center max-w-[1566px] mx-auto'>
-                        <p className='text-[#414141] text-[16px] text-center'> Particularly, SISPN Tech's Google Ads expertise spans all major formats of campaigns, providing an advertising strategy that is multichannel and able to meet the needs of customers at any point in their journey. It doesn't matter if it's taking high-intent users to search, boosting brand recognition through images, re-engaging previous customers, or advertising your services and products; we'll use the appropriate campaign type to meet your goals for the business. This blend of strategies will not only increase your reach across Google's huge range of services, which includes Search, Display, YouTube, Play Store, and all Google partner sites but it will also ensure constant, relevant and effective engagements for all of the platforms.</p>
-                    </div>
-                </div>
-            </section>
-            <section className='lg:py-15 py-12 lg:px-[80px] md:px-[40px] px-6'>
-                <div className='flex flex-col gap-5'>
-                    <div className='flex flex-col gap-2 max-w-[791px] mx-auto'>
-                        <h4 className='text-4xl font-bold text-center text-[#81358A]'>COMPREHENSIVE SEO SERVICES DESIGNED FOR YOUR WEBSITE</h4>
-                    </div>
-                    <p className='text-[#414141] text-[16px] max-w-[1566px] mx-auto text-center'>SISPN Tech offers an extensive range of SEO solutions designed to boost your website performance, enhance the siteâ€™s online presence and generate visible growth. Our custom SEO strategies include the following areas of expertise:</p>
-                    <div className='grid grid-cols-3 gap-4'>
-                        {googleAdsServices?.map(service => (
-                            <ProjectCard image={service.image} description={service.description} title={service.title} key={service.id} />
-                        ))}
-                    </div>
-                </div>
-            </section>
-            <section className='lg:py-15 py-12 lg:px-[80px] md:px-[40px] px-6'>
-                <div className='flex flex-col gap-4 items-center'>
-                    <h4 className='text-4xl font-bold text-[#81358A]'>WHAT ARE GOOGLE ADS AND HOW CAN THEY BOOST YOUR BUSINESS?</h4>
-                    <p className='text-[#414141] text-[16px] text-center max-w-[1450px] mx-auto'>Google Ads is a powerful online advertising platform created by Google. It allows businesses to place ads on Google's vast network of sites, including results from searches, YouTube, Google Maps and other partner sites. It operates on a pay-per-click (PPC) model that allows advertisers to pay only for each time a user clicks on their advertisements. This makes it an efficient method to reach customers in search of similar products or services to those of the advertisers.</p>
-                    <div className='grid grid-cols-2 gap-5'>
-                        {seoProcess?.map((item, idx) => (<StrategyCard key={idx} title={item.title} description={item.description} />))}
-                    </div>
-                </div>
-            </section>
-            <section>
-                <div className='lg:py-15 py-12 lg:px-[80px] md:px-[40px] px-6 gap-4 project'>
-                    <div className='flex flex-col gap-4'>
-                        <h4 className='text-4xl font-bold text-white text-center '>HOW DOES GOOGLE ADS BOOST BUSINESS GROWTH?</h4>
-                        <p className='text-white text-[16px] text-center max-w-[1450px] mx-auto'>IUsing Google's wide range of reach and its advanced capabilities for targeting, you can reach out to potential customers precisely when they're looking in search of relevant goods or services. This not only drives relevant traffic towards your site but also improves the probability of conversions. This ultimately results in more sales and revenue.</p>
-                        <p className='text-white text-[16px] text-center max-w-[1450px] mx-auto'>Additionally, the platform's flexibility makes it possible to continuously optimize the ad by using A/B experiment, keyword changes as well as performance analysis, it is possible to refine your marketing campaigns to meet the goals of your business.</p>
-                    </div>
-                </div>
-            </section>
-            {/* <section className='lg:py-15 py-12 lg:px-[80px] md:px-[40px] px-6'>
-                <div className='flex flex-col gap-5'>
-                    <div className='flex flex-col gap-2 max-w-[791px] mx-auto'>
-                        <h4 className='text-4xl font-bold text-center text-[#81358A]'>WHY CHOOSE SISPN TECH FOR GOOGLE ADS SERVICES?</h4>
-                    </div>
-                    <p className='text-[#414141] text-[16px] max-w-[1566px] mx-auto text-center'>At SISPN Tech, we don't just manage Google Ads campaigns, we design them for you to ensure the greatest impact. Our strategy incorporates advanced technology, expert knowledge of the industry and a commitment to accelerate your business's development. Our achievements are the reason businesses choose us.</p>
-                    <div className='grid grid-cols-3 gap-4'>
-                        {googleAdsWhyChooseUs?.map(service => (
-                            <ProjectCard image={service.image} description={service.description} title={service.title} key={service.id} />
-                        ))}
-                    </div>
-                </div>
-            </section> */}
-            <RequestForm />
-            <Popup isOpen={isOpen} onClose={closeModal} />
-        </main>
-    )
+      {/* ── Services Grid ── */}
+      <section className='pb-16 lg:px-20 md:px-10 px-6'>
+        <div className='flex flex-col gap-8'>
+          <div className='flex flex-col gap-3 max-w-2xl mx-auto text-center'>
+            <h2 className='text-3xl font-bold text-[#1a1a1a]'>
+              Comprehensive <span className='gradient-text'>Ad Campaign Services</span>
+            </h2>
+          </div>
+          <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5'>
+            {googleAdsServices.map(service => (
+              <ProjectCard image={service.image} description={service.description} title={service.title} key={service.id} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── What are Google Ads ── */}
+      <section className='py-16 lg:px-20 md:px-10 px-6 bg-[#faf5fb]'>
+        <div className='flex flex-col gap-8 items-center max-w-5xl mx-auto'>
+          <span className='section-badge'>
+            <i className="ri-question-line"></i>Understanding Google Ads
+          </span>
+          <h2 className='text-3xl lg:text-4xl font-bold text-[#1a1a1a] text-center leading-tight'>
+            What Are Google Ads & How Can They <span className='gradient-text'>Boost Your Business?</span>
+          </h2>
+          <p className='text-[#555] text-lg leading-8 text-center'>
+            Google Ads is a powerful online advertising platform that allows businesses to place ads across Google's vast network — search results, YouTube, Google Maps, and partner sites. Operating on a pay-per-click (PPC) model, you only pay when a user clicks your ad, making it one of the most cost-efficient ways to reach customers actively searching for what you offer.
+          </p>
+          <div className='grid lg:grid-cols-2 grid-cols-1 gap-5 w-full'>
+            {googleAdsProcess.map((item, idx) => (
+              <StrategyCard key={idx} index={idx} title={item.title} description={item.description} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Growth section ── */}
+      <section className='project relative'>
+        <div className='absolute inset-0 bg-black/55' />
+        <div className='relative z-10 py-20 lg:px-20 md:px-10 px-6 flex flex-col gap-8 items-center'>
+          <h2 className='text-3xl lg:text-4xl font-bold text-white text-center max-w-3xl leading-tight'>
+            How Does Google Ads <span className='text-[#e070f0]'>Boost Business Growth?</span>
+          </h2>
+          <p className='text-white/80 text-lg text-center max-w-3xl leading-8'>
+            Using Google's enormous reach and advanced targeting, you connect with potential customers at the exact moment they're searching for your products or services — driving relevant traffic, improving conversion probability, and ultimately increasing sales and revenue.
+          </p>
+          <p className='text-white/70 text-base text-center max-w-2xl leading-7'>
+            The platform's flexibility also enables continuous optimisation through A/B testing, keyword refinement, and performance analysis — ensuring your campaigns evolve with your business goals.
+          </p>
+          <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 w-full max-w-5xl'>
+            {whyChooseUs.map((item, idx) => (
+              <BenefitCard key={idx} index={idx} title={item.title} description={item.description} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <RequestForm />
+      <Popup isOpen={isOpen} onClose={closeModal} />
+    </main>
+  )
 }

@@ -42,28 +42,28 @@ export default function SideNav({ isOpen, onClose }: any) {
               <div className="bg-white h-12 w-12 rounded-full flex justify-center items-center">
                 <i className="ri-phone-line text-[#672b6c] text-2xl"></i>
               </div>
-              <span className="text-[16px] text-white">+1 (718) 395-9596</span>
+              <span className="text-xl text-white">+1 (718) 395-9596</span>
             </div>
 
             <div className="flex flex-row gap-4 items-center">
               <div className="bg-white h-12 w-12 rounded-full flex justify-center items-center">
                 <i className="ri-whatsapp-line text-[#672b6c] text-2xl"></i>
               </div>
-              <span className="text-[16px] text-white">+1 (602) 566-0822</span>
+              <span className="text-xl text-white">+1 (602) 566-0822</span>
             </div>
 
             <div className="flex flex-row gap-4 items-center">
               <div className="bg-white h-12 w-12 rounded-full flex justify-center items-center">
                 <i className="ri-mail-line text-[#672b6c] text-2xl"></i>
               </div>
-              <span className="text-[16px] text-white">info@sispntech.com</span>
+              <span className="text-xl text-white">info@sispntech.com</span>
             </div>
 
             <div className="flex flex-row gap-4 items-center">
               <div className="bg-white h-12 w-12 rounded-full flex justify-center items-center">
                 <i className="ri-map-pin-line text-[#672b6c] text-2xl"></i>
               </div>
-              <span className="text-[16px] text-white">
+              <span className="text-xl text-white">
                 364 E Main Street Suite 1902 Middletown, DE 19709
               </span>
             </div>

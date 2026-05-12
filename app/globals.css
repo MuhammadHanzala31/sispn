@@ -37,9 +37,15 @@
   font-weight: 700;
   font-style: italic;
 }
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --purple-primary: #81358A;
+  --purple-dark: #662C6D;
+  --purple-darker: #421C47;
+  --purple-bright: #B83DC8;
+  --purple-mid: #8E2391;
 }
 
 @theme inline {
@@ -49,115 +55,267 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-
-
 body {
   overflow-x: hidden !important;
   font-family: 'Aeonik', Arial, sans-serif;
 }
 
+/* ── Section label pill ── */
+.section-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 16px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, rgba(129,53,138,0.12), rgba(184,61,200,0.08));
+  border: 1px solid rgba(129,53,138,0.25);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--purple-primary);
+}
 
+/* ── Gradient text ── */
+.gradient-text {
+  background: linear-gradient(135deg, var(--purple-primary) 0%, var(--purple-bright) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
 
+/* ── Purple glow ── */
+.purple-glow {
+  box-shadow: 0 0 40px rgba(129,53,138,0.25), 0 0 80px rgba(129,53,138,0.1);
+}
+
+/* ── Glass card ── */
+.glass-card {
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.5);
+}
+
+/* ── Primary CTA button ── */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--purple-darker) 0%, var(--purple-mid) 100%);
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(129,53,138,0.4);
+}
+.btn-primary:active {
+  transform: scale(0.97);
+}
+
+/* ── Outline CTA button ── */
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 28px;
+  border-radius: 12px;
+  background: transparent;
+  color: var(--purple-primary);
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 2px solid var(--purple-primary);
+}
+.btn-outline:hover {
+  background: var(--purple-primary);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* ── Stat card ── */
+.stat-card {
+  padding: 24px 16px;
+  border-radius: 20px;
+  border: 1px solid rgba(129,53,138,0.15);
+  background: linear-gradient(135deg, rgba(129,53,138,0.04) 0%, rgba(184,61,200,0.03) 100%);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+.stat-card:hover {
+  border-color: rgba(129,53,138,0.4);
+  box-shadow: 0 8px 30px rgba(129,53,138,0.12);
+  transform: translateY(-4px);
+}
+
+/* ── Background images ── */
 .hero-banner {
   background: url('./../public/banner.png') no-repeat center center fixed;
   background-size: 100% 100%;
-
 }
 
-.project{
-  background: url('./../public/news.png') no-repeat center center ;
+.project {
+  background: url('./../public/news.png') no-repeat center center;
   background-size: 100% 100%;
-
-}
-.seo{
-  background: url('./../public/seo-bg/seo-bg.png') center ;
-  background-size:cover;
-
 }
 
-.web{
-  background: url('./../public/web-bg.png') center ;
-  background-size:cover;
-
+.seo {
+  background: url('./../public/seo-bg/seo-bg.png') center;
+  background-size: cover;
 }
 
-.slick-slide {
-  padding: 0 10px; /* gap between slides */
-  box-sizing: border-box;
+.web {
+  background: url('./../public/web-bg.png') center;
+  background-size: cover;
 }
 
-.slick-list {
-  margin: 0 -10px; /* balance outer spacing */
+.graphic {
+  background: url('./../public/graphic/milad-fakurian-pP5gt6Qbzig-unsplash.png') center;
+  background-size: cover;
 }
 
-
-.graphic{
-  background: url('./../public/graphic/milad-fakurian-pP5gt6Qbzig-unsplash.png') center ;
-  background-size:cover;
-
-}
-.repo{
-  background: url('./../public/reputation/giorgio-tomassetti-mTslIt14OUo-unsplash.png') center ;
-  background-size:cover;
-}
-.google{
-  background: url('./../public/google/Group\ 163432.png') center ;
-  background-size:cover;
-}
-.social{
-  background: url('./../public/social/Group\ 163473@2x.png') center ;
-  background-size:cover;
+.repo {
+  background: url('./../public/reputation/giorgio-tomassetti-mTslIt14OUo-unsplash.png') center;
+  background-size: cover;
 }
 
-.web{
-  background: url('./../public/web-bg.png') center ;
-  background-size:cover;
-}
-.email{
-  background: url('./../public/email.png') center ;
-  background-size:cover;
+.google {
+  background: url('./../public/google/Group\ 163432.png') center;
+  background-size: cover;
 }
 
-.sidenav{
+.social {
+  background: url('./../public/social/Group\ 163473@2x.png') center;
+  background-size: cover;
+}
+
+.email {
+  background: url('./../public/email.png') center;
+  background-size: cover;
+}
+
+.sidenav {
   background: url('./../public/mobile-bav.svg') center;
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 50px;
 }
 
+/* ── Slick carousel ── */
+.slick-slide {
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+.slick-list {
+  margin: 0 -10px;
+}
 
-/* Scrollbar ki width set karne ke liye */
+/* ── Scrollbar ── */
 ::-webkit-scrollbar {
-  width: 10px; /* Vertical scrollbar ki chaurai */
-  height: 10px; /* Horizontal scrollbar ki unchai */
+  width: 8px;
+  height: 8px;
 }
-
-/* Scrollbar ka background track */
 ::-webkit-scrollbar-track {
-  background: white; 
-  border-radius: 5px;
+  background: #faf5fb;
+  border-radius: 8px;
 }
-
-/* Scrollbar ka handle (jo move hota hai) */
 ::-webkit-scrollbar-thumb {
-  background: #662C6D; 
-  border-radius: 2px; /* Isse scroll bar rounded ho jayega */
-  border: 2px solid #f1f1f1; /* Handle aur track ke darmiyan halka gap */
+  background: linear-gradient(180deg, #81358A, #662C6D);
+  border-radius: 8px;
+  border: 2px solid #faf5fb;
 }
-
-/* Scrollbar handle par hover effect */
 ::-webkit-scrollbar-thumb:hover {
-  background: #4a204f; /* Hover karne par thoda dark color */
+  background: linear-gradient(180deg, #B83DC8, #81358A);
 }
-
-/* Scrollbar ke buttons (arrows) ko hide karne ke liye */
 ::-webkit-scrollbar-button {
   display: none;
+}
+
+/* ── Benefit card (used in .project bg sections) ── */
+.benefit-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 28px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.6);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+  transition: all 0.3s ease;
+}
+.benefit-card:hover {
+  background: rgba(255,255,255,0.98);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.18);
+}
+.benefit-card h4 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #421C47;
+  text-align: left;
+}
+.benefit-card p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #414141;
+  text-align: left;
+}
+
+/* ── Service page hero ── */
+.service-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(10,0,14,0.72) 0%, rgba(66,28,71,0.55) 100%);
+  z-index: 0;
+}
+
+/* ── Packages section ── */
+.packages-section {
+  position: relative;
+  padding: 64px 16px;
+  background: #0d0010;
+  overflow: hidden;
+}
+.packages-section::before {
+  content: '';
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 300px;
+  background: radial-gradient(ellipse, rgba(129,53,138,0.25) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* ── Pulse ring animation for hero badge ── */
+@keyframes pulse-ring {
+  0% { transform: scale(0.9); opacity: 1; }
+  100% { transform: scale(1.4); opacity: 0; }
+}
+.pulse-dot::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: #B83DC8;
+  animation: pulse-ring 1.5s ease-out infinite;
+}
+.pulse-dot {
+  position: relative;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #B83DC8;
+  flex-shrink: 0;
 }

@@ -1,7 +1,5 @@
 "use client"
 import ProjectCard from '@/app/(components)/ProjectCard'
-import React from 'react'
-import imageCard from '@/public/seo-card.png'
 import p1 from '@/public/d-p-1/daniel-korpai-pKRNxEguRgM-unsplash.png'
 import p2 from '@/public/d-p-2/aashish-yadav-YIHEZ8neNBE-unsplash (1).png'
 import p3 from '@/public/d-p-3/viseo-conseil-8XaM86qk9Ac-unsplash.png'
@@ -9,7 +7,7 @@ import p4 from '@/public/d-p-4/nubelson-fernandes-jKL2PvKN8Q0-unsplash.png'
 import p5 from '@/public/d-p-5/team-nocoloco-Yt9wUh3ZB3Q-unsplash.png'
 import p6 from '@/public/d-p-6/azwedo-l-lc-nT4WsKUoLo4-unsplash.png'
 import p7 from '@/public/d-p-7/dmitriy-demidov-iuuJC_pjLU0-unsplash.png'
-import StrategyCard from '@/app/(components)/StrategyCard';
+import StrategyCard from '@/app/(components)/StrategyCard'
 import RequestForm from '@/app/(components)/RequestForm'
 import { webDevPricing } from '@/app/pricingData'
 import PricingCard from '@/app/(components)/PricingCard'
@@ -18,190 +16,147 @@ import bg from '@/public/packages-bg.webp'
 import { useModal } from '@/app/context/store'
 import Popup from '@/app/(components)/Popup'
 import ServiceForm from '@/app/(components)/ServicesForm'
-
-
-
+import BenefitCard from '@/app/(components)/BenefitCard'
 
 const services = [
-    {
-        image: p1,
-        title: "Custom Web Development",
-        description:
-            "We build powerful, scalable web apps tailored to your business logic — from CRM and ERP to booking platforms and social networks. Using frameworks like React, Angular, Django, and Node.js, we deliver applications that are secure, efficient, and user-friendly.",
-    },
-    {
-        image: p2,
-        title: "CMS Development",
-        description:
-            "Easily manage your site content with customized CMS platforms. Whether it's WordPress, Drupal, Joomla, or a headless CMS solution, we tailor the setup to give you full control without requiring technical expertise.",
-    },
-    {
-        image: p3,
-        title: "E-Commerce Development",
-        description:
-            "Turn visitors into customers with secure, fast, and conversion-focused online product catalogs. From setup, payment gateway integration, inventory sync, and smooth checkout flows designed to reduce cart abandonment.",
-    },
-    {
-        image: p4,
-        title: "Front-End & Back-End Development",
-        description:
-            "From sleek user interfaces to solid, secure backend systems, we handle both ends of development. Our front-end stack includes HTML5, CSS3, JavaScript, React, Angular, and Vue.js. On the backend, we use Python, Java, PHP, .NET, and more to ensure your site runs smoothly at scale.",
-    },
-    {
-        image: p5,
-        title: "Web Portals & Intranets",
-        description:
-            "We design secure, role-based portals for employees, customers, or partners. From document sharing to real-time dashboards, we help streamline internal processes and external collaboration.",
-    },
-    {
-        image: p6,
-        title: "Mobile-Responsive Web Design",
-        description:
-            "We create websites that adapt perfectly to any device — desktop, tablet, or mobile. With a mobile-first approach and SEO optimization built in, your site won’t just look good; it will perform and rank better, too.",
-    },
-    {
-        image: p7,
-        title: "Maintenance & Support",
-        description:
-            "Your digital platform is never 'done' — it evolves. That’s why we offer proactive post-launch services: performance monitoring, bug fixes, feature enhancements, and security patches to keep your site running flawlessly.",
-    },
-];
+  { image: p1, title: "Custom Web Development", description: "We build powerful, scalable web apps tailored to your business logic — from CRM and ERP to booking platforms and social networks. Using React, Angular, Django, and Node.js, we deliver applications that are secure, efficient, and user-friendly." },
+  { image: p2, title: "CMS Development", description: "Easily manage your site content with customised CMS platforms. Whether it's WordPress, Drupal, Joomla, or a headless CMS, we tailor the setup to give you full control without requiring technical expertise." },
+  { image: p3, title: "E-Commerce Development", description: "Convert visitors into customers with secure, fast, conversion-focused online stores — from setup and payment gateway integration to inventory sync and smooth checkout flows that reduce cart abandonment." },
+  { image: p4, title: "Front-End & Back-End Development", description: "From sleek UIs to solid, secure backend systems, we handle both ends. Front-end: React, Angular, Vue.js. Back-end: Python, PHP, .NET, and more — built to scale." },
+  { image: p5, title: "Web Portals & Intranets", description: "Secure, role-based portals for employees, customers, or partners — with document sharing, real-time dashboards, and tools that streamline internal and external collaboration." },
+  { image: p6, title: "Mobile-Responsive Design", description: "Mobile-first websites that adapt perfectly to any device. With SEO optimisation built in, your site won't just look great — it will perform and rank better too." },
+  { image: p7, title: "Maintenance & Support", description: "Post-launch services including performance monitoring, bug fixes, feature enhancements, and security patches to keep your digital platform running flawlessly." },
+]
 
+const processSteps = [
+  { title: "Initial Assessment", description: "We dive deep into your business environment, target audience, and competitors to design a strategy that establishes the basis for long-term growth." },
+  { title: "Strategic Planning", description: "A detailed roadmap with timelines, technologies, and milestones — including risk assessment to ensure smooth execution and clear goals." },
+  { title: "Implementation", description: "Precise execution with a focus on site structure, content quality, mobile-friendliness, backlink building, and a seamless user experience." },
+  { title: "Performance Monitoring", description: "Continuous evaluation of key performance indicators with transparent reporting to keep you informed and ensure real outcomes." },
+]
 
-const seoProcess = [
-    {
-        title: "Initial Assessment",
-        description:
-            "In SISPN Tech, our SEO process starts with a thorough understanding of your company's business environment. We dive deep into your business, target audience in the relevant market and analyse your competitors to discover potential opportunities and barriers. With the help of this thorough analysis, we design a strategy that is in line with your company's objectives and establishes the basis for long-term growth.",
-    },
-    {
-        title: "Strategic Planning",
-        description:
-            "Based on the information and insights collected, we create a customized SEO strategy that meets the specific requirements of your business. This includes selecting the best-targeted keywords, categorizing the on-page elements, improving the technical aspects, as well as planning off-page actions. Our aim is to design an integrated plan that increases your website's visibility and brings targeted traffic.",
-    },
-    {
-        title: "Implementation",
-        description:
-            "Implementing the strategy requires precise focus on the smallest of the details. We optimize your website's structure, improve the quality of your content and ensure the site is mobile-friendly. Our team also concentrates on building quality backlinks and on the other hand improves the user experience in order to meet the required criteria of the search engines as well as user expectations.",
-    },
-    {
-        title: "Performance Monitoring",
-        description:
-            "To ensure the efficiency of our SEO strategies, we continuously evaluate key performance indicators, like organic traffic, keywords rankings as well as conversion rate. Our transparent reporting keeps you up-to-date about the progress we've made and gives you insight into areas of improvement to ensure that your investment produces real outcomes.",
-    },
-];
-
-
-const seoBenefits = [
-    {
-        title: "Requirement Gathering",
-        description:
-            "We analyze your business needs to define the project scope and objectives for SISPn Tech. Our team collaborates closely with you to ensure every detail aligns with your vision and expectations. We gather comprehensive insights to lay a solid foundation for your project.",
-    },
-    {
-        title: "Planning & Strategy",
-        description:
-            "We create a detailed roadmap with timelines, technologies, and milestones tailored for SISPn Tech. We strategize to optimize resources and set clear goals for successful project outcomes. Our planning phase includes risk assessment to ensure smooth execution.",
-    },
-    {
-        title: "UI/UX Design",
-        description:
-            "Our team designs intuitive and engaging interfaces with interactive prototypes for SISPn Tech. We prioritize user-friendly designs that enhance engagement and reflect your brand identity. Feedback from you is incorporated to refine the design iteratively.",
-    },
-    {
-        title: "Development",
-        description:
-            "We build robust solutions using agile methodologies and cutting-edge technologies for SISPn Tech. Our developers ensure scalability and performance to support your growing business needs. Regular progress updates keep you informed throughout the development phase.",
-    },
-    {
-        title: "Testing & QA",
-        description:
-            "Rigorous testing ensures functionality, performance, security, and compatibility for SISPn Tech. We address potential issues proactively to deliver a flawless end product. Multiple testing cycles guarantee a reliable and secure website.",
-    },
-    {
-        title: "Support & Maintenance",
-        description:
-            "Post-launch, we provide continuous updates, optimization, and support for SISPn Tech. Our team is committed to keeping your website secure and up-to-date over time. We offer ongoing assistance to address any future enhancements or issues.",
-    },
-];
-
+const devProcess = [
+  { title: "Requirement Gathering", description: "We analyse your business needs to define scope and objectives. Our team collaborates closely to ensure every detail aligns with your vision." },
+  { title: "Planning & Strategy", description: "A detailed roadmap with timelines, technologies, and milestones tailored to your project — including risk assessment for smooth execution." },
+  { title: "UI/UX Design", description: "Intuitive, engaging interfaces with interactive prototypes. User-friendly designs that enhance engagement and reflect your brand identity." },
+  { title: "Development", description: "Robust solutions built using agile methodologies and cutting-edge technologies, ensuring scalability and performance for your growing business." },
+  { title: "Testing & QA", description: "Rigorous testing for functionality, performance, security, and compatibility. Multiple cycles guarantee a reliable and secure final product." },
+  { title: "Support & Maintenance", description: "Continuous updates, optimisation, and support post-launch — keeping your website secure, current, and performing at its best." },
+]
 
 export default function page() {
-    const { isOpen, closeModal, openModal } = useModal()
+  const { isOpen, closeModal, openModal } = useModal()
 
-    return (
-        <main className='text-center'>
-            <section className='lg:py-20 py-12 lg:px-[80px] md:px-[40px] px-6 web flex lg:flex-row flex-col justify-between items-center'>
-                <div className='flex flex-col gap-8 text-start justify-center text-start max-w-[1298px] mx-auto'>
-                    <h4 className='text-white font-medium text-[50px] leading-18' >CUSTOM WEBSITE DEVELOPMENT <br /> <span className='font-bold'> SERVICES WITH SISPN TECH</span></h4>
-                    <p className='text-white text-lg leading-9 pr-12'>Transform your digital identity with our advanced CMS and Custom Website Development Services. SISPN Tech offers professional website development services designed to elevate your online presence. Our seasoned team creates attractive, user-friendly, responsive, fully functional, high-performance websites and online ecommerce stores that engage users and support business growth. We blend intuitive UI/UX design with scalable, secure back-end development to build sites that reflect your brand’s vision, ensuring a smooth user experience and strong visibility on all devices.</p>
-                    <button onClick={openModal} className='px-6 mt-3.5 py-3.5 rounded-lg text-white text-[16px] font-medium cursor-pointer  bg-linear-to-t hover:scale-[0.9] transition-all to-[#8E2391] from-[#421C47] w-fit'>Get A Free Consultation</button>
-                </div>
-                <ServiceForm/>  
-            </section>
-            <section className='lg:py-15 py-12 lg:px-[80px] md:px-[40px] px-6'>
-                <div className='flex flex-col gap-5'>
-                    <div className='flex flex-col gap-2 max-w-[791px] mx-auto'>
-                        <p className='text-[16px] text-[#414141] text-center'>What Can We Do</p>
-                        <h4 className='text-4xl font-bold text-[#81358A]'>SISPN TECH YOUR DIGITAL GROWTH PARTNER</h4>
-                    </div>
-                    <div className='flex flex-col gap-8 items-center max-w-[1566px] mx-auto'>
-                        <p className='text-[#414141] text-[16px] text-center'> We don’t just build websites — we build digital ecosystems that grow with your business. At SISPN Tech, we take a strategic approach to web design and development, ensuring that every line of code serves a purpose. Our team doesn’t believe in cookie-cutter templates. Instead, we create custom solutions that blend aesthetics, speed, functionality, and user experience to deliver tangible business outcomes. </p>
-                        <p className='text-[#414141] text-[16px] text-center'> From corporate websites to complex web portals, we’ve helped brands across industries enhance their digital footprint. As a trusted website development company, we don’t just launch websites — we deliver long-term value. </p>
-                        <p className='text-[#414141] text-[16px] text-center'>Let your website do more than just look good. Let it perform, scale, and convert. </p>
-                    </div>
-                </div>
-            </section>
-            <section className="py-16 bg-black relative z-1">
-                <h3 className="text-white text-4xl font-semibold text-center mb-4">Packages</h3>
-                <Image src={bg} alt="bg" className="w-full h-full absolute top-0 left-0 -z-1" />
+  return (
+    <main>
+      {/* ── Hero ── */}
+      <section className='min-h-160 lg:px-20 md:px-10 px-6 web relative flex lg:flex-row flex-col justify-between items-center pt-28 pb-16 gap-10'>
+        <div className='service-hero-overlay' />
+        <div className='relative z-10 flex flex-col gap-7 text-start max-w-2xl'>
+          <span className='section-badge border-white/20 text-white/80 bg-white/10'>
+            <i className="ri-code-s-slash-line"></i>Web Development
+          </span>
+          <h1 className='text-white font-bold text-4xl lg:text-5xl leading-tight'>
+            Custom Website Development<br />
+            <span className='bg-linear-to-r from-[#e070f0] to-[#B83DC8] bg-clip-text text-transparent'>Services With SISPN Tech</span>
+          </h1>
+          <p className='text-white/80 text-lg leading-8'>Transform your digital identity with SISPN Tech's professional website development services. Our seasoned team creates attractive, responsive, high-performance websites and e-commerce stores that engage users and drive business growth — blending intuitive UI/UX with scalable, secure back-end development.</p>
+          <button onClick={openModal} className='btn-primary w-fit'>
+            Get a Free Consultation
+            <i className="ri-arrow-right-line"></i>
+          </button>
+        </div>
+        <div className='relative z-10 w-full lg:max-w-md'>
+          <ServiceForm />
+        </div>
+      </section>
 
-                <div className="flex flex-wrap justify-center gap-6 px-4">
-                    {webDevPricing.map((plan, index) => (
-                        <PricingCard key={index} {...plan} />
-                    ))}
-                </div>
+      {/* ── Intro ── */}
+      <section className='py-16 lg:py-20 lg:px-20 md:px-10 px-6'>
+        <div className='flex flex-col gap-6 max-w-4xl mx-auto items-center text-center'>
+          <span className='section-badge'>
+            <i className="ri-rocket-line"></i>What Can We Do
+          </span>
+          <h2 className='text-3xl lg:text-4xl font-bold text-[#1a1a1a] leading-tight'>
+            SISPN Tech — Your <span className='gradient-text'>Digital Growth Partner</span>
+          </h2>
+          <div className='flex flex-col gap-4 text-[#555] text-lg leading-8'>
+            <p>We don't just build websites — we build digital ecosystems that grow with your business. At SISPN Tech, every line of code serves a purpose. We create custom solutions that blend aesthetics, speed, functionality, and user experience to deliver tangible business outcomes.</p>
+            <p>From corporate websites to complex web portals, we've helped brands across industries enhance their digital footprint. Let your website do more than look good — let it perform, scale, and convert.</p>
+          </div>
+        </div>
+      </section>
 
-            </section>
-            <section className='lg:py-15 py-12 lg:px-[80px] md:px-[40px] px-6'>
-                <div className='flex flex-col gap-5'>
-                    <div className='flex flex-col gap-2 max-w-[791px] mx-auto'>
-                        <h4 className='text-4xl font-bold text-center text-[#81358A]'>COMPLETE WEB DEVELOPMENT SOLUTIONS BY SISPN TECH</h4>
-                    </div>
-                    <p className='text-[#414141] text-[16px] max-w-[1566px] mx-auto text-center'>At SISPN Tech, we offer a full spectrum of website development services to meet the needs of modern businesses — whether you're launching a startup, scaling an enterprise, or optimizing your digital infrastructure.</p>
-                    <div className='grid lg:grid-cols-3 grid-cols-1 gap-4'>
-                        {services.map((services, id) => (
-                            <ProjectCard image={services.image} key={services.title} title={services.title} description={services.description} />
-                        ))}
-                    </div>
-                </div>
-            </section>
-            <section className='lg:py-15 py-12 lg:px-[80px] md:px-[40px] px-6'>
-                <div className='flex flex-col gap-4 items-center'>
-                    <h4 className='text-4xl font-bold text-[#81358A]'>TAILORED SEO STRATEGY FOR SUSTAINABLE GROWTH</h4>
-                    <p className='text-[#414141] text-[16px] text-center max-w-[1450px] mx-auto'>SISPN Tech understands that a universal approach doesn't perform in SEO campaigns. Our customized strategies are developed to meet your specific business goals. This ensures the long-term expansion of a digital business in a constantly evolving digital world. By focusing on long-term success and adjusting to the most recent SEO trends, we can help your business to stay ahead of your competitors.</p>
-                    <div className='grid lg:grid-cols-2 grid-cols-1 gap-5'>
-                        {seoProcess?.map((item, idx) => (<StrategyCard key={idx} title={item.title} description={item.description} />))}
-                    </div>
-                </div>
-            </section>
-            <section>
-                <div className='lg:py-15 py-12 lg:px-[80px] md:px-[40px] px-6 gap-4 project'>
-                    <div className='flex flex-col gap-4'>
-                        <h4 className='text-4xl font-bold text-white text-center '>OUR WEB DEVELOPMENT PROCESS</h4>
-                        <p className='text-white text-[16px] text-center max-w-[1450px] mx-auto'>At SISPN Tech, we deliver tailored web solutions with a structured and client-focused approach, ensuring your digital vision comes to life seamlessly. Our six-step process combines expertise, innovation, and dedication to build robust, high-performing websites that meet your unique business goals.</p>
-                        <div className='grid lg:grid-cols-2 grid-cols-1 gap-5'>
-                            {seoBenefits?.map((item, idx) => (<div key={idx} className='flex flex-col gap-2 border-2 bg-white border-white rounded-2xl p-4'>
-                                <h4 className='text-2xl font-bold text-[#81358A] text-center'>{item.title}</h4>
-                                <p className='text-[#414141] text-[16px] text-center'>{item.description}</p>
-                            </div>))}
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <RequestForm />
-            <Popup isOpen={isOpen} onClose={closeModal} />
+      {/* ── Packages ── */}
+      <section className='packages-section'>
+        <div className='relative z-10 flex flex-col gap-8 items-center'>
+          <span className='section-badge border-white/20 text-white/80 bg-white/10'>
+            <i className="ri-price-tag-3-line"></i>Pricing
+          </span>
+          <h2 className='text-3xl font-bold text-white text-center'>Web Development Packages</h2>
+          <div className='flex flex-wrap justify-center gap-6 px-4 w-full'>
+            {webDevPricing.map((plan, index) => (
+              <PricingCard key={index} {...plan} />
+            ))}
+          </div>
+        </div>
+        <Image src={bg} alt="packages background" className='w-full h-full absolute inset-0 object-cover -z-10 opacity-30' />
+      </section>
 
-        </main>
-    )
+      {/* ── Services Grid ── */}
+      <section className='py-16 lg:px-20 md:px-10 px-6'>
+        <div className='flex flex-col gap-8'>
+          <div className='flex flex-col gap-3 max-w-3xl mx-auto text-center'>
+            <h2 className='text-3xl lg:text-4xl font-bold text-[#1a1a1a]'>
+              Complete Web Development <span className='gradient-text'>Solutions</span>
+            </h2>
+            <p className='text-[#555] text-lg leading-8'>A full spectrum of services to meet the needs of modern businesses — from startups to enterprises.</p>
+          </div>
+          <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5'>
+            {services.map((service, idx) => (
+              <ProjectCard key={idx} image={service.image} title={service.title} description={service.description} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Strategy ── */}
+      <section className='py-16 lg:px-20 md:px-10 px-6 bg-[#faf5fb]'>
+        <div className='flex flex-col gap-8 items-center max-w-5xl mx-auto'>
+          <span className='section-badge'>
+            <i className="ri-map-2-line"></i>Our Methodology
+          </span>
+          <h2 className='text-3xl lg:text-4xl font-bold text-[#1a1a1a] text-center leading-tight'>
+            Tailored Strategy for <span className='gradient-text'>Sustainable Growth</span>
+          </h2>
+          <div className='grid lg:grid-cols-2 grid-cols-1 gap-5 w-full'>
+            {processSteps.map((item, idx) => (
+              <StrategyCard key={idx} index={idx} title={item.title} description={item.description} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Dev Process on dark bg ── */}
+      <section className='project relative'>
+        <div className='absolute inset-0 bg-black/55' />
+        <div className='relative z-10 py-20 lg:px-20 md:px-10 px-6 flex flex-col gap-8 items-center'>
+          <h2 className='text-3xl lg:text-4xl font-bold text-white text-center max-w-3xl leading-tight'>
+            Our Web Development <span className='text-[#e070f0]'>Process</span>
+          </h2>
+          <p className='text-white/80 text-lg text-center max-w-3xl leading-8'>
+            At SISPN Tech, we deliver tailored web solutions with a structured, client-focused approach. Our six-step process combines expertise, innovation, and dedication to build high-performing websites that meet your unique business goals.
+          </p>
+          <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 w-full max-w-5xl'>
+            {devProcess.map((item, idx) => (
+              <BenefitCard key={idx} index={idx} title={item.title} description={item.description} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <RequestForm />
+      <Popup isOpen={isOpen} onClose={closeModal} />
+    </main>
+  )
 }
