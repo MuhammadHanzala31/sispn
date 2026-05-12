@@ -88,7 +88,7 @@ export default function page() {
                     <h4 className='text-white font-medium text-[50px] leading-18' >INCREASE TARGETED TRAFFIC <br /> <span className='font-bold'> WITH SISPN TECH</span></h4>
                     <p className='text-white text-lg leading-9 pr-12'>At SISPN Tech, we specialize in providing Search Engine Optimization services that are tailored to your needs, increase targeted traffic, improve the visibility of your website, and improve the conversion rates as well. Our extensive SEO Services are created to be in line with your business goals, providing real growth and an advantage in the competitive digital world.</p>
                     <p className='text-white text-lg leading-9 pr-12'>Are you ready to dominate search engine rankings and speed up your business's expansion? Join SISPN Tech today and experience the difference in SEO strategy with visible results.</p>
-                    <button onClick={openModal} className='px-6 mt-3.5 py-3.5 rounded-lg text-white text-xl font-medium cursor-pointer  bg-linear-to-t hover:scale-[0.9] transition-all to-[#8E2391] from-[#421C47] w-fit'>Get a Free Consultation</button>
+                    <button onClick={openModal} className='px-6 mt-3.5 py-3.5 rounded-lg text-white text-[16px] font-medium cursor-pointer  bg-linear-to-t hover:scale-[0.9] transition-all to-[#8E2391] from-[#421C47] w-fit'>Get a Free Consultation</button>
 
                 </div>
                 <ServiceForm/>
@@ -96,14 +96,14 @@ export default function page() {
             <section className='lg:py-15 py-12 lg:px-[80px] md:px-[40px] px-6'>
                 <div className='flex flex-col gap-5'>
                     <div className='flex flex-col gap-2 max-w-[791px] mx-auto'>
-                        <p className='text-xl text-[#414141] text-center'>What Can We Do</p>
+                        <p className='text-[16px] text-[#414141] text-center'>What Can We Do</p>
                         <h4 className='text-4xl font-bold text-[#81358A]'>THE SEO COMPANY YOUR WEBSITE NEEDS</h4>
                     </div>
                     <div className='flex flex-col gap-8 items-center max-w-[1566px] mx-auto'>
-                        <p className='text-[#414141] text-xl text-center'> At SISPN Tech, we understand the difficulties that people or businesses experience in getting their websites noticed online. If your site isn't performing according to expectations, showing a decline in traffic or, on the other side, you are planning to launch your first website, our team is ready to assist.</p>
-                        <p className='text-[#414141] text-xl text-center'> <span className='font-bold'> SISPN Tech </span> has a dedicated team of expert SEO professionals. We specialize in designing customized strategies that are in line with your company's goals. Our strategy includes thorough site audits, optimization of the website’s performance for a better user experience, in-depth keyword research, and well-crafted, compelling content development to boost the rankings of your site in search engines.</p>
-                        <p className='text-[#414141] text-xl text-center'> We value transparency in communication. We provide regular updates and information about the effectiveness of the campaigns with the help of comprehensive performance reports.</p>
-                        <p className='text-[#414141] text-xl text-center'> By joining <span className='font-bold'> SISPN Tech </span>, you're choosing a digital marketing company with a proficient SEO team dedicated to bringing real outcomes and long-term growth and expansion for your business.</p>
+                        <p className='text-[#414141] text-[16px] text-center'> At SISPN Tech, we understand the difficulties that people or businesses experience in getting their websites noticed online. If your site isn't performing according to expectations, showing a decline in traffic or, on the other side, you are planning to launch your first website, our team is ready to assist.</p>
+                        <p className='text-[#414141] text-[16px] text-center'> <span className='font-bold'> SISPN Tech </span> has a dedicated team of expert SEO professionals. We specialize in designing customized strategies that are in line with your company's goals. Our strategy includes thorough site audits, optimization of the website’s performance for a better user experience, in-depth keyword research, and well-crafted, compelling content development to boost the rankings of your site in search engines.</p>
+                        <p className='text-[#414141] text-[16px] text-center'> We value transparency in communication. We provide regular updates and information about the effectiveness of the campaigns with the help of comprehensive performance reports.</p>
+                        <p className='text-[#414141] text-[16px] text-center'> By joining <span className='font-bold'> SISPN Tech </span>, you're choosing a digital marketing company with a proficient SEO team dedicated to bringing real outcomes and long-term growth and expansion for your business.</p>
                     </div>
                 </div>
             </section>
@@ -126,7 +126,7 @@ export default function page() {
                     <div className='flex flex-col gap-2 max-w-[791px] mx-auto'>
                         <h4 className='text-4xl font-bold text-center text-[#81358A]'>COMPREHENSIVE SEO SERVICES DESIGNED FOR YOUR WEBSITE</h4>
                     </div>
-                    <p className='text-[#414141] text-xl max-w-[1566px] mx-auto text-center'>SISPN Tech offers an extensive range of SEO solutions designed to boost your website performance, enhance the site’s online presence and generate visible growth. Our custom SEO strategies include the following areas of expertise:</p>
+                    <p className='text-[#414141] text-[16px] max-w-[1566px] mx-auto text-center'>SISPN Tech offers an extensive range of SEO solutions designed to boost your website performance, enhance the site’s online presence and generate visible growth. Our custom SEO strategies include the following areas of expertise:</p>
                     <div className='grid lg:grid-cols-3 grid-cols-1 gap-4'>
                         <ProjectCard image={seop1} title={"On-Page SEO"} description={'We at SISPN Tech precisely improve the content on your site and HTML structure to improve the visibility of your website to search engines. The on-page SEO services include strategically integrated keywords, meta tags refinement and content optimization, making sure your website ranks higher in relevant searches. Aligning with the elements of your website to search engine algorithms, we aim to get more targeted traffic to your website and boost engagement with users.'} />
                         <ProjectCard image={seop2} title={"Off-Page SEO"} description={'Building the authority of your website over its different pages is vital. Off-page SEO strategies aim to acquire high-quality backlinks, promote social media interaction, and enhance your website’s online image. All of these efforts increase the credibility of your website and improve its ranking in search engine results, leading to an increase in organic traffic.'} />
@@ -140,7 +140,7 @@ export default function page() {
             <section className='lg:py-15 py-12 lg:px-[80px] md:px-[40px] px-6'>
                 <div className='flex flex-col gap-4 items-center'>
                     <h4 className='text-4xl font-bold text-[#81358A]'>TAILORED SEO STRATEGY FOR SUSTAINABLE GROWTH</h4>
-                    <p className='text-[#414141] text-xl text-center max-w-[1450px] mx-auto'>SISPN Tech understands that a universal approach doesn't perform in SEO campaigns. Our customized strategies are developed to meet your specific business goals. This ensures the long-term expansion of a digital business in a constantly evolving digital world. By focusing on long-term success and adjusting to the most recent SEO trends, we can help your business to stay ahead of your competitors.</p>
+                    <p className='text-[#414141] text-[16px] text-center max-w-[1450px] mx-auto'>SISPN Tech understands that a universal approach doesn't perform in SEO campaigns. Our customized strategies are developed to meet your specific business goals. This ensures the long-term expansion of a digital business in a constantly evolving digital world. By focusing on long-term success and adjusting to the most recent SEO trends, we can help your business to stay ahead of your competitors.</p>
                     <div className='grid lg:grid-cols-2 grid-cols-1 gap-5'>
                         {seoProcess?.map((item, idx) => (<StrategyCard key={idx} title={item.title} description={item.description} />))}
                     </div>
@@ -150,11 +150,11 @@ export default function page() {
                 <div className='lg:py-15 py-12 lg:px-[80px] md:px-[40px] px-6 gap-4 project'>
                     <div className='flex flex-col gap-4'>
                         <h4 className='text-4xl font-bold text-white text-center '>OUR SEO PROCESS</h4>
-                        <p className='text-white text-xl text-center max-w-[1450px] mx-auto'>In today’s digital world, having a website is just the beginning of your online journey. In order to be truly successful online, your business needs to be credible, visible and easily discoverable by your target audience. This is the reason that Search Engine Optimization (SEO) is in the picture. In SISPN Tech, we specialize in offering comprehensive SEO services specifically tailored to your business goals to improve your web presence, bring relevant traffic, and convert visitors to loyal customers.</p>
+                        <p className='text-white text-[16px] text-center max-w-[1450px] mx-auto'>In today’s digital world, having a website is just the beginning of your online journey. In order to be truly successful online, your business needs to be credible, visible and easily discoverable by your target audience. This is the reason that Search Engine Optimization (SEO) is in the picture. In SISPN Tech, we specialize in offering comprehensive SEO services specifically tailored to your business goals to improve your web presence, bring relevant traffic, and convert visitors to loyal customers.</p>
                         <div className='grid lg:grid-cols-2 grid-cols-1 gap-5'>
                             {seoBenefits?.map((item, idx) => (<div key={idx} className='flex flex-col gap-2 border-2 bg-white border-white rounded-2xl p-4'>
                                 <h4 className='text-2xl font-bold text-[#81358A] text-center'>{item.title}</h4>
-                                <p className='text-[#414141] text-xl text-center'>{item.description}</p>
+                                <p className='text-[#414141] text-[16px] text-center'>{item.description}</p>
                             </div>))}
                         </div>
                     </div>

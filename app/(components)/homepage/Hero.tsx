@@ -31,7 +31,7 @@ export default function Hero() {
             text-sm 
             sm:text-base 
             md:text-lg 
-            lg:text-xl 
+            lg:text-[16px] 
             text-white/90 
             max-w-3xl
             leading-relaxed

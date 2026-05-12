@@ -32,13 +32,13 @@ export default function page() {
                             <Image src={blogImage} alt="blog-image" />
                             <div className='flex flex-col gap-8 pr-36 w-[737px]'>
                                 <div className='flex flex-row justify-start gap-3.5 '>
-                                    <p className={`text-xl text-white`}>25 MARCH 2026</p>
-                                    <span className={`text-xl text-white`}>|</span>
-                                    <p className={`text-xl text-white`}>DIGITAL MARKETING</p>
+                                    <p className={`text-[16px] text-white`}>25 MARCH 2026</p>
+                                    <span className={`text-[16px] text-white`}>|</span>
+                                    <p className={`text-[16px] text-white`}>DIGITAL MARKETING</p>
                                 </div>
                                 <h5 className={`text-3xl font-bold  text-white`}>The Power of Social Media Marketing: Boost Your Brand with SISPN Tech Digital</h5>
-                                <p className={`text-xl text-white`}>Increase your brand's visibility faster by using SISPN Tech, a results-focused and performance-oriented Social Media Marketing Agency.</p>
-                                <Link href={'/blogs'} className={`text-xl text-white`}>{'Read More >'}</Link>
+                                <p className={`text-[16px] text-white`}>Increase your brand's visibility faster by using SISPN Tech, a results-focused and performance-oriented Social Media Marketing Agency.</p>
+                                <Link href={'/blogs'} className={`text-[16px] text-white`}>{'Read More >'}</Link>
                             </div>
                         </div>
                     </div>
@@ -54,27 +54,27 @@ export default function page() {
                         <div className='flex flex-col gap-3'>
                             <div className='flex flex-row items-center gap-1'>
                                 <i className="ri-arrow-right-double-fill text-white text-2xl"></i>
-                                <h6 className='text-white text-xl font-bold'>GRAPHICS DESIGNING</h6>
+                                <h6 className='text-white text-[16px] font-bold'>GRAPHICS DESIGNING</h6>
                             </div>
                             <div className='flex flex-row items-center gap-1 cursor-pointer'>
                                 <i className="ri-arrow-right-double-fill text-white text-2xl"></i>
-                                <h6 className='text-white text-xl font-bold'>WEB APPS​</h6>
+                                <h6 className='text-white text-[16px] font-bold'>WEB APPS​</h6>
                             </div>
                             <div className='flex flex-row items-center gap-1 cursor-pointer'>
                                 <i className="ri-arrow-right-double-fill text-white text-2xl"></i>
-                                <h6 className='text-white text-xl font-bold'>DBRANDING</h6>
+                                <h6 className='text-white text-[16px] font-bold'>DBRANDING</h6>
                             </div>
                             <div className='flex flex-row items-center gap-1 cursor-pointer'>
                                 <i className="ri-arrow-right-double-fill text-white text-2xl"></i>
-                                <h6 className='text-white text-xl font-bold'>MOBILE APPS</h6>
+                                <h6 className='text-white text-[16px] font-bold'>MOBILE APPS</h6>
                             </div>
                             <div className='flex flex-row items-center gap-1 cursor-pointer'>
                                 <i className="ri-arrow-right-double-fill text-white text-2xl"></i>
-                                <h6 className='text-white text-xl font-bold'>LOGO DESIGNING</h6>
+                                <h6 className='text-white text-[16px] font-bold'>LOGO DESIGNING</h6>
                             </div>
                             <div className='flex flex-row items-center gap-1 cursor-pointer'>
                                 <i className="ri-arrow-right-double-fill text-white text-2xl"></i>
-                                <h6 className='text-white text-xl font-bold'>DIGITAL MARKETING</h6>
+                                <h6 className='text-white text-[16px] font-bold'>DIGITAL MARKETING</h6>
                             </div>
                         </div>
                     </div>

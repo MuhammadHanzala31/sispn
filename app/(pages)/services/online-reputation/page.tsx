@@ -174,18 +174,18 @@ export default function page() {
                 <div className='flex flex-col gap-8  text-start max-w-[1298px] mx-auto relative z-1'>
                     <h4 className='text-white font-medium text-[50px] leading-18' >ONLINE REPUTATION  <br /> <span className='font-bold'>SERVICES WITH SISPN TECH</span></h4>
                     <p className='text-white text-lg leading-9 pr-12'>Looking to grow with Google Ads? SISPN Tech delivers data-driven campaigns that go beyond clicks—focusing on real growth in sales, revenue, and ROI. From Search to Shopping and Video ads, we create tailored strategies that drive consistent performance and long-term success.</p>
-                    <button onClick={openModal} className='px-6 mt-3.5 py-3.5 rounded-lg text-white text-xl font-medium cursor-pointer  bg-linear-to-t hover:scale-[0.9] transition-all to-[#8E2391] from-[#421C47] w-fit'>Get a Free Consultation</button>
+                    <button onClick={openModal} className='px-6 mt-3.5 py-3.5 rounded-lg text-white text-[16px] font-medium cursor-pointer  bg-linear-to-t hover:scale-[0.9] transition-all to-[#8E2391] from-[#421C47] w-fit'>Get a Free Consultation</button>
                 </div>
                 <ServiceForm/>
             </section>
             <section className='lg:py-15 py-12 lg:px-[80px] md:px-[40px] px-6'>
                 <div className='flex flex-col gap-5'>
                     <div className='flex flex-col gap-2 max-w-[791px] mx-auto'>
-                        <p className='text-xl text-[#414141] text-center'>What Can We Do</p>
+                        <p className='text-[16px] text-[#414141] text-center'>What Can We Do</p>
                         <h4 className='text-4xl font-bold text-[#81358A] text-center'>ALIGN DIGITAL IMAGE WITH YOUR BRAND VISION</h4>
                     </div>
                     <div className='flex flex-col gap-8 items-center max-w-[1566px] mx-auto'>
-                        <p className='text-[#414141] text-xl text-center'> Your online reputation isn't simply a list of reviews. It's a reflection of your company or brandâ€™s reliability and credibility for the customers. Here at SISPN Tech, we help you build a strong image that matches your vision for your business and goals. Your online reputation can be a valuable tool to propel your company ahead. Here's how it can be possible:</p>
+                        <p className='text-[#414141] text-[16px] text-center'> Your online reputation isn't simply a list of reviews. It's a reflection of your company or brandâ€™s reliability and credibility for the customers. Here at SISPN Tech, we help you build a strong image that matches your vision for your business and goals. Your online reputation can be a valuable tool to propel your company ahead. Here's how it can be possible:</p>
                     </div>
                     <div className='grid grid-cols-2 gap-5'>
                         {reputationManagementBenefits?.map((item, idx) => (<StrategyCard key={idx} title={item.title} description={item.description} />))}
@@ -197,7 +197,7 @@ export default function page() {
                     <div className='flex flex-col gap-2 max-w-[791px] mx-auto'>
                         <h4 className='text-4xl font-bold text-center text-[#81358A]'>TAILORED ORM SOLUTIONS FOR YOU BUSINESS</h4>
                     </div>
-                    <p className='text-[#414141] text-xl max-w-[1566px] mx-auto text-center'>At SISPN Tech, we offer a diversity of Online Reputation Management Services designed to address the specific needs of your company. Our services can be customized and offer you an approach that is tailored to manage your online reputation efficiently. Our ORM Solutions include:</p>
+                    <p className='text-[#414141] text-[16px] max-w-[1566px] mx-auto text-center'>At SISPN Tech, we offer a diversity of Online Reputation Management Services designed to address the specific needs of your company. Our services can be customized and offer you an approach that is tailored to manage your online reputation efficiently. Our ORM Solutions include:</p>
                     <div className='grid grid-cols-3 gap-4'>
                         {googleAdsServices?.map(service => (
                             <ProjectCard image={service.image} description={service.description} title={service.title} key={service.id} />
@@ -209,11 +209,11 @@ export default function page() {
                 <div className='lg:py-15 py-12 lg:px-[80px] md:px-[40px] px-6 gap-4 project'>
                     <div className='flex flex-col gap-4'>
                         <h4 className='text-4xl font-bold text-white text-center '>CHOOSE SISPN TECH FOR YOUR ONLINE REPUTATION MANAGEMENT</h4>
-                        <p className='text-white text-xl text-center max-w-[1450px] mx-auto'>SISPN Tech is an industry-leading Brand Reputation Management Company, focused on helping businesses flourish in the digital world. Select SISPN Tech for the Online Reputation Management Services, and let us assist you to establish and maintain a reputable online presence that speaks to the strength of your company. This is why we stand out:</p>
+                        <p className='text-white text-[16px] text-center max-w-[1450px] mx-auto'>SISPN Tech is an industry-leading Brand Reputation Management Company, focused on helping businesses flourish in the digital world. Select SISPN Tech for the Online Reputation Management Services, and let us assist you to establish and maintain a reputable online presence that speaks to the strength of your company. This is why we stand out:</p>
                         <div className='grid grid-cols-2 gap-5'>
                             {seoBenefits?.map((item, idx) => (<div key={idx} className='flex flex-col gap-2 border-2 bg-white border-white rounded-2xl p-4'>
                                 <h4 className='text-2xl font-bold text-[#81358A] text-center'>{item.title}</h4>
-                                <p className='text-[#414141] text-xl text-center'>{item.description}</p>
+                                <p className='text-[#414141] text-[16px] text-center'>{item.description}</p>
                             </div>))}
                         </div>
                     </div>

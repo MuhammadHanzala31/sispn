@@ -106,7 +106,7 @@ export default function page() {
             <div className='flex lg:flex-row flex-col gap-8 items-center w-full'>
 
               <div data-aos="fade-right" className='flex flex-col gap-2 lg:w-1/2 w-full'>
-                <p className='text-xl text-white'>What Can We Do</p>
+                <p className='text-[16px] text-white'>What Can We Do</p>
                 <span className='text-3xl font-bold text-white'>
                   SERVICES WE CAN HELP YOU WITH
                 </span>
@@ -152,16 +152,16 @@ export default function page() {
           SERVICES WE CAN HELP YOU WITH
         </h3>
 
-        <p data-aos="fade-up" data-aos-delay="200" className='text-[#414141] text-xl leading-9'>
+        <p data-aos="fade-up" data-aos-delay="200" className='text-[#414141] text-[16px] leading-9'>
           There is no denying that the future is digital. Every digital touchpoint offers a chance to establish a connection with a business’s audience.
         </p>
 
-        <p data-aos="fade-up" data-aos-delay="300" className='text-[#414141] text-xl leading-9'>
+        <p data-aos="fade-up" data-aos-delay="300" className='text-[#414141] text-[16px] leading-9'>
           <span className='text-[#81358A] font-bold'>SISPN Technology </span>
           helps you scale your business faster than you think possible...
         </p>
 
-        <span data-aos="zoom-in" data-aos-delay="400" className='text-[#414141] text-xl font-bold'>
+        <span data-aos="zoom-in" data-aos-delay="400" className='text-[#414141] text-[16px] font-bold'>
           What’s stopping you? <br /> Budget? Time? Trust?
         </span>
 
@@ -169,7 +169,7 @@ export default function page() {
           data-aos="zoom-in-up"
           data-aos-delay="500"
           href={'/contact-us'} 
-          className='px-6 py-3.5 rounded-lg text-white text-xl bg-linear-to-t hover:scale-[0.9] transition-all to-[#8E2391] from-[#421C47]'
+          className='px-6 py-3.5 rounded-lg text-white text-[16px] bg-linear-to-t hover:scale-[0.9] transition-all to-[#8E2391] from-[#421C47]'
         >
           Let’s take your business to the next level!
         </Link>

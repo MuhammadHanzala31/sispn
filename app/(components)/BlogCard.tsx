@@ -11,13 +11,13 @@ export default function BlogCard({flexDirection} : {flexDirection? : props}) {
             <Image src={blogImage} alt="blog-image" className='w-1/2' />
             <div className='flex flex-col gap-8 pr-36 w-1/2'>
                 <div className='flex flex-row justify-start gap-3.5 '>
-                    <p className={`text-xl ${flexDirection === 'row' ? 'text-[#414141]'  : 'text-white'}` }>25 MARCH 2026</p>
-                    <span className={`text-xl ${flexDirection === 'row' ? 'text-[#414141]'  : 'text-white'}` }>|</span>
-                    <p className={`text-xl ${flexDirection === 'row' ? 'text-[#414141]'  : 'text-white'}` }>DIGITAL MARKETING</p>
+                    <p className={`text-[16px] ${flexDirection === 'row' ? 'text-[#414141]'  : 'text-white'}` }>25 MARCH 2026</p>
+                    <span className={`text-[16px] ${flexDirection === 'row' ? 'text-[#414141]'  : 'text-white'}` }>|</span>
+                    <p className={`text-[16px] ${flexDirection === 'row' ? 'text-[#414141]'  : 'text-white'}` }>DIGITAL MARKETING</p>
                 </div>
                 <h5 className={`text-3xl font-bold  ${flexDirection === 'row' ? 'text-[#662C6D]'  : 'text-white'}` }>The Power of Social Media Marketing: Boost Your Brand with SISPN Tech Digital</h5>
-                <p className={`text-xl ${flexDirection === 'row' ? 'text-[#414141]'  : 'text-white'}` }>Increase your brand's visibility faster by using SISPN Tech, a results-focused and performance-oriented Social Media Marketing Agency.</p>
-                <Link href={'/blogs'} className={`text-xl  text-[#662C6D]`}>{'Read More >'}</Link>
+                <p className={`text-[16px] ${flexDirection === 'row' ? 'text-[#414141]'  : 'text-white'}` }>Increase your brand's visibility faster by using SISPN Tech, a results-focused and performance-oriented Social Media Marketing Agency.</p>
+                <Link href={'/blogs'} className={`text-[16px]  text-[#662C6D]`}>{'Read More >'}</Link>
             </div>
         </div>
     )

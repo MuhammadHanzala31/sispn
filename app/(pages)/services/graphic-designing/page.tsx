@@ -242,20 +242,20 @@ export default function page() {
         <div className='flex flex-col gap-8 text-start max-w-[1298px] mx-auto relative z-1'>
           <h4 className='text-white font-medium text-[50px] leading-18' >CUSTOM GRAPHIC DESIGN<br /> <span className='font-bold'> SERVICES WITH SISPN TECH</span></h4>
           <p className='text-white text-lg leading-9 pr-12'>At SISPN Tech, we turn your ideas into stunning visual realities. Our award-winning design team specializes in a wide range of custom graphic design services, from logo design services that build brand identity to dynamic motion graphics and everything in between . As a leading graphics and creative design agency, we craft each asset, including brochures, social media graphics, website visuals, and more, to captivate your audience and drive results. Ready to elevate your brand with professional graphics? Get started with SISPN Tech today.</p>
-          <button onClick={openModal} className='px-6 mt-3.5 py-3.5 rounded-lg text-white text-xl font-medium cursor-pointer  bg-linear-to-t hover:scale-[0.9] transition-all to-[#8E2391] from-[#421C47] w-fit'>Get a Free Consultation</button>
+          <button onClick={openModal} className='px-6 mt-3.5 py-3.5 rounded-lg text-white text-[16px] font-medium cursor-pointer  bg-linear-to-t hover:scale-[0.9] transition-all to-[#8E2391] from-[#421C47] w-fit'>Get a Free Consultation</button>
         </div>
         <ServiceForm/>
       </section>
       <section className='lg:py-15 py-12 lg:px-[80px] md:px-[40px] px-6'>
         <div className='flex flex-col gap-5'>
           <div className='flex flex-col gap-2 max-w-[791px] mx-auto'>
-            <p className='text-xl text-[#414141] text-center'>What Can We Do</p>
+            <p className='text-[16px] text-[#414141] text-center'>What Can We Do</p>
             <h4 className='text-4xl font-bold text-[#81358A] text-center'>WHY VISUAL EXCELLENCE MATTERS MORE THAN EVER</h4>
           </div>
           <div className='flex flex-col gap-8 items-center max-w-[1566px] mx-auto'>
-            <p className='text-[#414141] text-xl text-center'> In todayâ€™s fast-paced digital landscape, your brand has just seconds to make an impression and most often, it's your design that speaks first. Research shows that 81% of marketers consider creative effectiveness the top factor in a campaign, underlining the power of strong visual design. Whether you're a startup looking to launch with a memorable logo, an eCommerce brand striving for scroll-stopping ads, or a B2B company building trust through professionalism, graphics designing services are at the heart of your success.</p>
-            <p className='text-[#414141] text-xl text-center'>SISPN Tech is a forward-thinking graphics designing company. Utilizing industry-standard Adobe software, including Photoshop, Illustrator, and InDesign, we tailor each design to match your brandâ€™s voice, vision, and goals. From high-impact logo design services to full-spectrum identity packages, our team helps you stand out, get noticed, and stay remembered.</p>
-            <p className='text-[#414141] text-xl text-center'>We bridge creativity with strategyâ€”just like top-tier graphic design agenciesâ€”but with the agility and affordability todayâ€™s digital-first businesses need. Looking for a design graphic agency that can deliver both substance and style? Youâ€™re in the right place. Weâ€™re not just designersâ€”weâ€™re your brandâ€™s creative engine.</p>
+            <p className='text-[#414141] text-[16px] text-center'> In todayâ€™s fast-paced digital landscape, your brand has just seconds to make an impression and most often, it's your design that speaks first. Research shows that 81% of marketers consider creative effectiveness the top factor in a campaign, underlining the power of strong visual design. Whether you're a startup looking to launch with a memorable logo, an eCommerce brand striving for scroll-stopping ads, or a B2B company building trust through professionalism, graphics designing services are at the heart of your success.</p>
+            <p className='text-[#414141] text-[16px] text-center'>SISPN Tech is a forward-thinking graphics designing company. Utilizing industry-standard Adobe software, including Photoshop, Illustrator, and InDesign, we tailor each design to match your brandâ€™s voice, vision, and goals. From high-impact logo design services to full-spectrum identity packages, our team helps you stand out, get noticed, and stay remembered.</p>
+            <p className='text-[#414141] text-[16px] text-center'>We bridge creativity with strategyâ€”just like top-tier graphic design agenciesâ€”but with the agility and affordability todayâ€™s digital-first businesses need. Looking for a design graphic agency that can deliver both substance and style? Youâ€™re in the right place. Weâ€™re not just designersâ€”weâ€™re your brandâ€™s creative engine.</p>
           </div>
           {/* <div className='grid grid-cols-3 gap-5'>
                         {reputationManagementBenefits?.map((item, idx) => (<StrategyCard key={idx} title={item.title} description={item.description} />))}
@@ -278,7 +278,7 @@ export default function page() {
           <div className='flex flex-col gap-2 max-w-[791px] mx-auto'>
             <h4 className='text-4xl font-bold text-center text-[#81358A]'>OUR GRAPHICS DESIGN SERVICES</h4>
           </div>
-          <p className='text-[#414141] text-xl max-w-[1566px] mx-auto text-center'>SISPN Tech offers a comprehensive suite of creative design solutions for every need. From branding assets to digital experiences, our graphic design experts handle it all. Explore our key services below:</p>
+          <p className='text-[#414141] text-[16px] max-w-[1566px] mx-auto text-center'>SISPN Tech offers a comprehensive suite of creative design solutions for every need. From branding assets to digital experiences, our graphic design experts handle it all. Explore our key services below:</p>
           <div className='grid grid-cols-4 gap-4'>
             {googleAdsServices?.map(service => (
               <ProjectCard image={service.image} description={service.description} title={service.title} key={service.id} />
@@ -290,11 +290,11 @@ export default function page() {
         <div className='lg:py-15 py-12 lg:px-[80px] md:px-[40px] px-6 gap-4 project'>
           <div className='flex flex-col gap-4'>
             <h4 className='text-4xl font-bold text-white text-center '>HOW OUR DESIGN PROCESS WORKS</h4>
-            <p className='text-white text-xl text-center max-w-[1450px] mx-auto'>We make it easy to get started and stay informed at every stage. Our streamlined 4-step process ensures clarity and collaboration:</p>
+            <p className='text-white text-[16px] text-center max-w-[1450px] mx-auto'>We make it easy to get started and stay informed at every stage. Our streamlined 4-step process ensures clarity and collaboration:</p>
             <div className='grid grid-cols-2 gap-5'>
               {seoBenefits?.map((item, idx) => (<div key={idx} className='flex flex-col gap-2 border-2 bg-white border-white rounded-2xl p-4'>
                 <h4 className='text-2xl font-bold text-[#81358A] text-center'>{item.title}</h4>
-                <p className='text-[#414141] text-xl text-center'>{item.description}</p>
+                <p className='text-[#414141] text-[16px] text-center'>{item.description}</p>
               </div>))}
             </div>
           </div>
@@ -303,7 +303,7 @@ export default function page() {
       <section className='lg:py-15 py-12 lg:px-[80px] md:px-[40px] px-6'>
         <div className='flex flex-col gap-4 items-center'>
           <h4 className='text-4xl font-bold text-[#81358A]'>INDUSTRIES WE SERVE IN GRAPHICS DESIGNING</h4>
-          <p className='text-[#414141] text-xl text-center max-w-[1450px] mx-auto'>Compelling visuals are crucial in every industry. In fact, a majority of B2B marketers make visual assets a top priority, underscoring that great design drives engagement no matter the sector. No matter your field, we adapt our creative approach to fit your market and target audience. Every industry has unique challenges; we ensure each design speaks the language of your sector. SISPN Tech has experience across a wide range of industries, including:</p>
+          <p className='text-[#414141] text-[16px] text-center max-w-[1450px] mx-auto'>Compelling visuals are crucial in every industry. In fact, a majority of B2B marketers make visual assets a top priority, underscoring that great design drives engagement no matter the sector. No matter your field, we adapt our creative approach to fit your market and target audience. Every industry has unique challenges; we ensure each design speaks the language of your sector. SISPN Tech has experience across a wide range of industries, including:</p>
           <div className='grid grid-cols-2 gap-5'>
             {seoProcess?.map((item, idx) => (<StrategyCard key={idx} title={item.title} description={item.description} />))}
           </div>

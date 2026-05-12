@@ -135,20 +135,20 @@ export default function page() {
                 <div className='flex flex-col gap-8 text-start justify-center text-start max-w-[1298px] mx-auto'>
                     <h4 className='text-white font-medium text-[50px] leading-18' >CUSTOM WEBSITE DEVELOPMENT <br /> <span className='font-bold'> SERVICES WITH SISPN TECH</span></h4>
                     <p className='text-white text-lg leading-9 pr-12'>Transform your digital identity with our advanced CMS and Custom Website Development Services. SISPN Tech offers professional website development services designed to elevate your online presence. Our seasoned team creates attractive, user-friendly, responsive, fully functional, high-performance websites and online ecommerce stores that engage users and support business growth. We blend intuitive UI/UX design with scalable, secure back-end development to build sites that reflect your brand’s vision, ensuring a smooth user experience and strong visibility on all devices.</p>
-                    <button onClick={openModal} className='px-6 mt-3.5 py-3.5 rounded-lg text-white text-xl font-medium cursor-pointer  bg-linear-to-t hover:scale-[0.9] transition-all to-[#8E2391] from-[#421C47] w-fit'>Get A Free Consultation</button>
+                    <button onClick={openModal} className='px-6 mt-3.5 py-3.5 rounded-lg text-white text-[16px] font-medium cursor-pointer  bg-linear-to-t hover:scale-[0.9] transition-all to-[#8E2391] from-[#421C47] w-fit'>Get A Free Consultation</button>
                 </div>
                 <ServiceForm/>  
             </section>
             <section className='lg:py-15 py-12 lg:px-[80px] md:px-[40px] px-6'>
                 <div className='flex flex-col gap-5'>
                     <div className='flex flex-col gap-2 max-w-[791px] mx-auto'>
-                        <p className='text-xl text-[#414141] text-center'>What Can We Do</p>
+                        <p className='text-[16px] text-[#414141] text-center'>What Can We Do</p>
                         <h4 className='text-4xl font-bold text-[#81358A]'>SISPN TECH YOUR DIGITAL GROWTH PARTNER</h4>
                     </div>
                     <div className='flex flex-col gap-8 items-center max-w-[1566px] mx-auto'>
-                        <p className='text-[#414141] text-xl text-center'> We don’t just build websites — we build digital ecosystems that grow with your business. At SISPN Tech, we take a strategic approach to web design and development, ensuring that every line of code serves a purpose. Our team doesn’t believe in cookie-cutter templates. Instead, we create custom solutions that blend aesthetics, speed, functionality, and user experience to deliver tangible business outcomes. </p>
-                        <p className='text-[#414141] text-xl text-center'> From corporate websites to complex web portals, we’ve helped brands across industries enhance their digital footprint. As a trusted website development company, we don’t just launch websites — we deliver long-term value. </p>
-                        <p className='text-[#414141] text-xl text-center'>Let your website do more than just look good. Let it perform, scale, and convert. </p>
+                        <p className='text-[#414141] text-[16px] text-center'> We don’t just build websites — we build digital ecosystems that grow with your business. At SISPN Tech, we take a strategic approach to web design and development, ensuring that every line of code serves a purpose. Our team doesn’t believe in cookie-cutter templates. Instead, we create custom solutions that blend aesthetics, speed, functionality, and user experience to deliver tangible business outcomes. </p>
+                        <p className='text-[#414141] text-[16px] text-center'> From corporate websites to complex web portals, we’ve helped brands across industries enhance their digital footprint. As a trusted website development company, we don’t just launch websites — we deliver long-term value. </p>
+                        <p className='text-[#414141] text-[16px] text-center'>Let your website do more than just look good. Let it perform, scale, and convert. </p>
                     </div>
                 </div>
             </section>
@@ -168,7 +168,7 @@ export default function page() {
                     <div className='flex flex-col gap-2 max-w-[791px] mx-auto'>
                         <h4 className='text-4xl font-bold text-center text-[#81358A]'>COMPLETE WEB DEVELOPMENT SOLUTIONS BY SISPN TECH</h4>
                     </div>
-                    <p className='text-[#414141] text-xl max-w-[1566px] mx-auto text-center'>At SISPN Tech, we offer a full spectrum of website development services to meet the needs of modern businesses — whether you're launching a startup, scaling an enterprise, or optimizing your digital infrastructure.</p>
+                    <p className='text-[#414141] text-[16px] max-w-[1566px] mx-auto text-center'>At SISPN Tech, we offer a full spectrum of website development services to meet the needs of modern businesses — whether you're launching a startup, scaling an enterprise, or optimizing your digital infrastructure.</p>
                     <div className='grid lg:grid-cols-3 grid-cols-1 gap-4'>
                         {services.map((services, id) => (
                             <ProjectCard image={services.image} key={services.title} title={services.title} description={services.description} />
@@ -179,7 +179,7 @@ export default function page() {
             <section className='lg:py-15 py-12 lg:px-[80px] md:px-[40px] px-6'>
                 <div className='flex flex-col gap-4 items-center'>
                     <h4 className='text-4xl font-bold text-[#81358A]'>TAILORED SEO STRATEGY FOR SUSTAINABLE GROWTH</h4>
-                    <p className='text-[#414141] text-xl text-center max-w-[1450px] mx-auto'>SISPN Tech understands that a universal approach doesn't perform in SEO campaigns. Our customized strategies are developed to meet your specific business goals. This ensures the long-term expansion of a digital business in a constantly evolving digital world. By focusing on long-term success and adjusting to the most recent SEO trends, we can help your business to stay ahead of your competitors.</p>
+                    <p className='text-[#414141] text-[16px] text-center max-w-[1450px] mx-auto'>SISPN Tech understands that a universal approach doesn't perform in SEO campaigns. Our customized strategies are developed to meet your specific business goals. This ensures the long-term expansion of a digital business in a constantly evolving digital world. By focusing on long-term success and adjusting to the most recent SEO trends, we can help your business to stay ahead of your competitors.</p>
                     <div className='grid lg:grid-cols-2 grid-cols-1 gap-5'>
                         {seoProcess?.map((item, idx) => (<StrategyCard key={idx} title={item.title} description={item.description} />))}
                     </div>
@@ -189,11 +189,11 @@ export default function page() {
                 <div className='lg:py-15 py-12 lg:px-[80px] md:px-[40px] px-6 gap-4 project'>
                     <div className='flex flex-col gap-4'>
                         <h4 className='text-4xl font-bold text-white text-center '>OUR WEB DEVELOPMENT PROCESS</h4>
-                        <p className='text-white text-xl text-center max-w-[1450px] mx-auto'>At SISPN Tech, we deliver tailored web solutions with a structured and client-focused approach, ensuring your digital vision comes to life seamlessly. Our six-step process combines expertise, innovation, and dedication to build robust, high-performing websites that meet your unique business goals.</p>
+                        <p className='text-white text-[16px] text-center max-w-[1450px] mx-auto'>At SISPN Tech, we deliver tailored web solutions with a structured and client-focused approach, ensuring your digital vision comes to life seamlessly. Our six-step process combines expertise, innovation, and dedication to build robust, high-performing websites that meet your unique business goals.</p>
                         <div className='grid lg:grid-cols-2 grid-cols-1 gap-5'>
                             {seoBenefits?.map((item, idx) => (<div key={idx} className='flex flex-col gap-2 border-2 bg-white border-white rounded-2xl p-4'>
                                 <h4 className='text-2xl font-bold text-[#81358A] text-center'>{item.title}</h4>
-                                <p className='text-[#414141] text-xl text-center'>{item.description}</p>
+                                <p className='text-[#414141] text-[16px] text-center'>{item.description}</p>
                             </div>))}
                         </div>
                     </div>

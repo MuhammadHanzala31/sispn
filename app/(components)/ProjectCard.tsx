@@ -15,7 +15,7 @@ export default function ProjectCard({
   link?: string
 }) {
   return (
-    <div className="group relative overflow-hidden rounded-[28px] border border-[#f1e8f3] bg-white shadow-[0_10px_40px_rgba(0,0,0,0.08)] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(102,44,109,0.18)]">
+    <div className="group relative overflow-hidden rounded-[28px] border border-[#f1e8f3] bg-white shadow-[0_10px_40px_rgba(0,0,0,0.08)] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(102,44,109,0.18)] ">
       
       {/* Top Glow */}
       <div className="absolute top-0 left-0 h-1 w-full bg-gradient-to-r from-[#81358A] to-[#662C6D]" />
@@ -35,7 +35,7 @@ export default function ProjectCard({
       </div>
 
       {/* Content */}
-      <div className="flex flex-col gap-5 p-7">
+      <div className="flex flex-col gap-5 p-7 ">
         
         {/* Tag */}
         <div className="w-fit rounded-full bg-[#f6edf7] px-4 py-2 text-sm font-medium text-[#81358A]">

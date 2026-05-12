@@ -93,7 +93,7 @@ export default function page() {
                                 onClick={() => setActiveTab(tab)}
                                 data-aos="zoom-in"
                                 data-aos-delay={index * 80}
-                                className={`px-5 py-3 font-semibold transition-all duration-300 cursor-pointer text-xl ${
+                                className={`px-5 py-3 font-semibold transition-all duration-300 cursor-pointer text-[16px] ${
                                     activeTab === tab
                                         ? "text-[#e040fb] border-b-2 border-[#e040fb]"
                                         : "text-white"

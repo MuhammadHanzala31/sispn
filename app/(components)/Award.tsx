@@ -93,7 +93,7 @@ export default function AwardsSlider() {
 
         {/* Header */}
         <div className="text-center mb-16">
-          <p className='text-[#414141] text-xl md:text-2xl mb-4'>Our Awards</p>
+          <p className='text-[#414141] text-[16px] md:text-2xl mb-4'>Our Awards</p>
           <h3 className='text-[#414141] text-3xl md:text-5xl'>
             DIGITAL <span className='text-[#81358A] font-bold'>MARKETING AGENCY</span>
           </h3>
@@ -113,7 +113,7 @@ export default function AwardsSlider() {
             <p className="text-gray-600 text-base md:text-2xl mb-8">
               Being appreciated by clients we work with means world to us. it also translate beautifully into our official ratings and awards.
             </p>
-            <button onClick={openModal} className='px-6 mt-3.5 py-3.5 rounded-lg text-white text-xl font-medium cursor-pointer  bg-linear-to-t hover:scale-[0.9] transition-all to-[#8E2391] from-[#421C47] w-fit'>Let’s Talk About Project</button>
+            <button onClick={openModal} className='px-6 mt-3.5 py-3.5 rounded-lg text-white text-[16px] font-medium cursor-pointer  bg-linear-to-t hover:scale-[0.9] transition-all to-[#8E2391] from-[#421C47] w-fit'>Let’s Talk About Project</button>
 
 
             {/* Buttons */}

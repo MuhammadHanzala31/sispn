@@ -41,6 +41,8 @@ export default function About() {
           lg:text-xl 
           text-[#414141] 
           leading-relaxed
+          max-w-3xl
+          mx-auto
         '>
           We strive to deliver the highest level of expertise including graphics services, brand designing,
           <span className='text-[#81358A]'> e-commerce product development, custom website development and affordable digital marketing services</span>.

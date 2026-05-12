@@ -211,18 +211,18 @@ export default function page() {
                 <div className='flex flex-col gap-8 justify-center text-start max-w-[1298px] mx-auto'>
                     <h4 className='text-white font-medium text-[50px] leading-18' >GOOGLE ADS SERVICES <br /> <span className='font-bold'> WITH SISPN TECH</span></h4>
                     <p className='text-white text-lg leading-9 pr-12'>Looking to grow your business with Google Ads? SISPN Tech helps you achieve real results through expertly managed, data-driven campaigns. Our certified specialists focus on more than just clicks—we drive sales, revenue, and ROI. From Search and Shopping to Video ads, we create tailored strategies that deliver consistent performance and long-term growth.</p>
-                    <button onClick={openModal} className='px-6 mt-3.5 py-3.5 rounded-lg text-white text-xl font-medium cursor-pointer  bg-linear-to-t hover:scale-[0.9] transition-all to-[#8E2391] from-[#421C47] w-fit'>Get a Free Consultation</button>
+                    <button onClick={openModal} className='px-6 mt-3.5 py-3.5 rounded-lg text-white text-[16px] font-medium cursor-pointer  bg-linear-to-t hover:scale-[0.9] transition-all to-[#8E2391] from-[#421C47] w-fit'>Get a Free Consultation</button>
                 </div>
                 <ServiceForm/>
             </section>
             <section className='lg:py-15 py-12 lg:px-[80px] md:px-[40px] px-6 text-center'>
                 <div className='flex flex-col gap-5'>
                     <div className='flex flex-col gap-2 max-w-[791px] mx-auto'>
-                        <p className='text-xl text-[#414141] text-center'>What Can We Do</p>
+                        <p className='text-[16px] text-[#414141] text-center'>What Can We Do</p>
                         <h4 className='text-4xl font-bold text-[#81358A]'>OUR COMPLETE SUITE OF GOOGLE ADS CAMPAIGN SERVICES</h4>
                     </div>
                     <div className='flex flex-col gap-8 items-center max-w-[1566px] mx-auto'>
-                        <p className='text-[#414141] text-xl text-center'> Particularly, SISPN Tech's Google Ads expertise spans all major formats of campaigns, providing an advertising strategy that is multichannel and able to meet the needs of customers at any point in their journey. It doesn't matter if it's taking high-intent users to search, boosting brand recognition through images, re-engaging previous customers, or advertising your services and products; we'll use the appropriate campaign type to meet your goals for the business. This blend of strategies will not only increase your reach across Google's huge range of services, which includes Search, Display, YouTube, Play Store, and all Google partner sites but it will also ensure constant, relevant and effective engagements for all of the platforms.</p>
+                        <p className='text-[#414141] text-[16px] text-center'> Particularly, SISPN Tech's Google Ads expertise spans all major formats of campaigns, providing an advertising strategy that is multichannel and able to meet the needs of customers at any point in their journey. It doesn't matter if it's taking high-intent users to search, boosting brand recognition through images, re-engaging previous customers, or advertising your services and products; we'll use the appropriate campaign type to meet your goals for the business. This blend of strategies will not only increase your reach across Google's huge range of services, which includes Search, Display, YouTube, Play Store, and all Google partner sites but it will also ensure constant, relevant and effective engagements for all of the platforms.</p>
                     </div>
                 </div>
             </section>
@@ -231,7 +231,7 @@ export default function page() {
                     <div className='flex flex-col gap-2 max-w-[791px] mx-auto'>
                         <h4 className='text-4xl font-bold text-center text-[#81358A]'>COMPREHENSIVE SEO SERVICES DESIGNED FOR YOUR WEBSITE</h4>
                     </div>
-                    <p className='text-[#414141] text-xl max-w-[1566px] mx-auto text-center'>SISPN Tech offers an extensive range of SEO solutions designed to boost your website performance, enhance the siteâ€™s online presence and generate visible growth. Our custom SEO strategies include the following areas of expertise:</p>
+                    <p className='text-[#414141] text-[16px] max-w-[1566px] mx-auto text-center'>SISPN Tech offers an extensive range of SEO solutions designed to boost your website performance, enhance the siteâ€™s online presence and generate visible growth. Our custom SEO strategies include the following areas of expertise:</p>
                     <div className='grid grid-cols-3 gap-4'>
                         {googleAdsServices?.map(service => (
                             <ProjectCard image={service.image} description={service.description} title={service.title} key={service.id} />
@@ -242,7 +242,7 @@ export default function page() {
             <section className='lg:py-15 py-12 lg:px-[80px] md:px-[40px] px-6'>
                 <div className='flex flex-col gap-4 items-center'>
                     <h4 className='text-4xl font-bold text-[#81358A]'>WHAT ARE GOOGLE ADS AND HOW CAN THEY BOOST YOUR BUSINESS?</h4>
-                    <p className='text-[#414141] text-xl text-center max-w-[1450px] mx-auto'>Google Ads is a powerful online advertising platform created by Google. It allows businesses to place ads on Google's vast network of sites, including results from searches, YouTube, Google Maps and other partner sites. It operates on a pay-per-click (PPC) model that allows advertisers to pay only for each time a user clicks on their advertisements. This makes it an efficient method to reach customers in search of similar products or services to those of the advertisers.</p>
+                    <p className='text-[#414141] text-[16px] text-center max-w-[1450px] mx-auto'>Google Ads is a powerful online advertising platform created by Google. It allows businesses to place ads on Google's vast network of sites, including results from searches, YouTube, Google Maps and other partner sites. It operates on a pay-per-click (PPC) model that allows advertisers to pay only for each time a user clicks on their advertisements. This makes it an efficient method to reach customers in search of similar products or services to those of the advertisers.</p>
                     <div className='grid grid-cols-2 gap-5'>
                         {seoProcess?.map((item, idx) => (<StrategyCard key={idx} title={item.title} description={item.description} />))}
                     </div>
@@ -252,8 +252,8 @@ export default function page() {
                 <div className='lg:py-15 py-12 lg:px-[80px] md:px-[40px] px-6 gap-4 project'>
                     <div className='flex flex-col gap-4'>
                         <h4 className='text-4xl font-bold text-white text-center '>HOW DOES GOOGLE ADS BOOST BUSINESS GROWTH?</h4>
-                        <p className='text-white text-xl text-center max-w-[1450px] mx-auto'>IUsing Google's wide range of reach and its advanced capabilities for targeting, you can reach out to potential customers precisely when they're looking in search of relevant goods or services. This not only drives relevant traffic towards your site but also improves the probability of conversions. This ultimately results in more sales and revenue.</p>
-                        <p className='text-white text-xl text-center max-w-[1450px] mx-auto'>Additionally, the platform's flexibility makes it possible to continuously optimize the ad by using A/B experiment, keyword changes as well as performance analysis, it is possible to refine your marketing campaigns to meet the goals of your business.</p>
+                        <p className='text-white text-[16px] text-center max-w-[1450px] mx-auto'>IUsing Google's wide range of reach and its advanced capabilities for targeting, you can reach out to potential customers precisely when they're looking in search of relevant goods or services. This not only drives relevant traffic towards your site but also improves the probability of conversions. This ultimately results in more sales and revenue.</p>
+                        <p className='text-white text-[16px] text-center max-w-[1450px] mx-auto'>Additionally, the platform's flexibility makes it possible to continuously optimize the ad by using A/B experiment, keyword changes as well as performance analysis, it is possible to refine your marketing campaigns to meet the goals of your business.</p>
                     </div>
                 </div>
             </section>
@@ -262,7 +262,7 @@ export default function page() {
                     <div className='flex flex-col gap-2 max-w-[791px] mx-auto'>
                         <h4 className='text-4xl font-bold text-center text-[#81358A]'>WHY CHOOSE SISPN TECH FOR GOOGLE ADS SERVICES?</h4>
                     </div>
-                    <p className='text-[#414141] text-xl max-w-[1566px] mx-auto text-center'>At SISPN Tech, we don't just manage Google Ads campaigns, we design them for you to ensure the greatest impact. Our strategy incorporates advanced technology, expert knowledge of the industry and a commitment to accelerate your business's development. Our achievements are the reason businesses choose us.</p>
+                    <p className='text-[#414141] text-[16px] max-w-[1566px] mx-auto text-center'>At SISPN Tech, we don't just manage Google Ads campaigns, we design them for you to ensure the greatest impact. Our strategy incorporates advanced technology, expert knowledge of the industry and a commitment to accelerate your business's development. Our achievements are the reason businesses choose us.</p>
                     <div className='grid grid-cols-3 gap-4'>
                         {googleAdsWhyChooseUs?.map(service => (
                             <ProjectCard image={service.image} description={service.description} title={service.title} key={service.id} />

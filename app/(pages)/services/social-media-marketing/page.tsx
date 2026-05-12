@@ -213,7 +213,7 @@ export default function page() {
                 <div className='flex flex-col gap-8  text-start max-w-[1298px] mx-auto'>
                     <h4 className='text-white font-medium text-[50px] leading-18' >SOCIAL MEDIA MARKETING <br /> <span className='font-bold'> SERVICES WITH SISPN TECH</span></h4>
                     <p className='text-white text-lg leading-9 pr-12'>Increase your brand's visibility faster by using SISPN Tech, a results-focused and performance-oriented Social Media Marketing Agency. We assist businesses in converting audience to recurring customers using strategies that are specifically tailored to platforms like Facebook, Instagram, LinkedIn, TikTok & more. Our skilled team blends imagination with analytics to design campaigns that not only appear attractive but are actually effective for conversions. From captivating content to hyper-targeted advertisements, we provide social media marketing solutions that are in line with your company's goals and ensure an ongoing, sustainable success.</p>
-                    <button onClick={openModal} className='px-6 mt-3.5  py-3.5 rounded-lg text-white text-xl font-medium cursor-pointer  bg-linear-to-t hover:scale-[0.9] transition-all to-[#8E2391] from-[#421C47] w-fit'>Get A Free Consultation</button>
+                    <button onClick={openModal} className='px-6 mt-3.5  py-3.5 rounded-lg text-white text-[16px] font-medium cursor-pointer  bg-linear-to-t hover:scale-[0.9] transition-all to-[#8E2391] from-[#421C47] w-fit'>Get A Free Consultation</button>
 
                 </div>
                 <ServiceForm />
@@ -221,18 +221,18 @@ export default function page() {
             <section className='lg:py-15 py-12 lg:px-[80px] md:px-[40px] px-6'>
                 <div className='flex flex-col gap-5'>
                     <div className='flex flex-col gap-2 max-w-[791px] mx-auto'>
-                        <p className='text-xl text-[#414141] text-center'>What Can We Do</p>
+                        <p className='text-[16px] text-[#414141] text-center'>What Can We Do</p>
                         <h4 className='text-4xl font-bold text-[#81358A] text-center'>RESULTS-DRIVEN SOCIAL MEDIA MARKETING AGENCY</h4>
                     </div>
                     <div className='flex flex-col gap-8 items-center max-w-[1566px] mx-auto'>
-                        <p className='text-[#414141] text-xl text-center'> In SISPN Tech, we don't just publish the content, we plan, optimize, and make it easier to convert. As your reliable Social Media Marketing Agency, we create data-driven campaigns that don't just increase engagement, but also yield tangible business outcomes. If you're looking to enhance your brand recognition, improve site traffic, or inicrease the number of conversions, you can consider our tried and true method that makes sure your goals are achieved and even excelled.</p>
-                        <p className='text-[#414141] text-xl text-center'>We design and create content that is highly impactful and engaging, leverage viral trends, and create ad campaigns that are precisely targeted on the platform where your audience is located. With the help of experts in specific platforms and real-time analytics, our team can turn your social media presence into a real lead-generation source.</p>
+                        <p className='text-[#414141] text-[16px] text-center'> In SISPN Tech, we don't just publish the content, we plan, optimize, and make it easier to convert. As your reliable Social Media Marketing Agency, we create data-driven campaigns that don't just increase engagement, but also yield tangible business outcomes. If you're looking to enhance your brand recognition, improve site traffic, or inicrease the number of conversions, you can consider our tried and true method that makes sure your goals are achieved and even excelled.</p>
+                        <p className='text-[#414141] text-[16px] text-center'>We design and create content that is highly impactful and engaging, leverage viral trends, and create ad campaigns that are precisely targeted on the platform where your audience is located. With the help of experts in specific platforms and real-time analytics, our team can turn your social media presence into a real lead-generation source.</p>
                         <ul className='flex flex-col gap-4'>
-                            <p className='text-[#414141] text-xl text-center'>- Campaigns that are specifically tailored to your business goals </p>
-                            <p className='text-[#414141] text-xl text-center'>- Synchronized work in Paid and Organic strategies</p>
-                            <p className='text-[#414141] text-xl text-center'>- AI-powered insight and performance monitoring </p>
-                            <p className='text-[#414141] text-xl text-center'>- Continuous testing and optimization </p>
-                            <p className='text-[#414141] text-xl text-center'>- Transparent reporting with measurable KPIs and Stats</p>
+                            <p className='text-[#414141] text-[16px] text-center'>- Campaigns that are specifically tailored to your business goals </p>
+                            <p className='text-[#414141] text-[16px] text-center'>- Synchronized work in Paid and Organic strategies</p>
+                            <p className='text-[#414141] text-[16px] text-center'>- AI-powered insight and performance monitoring </p>
+                            <p className='text-[#414141] text-[16px] text-center'>- Continuous testing and optimization </p>
+                            <p className='text-[#414141] text-[16px] text-center'>- Transparent reporting with measurable KPIs and Stats</p>
                         </ul>
                     </div>
                     {/* <div className='grid grid-cols-3 gap-5'>
@@ -246,7 +246,7 @@ export default function page() {
                     <div className='flex flex-col gap-2 max-w-[791px] mx-auto'>
                         <h4 className='text-4xl font-bold text-center text-[#81358A]'>TAILORED SMM SERVICES THAT FUEL THE GROWTH</h4>
                     </div>
-                    <p className='text-[#414141] text-xl max-w-[1566px] mx-auto text-center'>In SISPN Tech, our services surpass the basic ones. We are a result-oriented Social Media Marketing Agency. We offer customized solutions that are suited to the goals of your company, whether it's sales, gaining visibility, or creating an engaged community.</p>
+                    <p className='text-[#414141] text-[16px] max-w-[1566px] mx-auto text-center'>In SISPN Tech, our services surpass the basic ones. We are a result-oriented Social Media Marketing Agency. We offer customized solutions that are suited to the goals of your company, whether it's sales, gaining visibility, or creating an engaged community.</p>
                     <div className='grid grid-cols-3 gap-4'>
                         {googleAdsServices?.map(service => (
                             <ProjectCard image={service.image} description={service.description} title={service.title} key={service.id} />
@@ -257,7 +257,7 @@ export default function page() {
             <section className='lg:py-15 py-12 lg:px-[80px] md:px-[40px] px-6'>
                 <div className='flex flex-col gap-4 items-center'>
                     <h4 className='text-4xl font-bold text-[#81358A]'>OUR PROVEN SOCIAL MEDIA MARKETING EXECUTION FRAMEWORK</h4>
-                    <p className='text-[#414141] text-xl text-center max-w-[1450px] mx-auto'>Here at SISPN Tech, we don't believe in guesswork. We are a result-driven Social Media Marketing Agency. Our approach is built on the clarity of performance, as well as the real ROI. We can turn your social channels into profit- generating machines:</p>
+                    <p className='text-[#414141] text-[16px] text-center max-w-[1450px] mx-auto'>Here at SISPN Tech, we don't believe in guesswork. We are a result-driven Social Media Marketing Agency. Our approach is built on the clarity of performance, as well as the real ROI. We can turn your social channels into profit- generating machines:</p>
                     <div className='grid grid-cols-2 gap-5'>
                         {seoProcess?.map((item, idx) => (<StrategyCard key={idx} title={item.title} description={item.description} />))}
                     </div>
@@ -267,12 +267,12 @@ export default function page() {
                 <div className='lg:py-15 py-12 lg:px-[80px] md:px-[40px] px-6 gap-4 project'>
                     <div className='flex flex-col gap-4'>
                         <h4 className='text-4xl font-bold text-white text-center '>SOCIAL MEDIA IS A GROWTH ENGINE FOR BRANDS</h4>
-                        <p className='text-white text-xl text-center max-w-[1450px] mx-auto'>Social media marketing goes beyond just posting updates. It's also an effective method to connect with your customers where they go to spend their time and influence their decisions to convert clicks into sales. Here at SISPN Tech, our Social Media Marketing Services are created to not only increase visibility but also directly impact the sales, retention and engagement.</p>
-                        <p className='text-white text-xl text-center max-w-[1450px] mx-auto'>If you're looking to improve the visibility of your brand, increase leads, or improve customer loyalty, the social networks such as Facebook, Instagram, LinkedIn and TikTok provide unrivalled, personalized and targeted advertising.</p>
+                        <p className='text-white text-[16px] text-center max-w-[1450px] mx-auto'>Social media marketing goes beyond just posting updates. It's also an effective method to connect with your customers where they go to spend their time and influence their decisions to convert clicks into sales. Here at SISPN Tech, our Social Media Marketing Services are created to not only increase visibility but also directly impact the sales, retention and engagement.</p>
+                        <p className='text-white text-[16px] text-center max-w-[1450px] mx-auto'>If you're looking to improve the visibility of your brand, increase leads, or improve customer loyalty, the social networks such as Facebook, Instagram, LinkedIn and TikTok provide unrivalled, personalized and targeted advertising.</p>
                         <div className='grid grid-cols-2 gap-5'>
                             {seoBenefits?.map((item, idx) => (<div key={idx} className='flex flex-col gap-2 border-2 bg-white border-white rounded-2xl p-4'>
                                 <h4 className='text-2xl font-bold text-[#81358A] text-center'>{item.title}</h4>
-                                <p className='text-[#414141] text-xl text-center'>{item.description}</p>
+                                <p className='text-[#414141] text-[16px] text-center'>{item.description}</p>
                             </div>))}
                         </div>
                     </div>
@@ -281,7 +281,7 @@ export default function page() {
             <section className='lg:py-15 py-12 lg:px-[80px] md:px-[40px] px-6'>
                 <div className='flex flex-col gap-4 items-center'>
                     <h4 className='text-4xl font-bold text-[#81358A]'>OUR PROVEN SOCIAL MEDIA MARKETING EXECUTION FRAMEWORK</h4>
-                    <p className='text-[#414141] text-xl text-center max-w-[1450px] mx-auto'>Here at SISPN Tech, we don't believe in guesswork. We are a result-driven Social Media Marketing Agency. Our approach is built on the clarity of performance, as well as the real ROI. We can turn your social channels into profit- generating machines:</p>
+                    <p className='text-[#414141] text-[16px] text-center max-w-[1450px] mx-auto'>Here at SISPN Tech, we don't believe in guesswork. We are a result-driven Social Media Marketing Agency. Our approach is built on the clarity of performance, as well as the real ROI. We can turn your social channels into profit- generating machines:</p>
                     <div className='grid grid-cols-2 gap-5'>
                         {marketingFeatures?.map((item, idx) => (<StrategyCard key={idx} title={item.title} description={item.description} />))}
                     </div>
